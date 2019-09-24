@@ -1,0 +1,2542 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>入侵痕迹排查-Linux - knowledge_wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#757575">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="brown">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#-linux" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="knowledge_wiki" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                knowledge_wiki
+              </span>
+              <span class="md-header-nav__topic">
+                入侵痕迹排查-Linux
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="knowledge_wiki" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    knowledge_wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Web security
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Web security
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/01introduce/" title="Security Basic" class="md-nav__link">
+      Security Basic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/02information_gathering/" title="information gathering" class="md-nav__link">
+      information gathering
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/03Web_Security_protocol/" title="Web Security protocol" class="md-nav__link">
+      Web Security protocol
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/04SQL_Injection/" title="SQL Injection" class="md-nav__link">
+      SQL Injection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/05xxe/" title="xxe" class="md-nav__link">
+      xxe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/06Code_Injection/" title="Code Injection" class="md-nav__link">
+      Code Injection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/07Command_execute/" title="Command execute" class="md-nav__link">
+      Command execute
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/08Variable_Coverage/" title="Variable Coverage" class="md-nav__link">
+      Variable Coverage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/09XSS/" title="XSS" class="md-nav__link">
+      XSS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/10CSRF/" title="CSRF" class="md-nav__link">
+      CSRF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/11file_processing/" title="File Processing" class="md-nav__link">
+      File Processing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/12Session_Management/" title="Session Management" class="md-nav__link">
+      Session Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/13Unvalidated_Redirects_and_Forwards/" title="Unvalidated Redirects and Forwards" class="md-nav__link">
+      Unvalidated Redirects and Forwards
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/14SSRF/" title="SSRF" class="md-nav__link">
+      SSRF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/15unserialize/" title="unserialize" class="md-nav__link">
+      unserialize
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/16Databases_Security/" title="Databases Security" class="md-nav__link">
+      Databases Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/17Operating_system_Security/" title="Operating system Security" class="md-nav__link">
+      Operating system Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/18Middleware_Security/" title="Middleware Security" class="md-nav__link">
+      Middleware Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/19Pentest_Cheat_Sheets/" title="Pentest Cheat Sheets" class="md-nav__link">
+      Pentest Cheat Sheets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-20" type="checkbox" id="nav-2-20">
+    
+    <label class="md-nav__link" for="nav-2-20">
+      tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-20">
+        tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/tools_common/" title="common" class="md-nav__link">
+      common
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/tools_Nmap/" title="nmap" class="md-nav__link">
+      nmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/tools_Burpsuite/" title="Burpsuite" class="md-nav__link">
+      Burpsuite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/tools_SQLMap/" title="SQLMap" class="md-nav__link">
+      SQLMap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/tools_Metasploit/" title="Metasploit" class="md-nav__link">
+      Metasploit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Bug-Bounty
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Bug-Bounty
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Bug-Bounty/Bug-Bounty/" title="Bug-Bounty" class="md-nav__link">
+      Bug-Bounty
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Bug-Bounty/CTF/" title="CTF" class="md-nav__link">
+      CTF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Research on program vulnerabilities
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Research on program vulnerabilities
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/攻击类漏洞利用/" title="漏洞利用" class="md-nav__link">
+      漏洞利用
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/01PHP Security/" title="PHP Security" class="md-nav__link">
+      PHP Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/02Binary_Security/" title="Binary Security" class="md-nav__link">
+      Binary Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/03Malware_tech/" title="Malware analysis" class="md-nav__link">
+      Malware analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/04Malware_Analysis_tech/" title="Malware analysis tech" class="md-nav__link">
+      Malware analysis tech
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Computer Forensics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Computer Forensics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../00APT上机检查思路/" title="Introduce" class="md-nav__link">
+      Introduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../01Windows执行痕迹搜集/" title="Windows执行痕迹搜集" class="md-nav__link">
+      Windows执行痕迹搜集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02流量分析/" title="流量分析" class="md-nav__link">
+      流量分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03内存分析/" title="内存分析" class="md-nav__link">
+      内存分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        入侵痕迹排查-Linux
+      </label>
+    
+    <a href="./" title="入侵痕迹排查-Linux" class="md-nav__link md-nav__link--active">
+      入侵痕迹排查-Linux
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-linux" title="入侵痕迹排查-Linux" class="md-nav__link">
+    入侵痕迹排查-Linux
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" title="1、文件排查" class="md-nav__link">
+    1、文件排查
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="按时间搜索文件" class="md-nav__link">
+    按时间搜索文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="特殊权限文件查看" class="md-nav__link">
+    特殊权限文件查看
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" title="2、账号安全" class="md-nav__link">
+    2、账号安全
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" title="3、历史命令" class="md-nav__link">
+    3、历史命令
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" title="4、网络连接排查" class="md-nav__link">
+    4、网络连接排查
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="排查端口" class="md-nav__link">
+    排查端口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="排查进程" class="md-nav__link">
+    排查进程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" title="5、开机启动项" class="md-nav__link">
+    5、开机启动项
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" title="6、计划任务" class="md-nav__link">
+    6、计划任务
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" title="7、服务" class="md-nav__link">
+    7、服务
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" title="8、日志分析" class="md-nav__link">
+    8、日志分析
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="系统日志" class="md-nav__link">
+    系统日志
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apache" title="apache日志" class="md-nav__link">
+    apache日志
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" title="9、查杀工具" class="md-nav__link">
+    9、查杀工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10" title="10、自动化辅助脚本" class="md-nav__link">
+    10、自动化辅助脚本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11" title="11、排查技巧" class="md-nav__link">
+    11、排查技巧
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proc" title="利用/proc恢复删除的文件" class="md-nav__link">
+    利用/proc恢复删除的文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm" title="RPM文件检查" class="md-nav__link">
+    RPM文件检查
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="参考：排查实战" class="md-nav__link">
+    参考：排查实战
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04入侵痕迹排查-Windows/" title="入侵痕迹排查-Windows" class="md-nav__link">
+      入侵痕迹排查-Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../06入侵手法/" title="入侵手法" class="md-nav__link">
+      入侵手法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../05tools_common/" title="tools_commo" class="md-nav__link">
+      tools_commo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Information_Security_Engineer/" title="Information Security Engineer" class="md-nav__link">
+      Information Security Engineer
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      common
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        common
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/00_Programer_learn_Strategy/" title="程序员攻略" class="md-nav__link">
+      程序员攻略
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/01_Algrothm/" title="Algrothm" class="md-nav__link">
+      Algrothm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_1_python_基本语法/" title="基本语法" class="md-nav__link">
+      基本语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_2_python_变量和数据类型/" title="变量和数据类型" class="md-nav__link">
+      变量和数据类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_3_python_流程控制/" title="流程控制" class="md-nav__link">
+      流程控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_4_python_函数及作用域/" title="函数及作用域" class="md-nav__link">
+      函数及作用域
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_5_python_数学/" title="数学函数" class="md-nav__link">
+      数学函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_6_python_字符串/" title="字符串" class="md-nav__link">
+      字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_7_python_列表/" title="列表" class="md-nav__link">
+      列表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_8_python_tuple/" title="tuple" class="md-nav__link">
+      tuple
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_9_python_字典/" title="字典" class="md-nav__link">
+      字典
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_10_python_集合/" title="集合" class="md-nav__link">
+      集合
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_11_python_文件操作/" title="文件操作" class="md-nav__link">
+      文件操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_12_python_os/" title="OS" class="md-nav__link">
+      OS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_13_python_shutil/" title="shutil" class="md-nav__link">
+      shutil
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_14_python_zip压缩/" title="zip压缩" class="md-nav__link">
+      zip压缩
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_15_python_calendar日历/" title="calendar日历" class="md-nav__link">
+      calendar日历
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_16_python_time时间/" title="time时间" class="md-nav__link">
+      time时间
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_17_python_类和对象/" title="类和对象" class="md-nav__link">
+      类和对象
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_18_python_模块和包/" title="模块和包" class="md-nav__link">
+      模块和包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_19_python_错误和异常处理/" title="错误和异常处理" class="md-nav__link">
+      错误和异常处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_20_python_tkinter/" title="tkinter" class="md-nav__link">
+      tkinter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_21_python_性能/" title="性能" class="md-nav__link">
+      性能
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_22_python_多线程/" title="多线程" class="md-nav__link">
+      多线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3-23" type="checkbox" id="nav-7-3-23">
+    
+    <label class="md-nav__link" for="nav-7-3-23">
+      Flask
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-3-23">
+        Flask
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/Python_flask/1_URL和视图笔记/" title="URL和视图笔记" class="md-nav__link">
+      URL和视图笔记
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/Python_flask/2_模板笔记/" title="模板" class="md-nav__link">
+      模板
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/Python_flask/3_数据库/" title="数据库" class="md-nav__link">
+      数据库
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/Python_flask/4_cookie和session笔记/" title="cookie和session笔记" class="md-nav__link">
+      cookie和session笔记
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/03_C_C++_Basic/" title="C_C++" class="md-nav__link">
+      C_C++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/03_1_MFC/" title="C++_MFC" class="md-nav__link">
+      C++_MFC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/04_Java_Book/" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/Other-VBA语法/" title="VBA" class="md-nav__link">
+      VBA
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/Other-Powersehll/" title="Powersehll" class="md-nav__link">
+      Powersehll
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../安全岗位面试/" title="面试" class="md-nav__link">
+      面试
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-linux" title="入侵痕迹排查-Linux" class="md-nav__link">
+    入侵痕迹排查-Linux
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" title="1、文件排查" class="md-nav__link">
+    1、文件排查
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="按时间搜索文件" class="md-nav__link">
+    按时间搜索文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="特殊权限文件查看" class="md-nav__link">
+    特殊权限文件查看
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" title="2、账号安全" class="md-nav__link">
+    2、账号安全
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" title="3、历史命令" class="md-nav__link">
+    3、历史命令
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" title="4、网络连接排查" class="md-nav__link">
+    4、网络连接排查
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="排查端口" class="md-nav__link">
+    排查端口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="排查进程" class="md-nav__link">
+    排查进程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" title="5、开机启动项" class="md-nav__link">
+    5、开机启动项
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" title="6、计划任务" class="md-nav__link">
+    6、计划任务
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" title="7、服务" class="md-nav__link">
+    7、服务
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" title="8、日志分析" class="md-nav__link">
+    8、日志分析
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="系统日志" class="md-nav__link">
+    系统日志
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apache" title="apache日志" class="md-nav__link">
+    apache日志
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" title="9、查杀工具" class="md-nav__link">
+    9、查杀工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10" title="10、自动化辅助脚本" class="md-nav__link">
+    10、自动化辅助脚本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11" title="11、排查技巧" class="md-nav__link">
+    11、排查技巧
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proc" title="利用/proc恢复删除的文件" class="md-nav__link">
+    利用/proc恢复删除的文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm" title="RPM文件检查" class="md-nav__link">
+    RPM文件检查
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="参考：排查实战" class="md-nav__link">
+    参考：排查实战
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>入侵痕迹排查-Linux</h1>
+                
+                <h2 id="-linux">入侵痕迹排查-Linux</h2>
+<h3 id="1">1、文件排查</h3>
+<p>敏感目录的文件分析[类/tmp目录，命令目录/usr/bin /usr/sbin等]，按时间排序查看。</p>
+<pre><code>echo $PATH           # 查看系统环境变量
+ls -rtal /bin
+ls -rtal /sbin
+ls -rtal /usr/bin/
+ls -rtal /usr/sbin/
+ls -rtal /tmp
+ls -rtal /etc/init.d/
+</code></pre>
+
+<p>可疑文件用stat查看创建、修改、访问时间的查看。</p>
+<h4 id="_1">按时间搜索文件</h4>
+<p>Linux按日期查找文件并列出在特定日期修改的文件。</p>
+<ul>
+<li>在/data/images目录中查找在2007年1月1日到2008年1月1日之间修改的文件：</li>
+</ul>
+<pre><code>
+touch --date &quot;2007-01-01&quot; /tmp/start
+touch --date &quot;2008-01-01&quot; /tmp/end
+find /data/images -type f -newer /tmp/start -not -newer /tmp/end
+</code></pre>
+
+<ul>
+<li>find命令的-newerXY选项</li>
+</ul>
+<pre><code>a - 文件的访问时间
+B - 文件的创建时间
+c - inode状态改变时间
+m - 文件的修改时间
+t - 引用被直接解释为时间
+
+find /dir/ -type f -newerXY 'yyyy-mm-dd'
+find /dir/ -type f -newerXY 'yyyy-mm-dd' -ls
+
+## 查看当前目录2017年9月24日修改的所有文件 
+find . -type f -newermt 2017-09-24
+## 显示属性
+find . -type f -newermt 2017-09-24 -ls
+## 时间查找
+find /path/to/dir -newermt &quot;yyyy-mm-dd HH:mm:ss&quot; -not -newermt &quot;yyyy-mm-dd HH:mm:ss+1&quot;
+## 按日期范围查找
+find / -newermt &quot;2019-09-09 00:00:00&quot; -not -newermt &quot;2019-09-10 00:00:00+1&quot;
+</code></pre>
+
+<h4 id="_2">特殊权限文件查看</h4>
+<ul>
+<li>查找777权限的文件</li>
+</ul>
+<pre><code>find . -name *.jsp -perm 777
+</code></pre>
+
+<ul>
+<li>查找隐藏文件</li>
+</ul>
+<p>隐藏的文件（以 "."开头的具有隐藏属性的文件）</p>
+<p>ls -a可以将目录下的全部文件（包括隐藏文件）显示出来
+ls -r将排序结果反向输出，例如：原本文件名由小到大，反向则由大到小
+ls -R连同子目录一同显示出来，也就所说该目录下所有文件都会显示出来（显示隐藏文件要加-a参数）
+简单的介绍就到这了，我们放码说话。</p>
+<pre><code># ls -arR | grep &quot;^\.&quot;
+</code></pre>
+
+<h3 id="2">2、账号安全</h3>
+<ul>
+<li>基本知识</li>
+</ul>
+<pre><code>1、用户信息文件/etc/passwd
+root:x:0:0:root:/root:/bin/bash
+account:password:UID:GID:GECOS:directory:shell
+用户名：密码：用户ID：组ID：用户说明：家目录：登陆之后shell
+注意：无密码只允许本机登陆，远程不允许登陆
+
+2、影子文件/etc/shadow
+root:$6$oGs1PqhL2p3ZetrE$X7o7bzoouHQVSEmSgsYN5UD4.kMHx6qgbTqwNVC5oOAouXvcjQSt.Ft7ql1WpkopY0UV9ajBwUt1DpYxTCVvI/:16809:0:99999:7:::
+用户名：加密密码：密码最后一次修改日期：两次密码的修改时间间隔：密码有效期：密码修改到期到的警告天数：密码过期之后的宽限天数：账号失效时间：保留
+
+
+who     查看当前登录用户（tty本地登陆  pts远程登录）
+w       查看系统信息，想知道某一时刻用户的行为
+uptime  查看登陆多久、多少用户，负载
+</code></pre>
+
+<ul>
+<li>入侵排查</li>
+</ul>
+<pre><code>1、查询特权用户特权用户(uid 为0)
+[root@localhost ~]# awk -F: '$3==0{print $1}' /etc/passwd
+2、查询可以远程登录的帐号信息
+[root@localhost ~]# awk '/\$1|\$6/{print $1}' /etc/shadow
+3、除root帐号外，其他帐号是否存在sudo权限。如非管理需要，普通帐号应删除sudo权限
+[root@localhost ~]# more /etc/sudoers | grep -v &quot;^#\|^$&quot; | grep &quot;ALL=(ALL)&quot;
+4、禁用或删除多余及可疑的帐号
+    usermod -L user    禁用帐号，帐号无法登录，/etc/shadow第二栏为!开头
+    userdel user       删除user用户
+    userdel -r user    将删除user用户，并且将/home目录下的user目录一并删除
+</code></pre>
+
+<h3 id="3">3、历史命令</h3>
+<ul>
+<li>基础知识</li>
+</ul>
+<pre><code>通过.bash_history查看帐号执行过的系统命令
+1、root的历史命令
+
+histroy
+cat ~/.bash_history
+
+2、打开/home各帐号目录下的.bash_history，查看普通帐号的历史命令
+
+为历史的命令增加登录的IP地址、执行命令时间等信息：
+1）保存1万条命令
+
+sed -i 's/^HISTSIZE=1000/HISTSIZE=10000/g' /etc/profile
+
+2）在/etc/profile的文件尾部添加如下行数配置信息：
+
+###### 加固历史命令显示 #########
+USER_IP=`who -u am i 2&gt;/dev/null | awk '{print $NF}' | sed -e 's/[()]//g'`
+if [ &quot;$USER_IP&quot; = &quot;&quot; ]
+then
+USER_IP=`hostname`
+fi
+export HISTTIMEFORMAT=&quot;%F %T $USER_IP `whoami` &quot;
+shopt -s histappend
+export PROMPT_COMMAND=&quot;history -a&quot;
+###### 加固历史命令显示 #########
+
+3）source /etc/profile让配置生效
+
+生成效果： 1  2018-07-10 19:45:39 192.168.204.1 root source /etc/profile
+
+3、历史操作命令的清除：history -c
+但此命令并不会清除保存在文件中的记录，因此需要手动删除.bash_profile文件中的记录。
+
+4、当前会话历史操作命令的清除：history -r
+</code></pre>
+
+<ul>
+<li>入侵排查：</li>
+</ul>
+<pre><code>进入用户目录下
+cat .bash_history &gt;&gt; history.txt
+</code></pre>
+
+<h3 id="4">4、网络连接排查</h3>
+<h4 id="_3">排查端口</h4>
+<p>使用netstat 网络连接命令，分析可疑端口、IP、PID</p>
+<pre><code>netstat -antlp|more
+
+查看下pid所对应的进程文件路径，
+运行ls -l /proc/$PID/exe或file /proc/$PID/exe（$PID 为对应的pid 号）
+</code></pre>
+
+<h4 id="_4">排查进程</h4>
+<p>使用ps命令，分析进程</p>
+<pre><code>ps aux | grep pid  # 排查指定PID
+ls /proc/{$pid}/   # 找进程路径
+</code></pre>
+
+<h3 id="5">5、开机启动项</h3>
+<ul>
+<li>基础知识：</li>
+</ul>
+<p>系统运行级别示意图：</p>
+<table>
+<thead>
+<tr>
+<th>运行级别</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>关机</td>
+</tr>
+<tr>
+<td>1</td>
+<td>单用户模式，可以想象为windows的安全模式，主要用于系统修复</td>
+</tr>
+<tr>
+<td>2</td>
+<td>不完全的命令行模式，不含NFS服务</td>
+</tr>
+<tr>
+<td>3</td>
+<td>完全的命令行模式，就是标准字符界面</td>
+</tr>
+<tr>
+<td>4</td>
+<td>系统保留</td>
+</tr>
+<tr>
+<td>5</td>
+<td>图形模式</td>
+</tr>
+<tr>
+<td>6</td>
+<td>重启动</td>
+</tr>
+</tbody>
+</table>
+<p>查看运行级别命令 runlevel</p>
+<p>系统默认允许级别</p>
+<pre><code>vi  /etc/inittab
+id=3：initdefault  系统开机后直接进入哪个运行级别
+</code></pre>
+
+<p>开机启动配置文件</p>
+<pre><code>/etc/rc.local
+/etc/rc.d/rc[0~6].d
+</code></pre>
+
+<p>例子:当我们需要开机启动自己的脚本时，只需要将可执行脚本丢在/etc/init.d目录下，然后在/etc/rc.d/rc*.d中建立软链接即可</p>
+<pre><code>root@localhost ~]# ln -s /etc/init.d/sshd /etc/rc.d/rc3.d/S100ssh
+</code></pre>
+
+<p>此处sshd是具体服务的脚本文件，S100ssh是其软链接，S开头代表加载时自启动；如果是K开头的脚本文件，代表运行级别加载时需要关闭的。</p>
+<ul>
+<li>入侵排查</li>
+</ul>
+<pre><code>启动项文件： more /etc/rc.local /etc/rc.d/rc[0~6].d ls -l /etc/rc.d/rc3.d/
+</code></pre>
+
+<h3 id="6">6、计划任务</h3>
+<ul>
+<li>基础知识</li>
+</ul>
+<pre><code>1、利用crontab创建计划任务
+
+## 列出某个用户cron服务的详细内容，默认编写的crontab文件会保存在 (/var/spool/cron/用户名 例如: /var/spool/cron/root
+
+crontab -l      # 列出某个用户cron服务的详细内容
+
+ls /etc/cron*   # 查看etc目录任务计划相关文件
+
+##  删除每个用户cront任务
+
+crontab -r
+
+2、利用anacron实现异步定时任务调度
+
+anacron 任务被列在 /etc/anacrontab 中，任务可以使用下面的格式（anacron 文件中的注释必须以 # 号开始）安排。
+
+period   delay   job-identifier   command
+
+从上面的格式中：
+
+- period - 这是任务的频率，以天来指定，或者是@daily 、@weekly、@monthly 代表每天、每周、每月一次。你也可以使用数字：1 - 每天、7 - 每周、30- 每月，或者N - 几天。
+- delay - 这是在执行一个任务前等待的分钟数。
+- job-id - 这是写在日志文件中任务的独特名字。
+- command - 这是要执行的命令或 shell 脚本。
+
+## 例子 
+
+每天运行 /home/backup.sh脚本
+
+ vi /etc/anacrontab 
+ @daily 10 /bin/bash /home/backup.sh
+
+</code></pre>
+
+<ul>
+<li>入侵排查</li>
+</ul>
+<pre><code>cat /var/spool/cron/* 
+cat /etc/crontab
+ls -rtal /etc/cron.d/*
+ls -rtal /etc/cron.daily/* 
+cat /etc/cron.hourly/* 
+cat /etc/cron.monthly/*
+cat /etc/cron.weekly/*
+cat /etc/anacrontab
+cat /var/spool/anacron/*
+
+ more /etc/cron.daily/*  查看目录下所有文件
+</code></pre>
+
+<h3 id="7">7、服务</h3>
+<ul>
+<li>基础知识</li>
+</ul>
+<pre><code># 第一种修改方法：
+
+chkconfig [--level 运行级别] [独立服务名] [on|off]
+chkconfig –level  2345 httpd on  开启自启动
+chkconfig httpd on （默认level是2345）
+
+第二种修改方法：
+
+修改/etc/re.d/rc.local 文件  
+加入 /etc/init.d/httpd start
+
+第三种修改方法：
+
+使用ntsysv命令管理自启动，可以管理独立服务和xinetd服务。
+</code></pre>
+
+<ul>
+<li>入侵排查</li>
+</ul>
+<pre><code>1、查询已安装的服务-RPM包安装的服务：
+
+chkconfig  --list  查看服务自启动状态，可以看到所有的RPM包安装的服务
+ps aux | grep crond 查看当前服务
+
+系统在3与5级别下的启动项 
+中文环境
+chkconfig --list | grep &quot;3:启用\|5:启用&quot;
+英文环境
+chkconfig --list | grep &quot;3:on\|5:on&quot;
+
+2、源码包安装的服务
+
+查看服务安装位置 ，一般是在/user/local/
+service httpd start
+搜索/etc/rc.d/init.d/  查看是否存在
+</code></pre>
+
+<h3 id="8">8、日志分析</h3>
+<h4 id="_5">系统日志</h4>
+<p>日志默认存放位置：/var/log/</p>
+<p>查看日志配置情况：more /etc/rsyslog.conf</p>
+<table>
+<thead>
+<tr>
+<th>日志文件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/var/log/cron</td>
+<td>记录了系统定时任务相关的日志</td>
+</tr>
+<tr>
+<td>/var/log/cups</td>
+<td>记录打印信息的日志</td>
+</tr>
+<tr>
+<td>/var/log/dmesg</td>
+<td>记录了系统在开机时内核自检的信息，也可以使用dmesg命令直接查看内核自检信息</td>
+</tr>
+<tr>
+<td>/var/log/mailog</td>
+<td>记录邮件信息</td>
+</tr>
+<tr>
+<td>/var/log/message</td>
+<td>记录系统重要信息的日志。这个日志文件中会记录Linux系统的绝大多数重要信息，如果系统出现问题时，首先要检查的就应该是这个日志文件</td>
+</tr>
+<tr>
+<td>/var/log/btmp</td>
+<td>记录错误登录日志，这个文件是二进制文件，不能直接vi查看，而要使用lastb命令查看</td>
+</tr>
+<tr>
+<td>/var/log/lastlog</td>
+<td>记录系统中所有用户最后一次登录时间的日志，这个文件是二进制文件，不能直接vi，而要使用lastlog命令查看</td>
+</tr>
+<tr>
+<td>/var/log/wtmp</td>
+<td>永久记录所有用户的登录、注销信息，同时记录系统的启动、重启、关机事件。同样这个文件也是一个二进制文件，不能直接vi，而需要使用last命令来查看</td>
+</tr>
+<tr>
+<td>/var/log/utmp</td>
+<td>记录当前已经登录的用户信息，这个文件会随着用户的登录和注销不断变化，只记录当前登录用户的信息。同样这个文件不能直接vi，而要使用w,who,users等命令来查询</td>
+</tr>
+<tr>
+<td>/var/log/secure</td>
+<td>记录验证和授权方面的信息，只要涉及账号和密码的程序都会记录，比如SSH登录，su切换用户，sudo授权，甚至添加用户和修改用户密码都会记录在这个日志文件中</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>/var/log/wtmp</li>
+</ul>
+<pre><code>last
+last -f /var/log/wtmp
+</code></pre>
+
+<ul>
+<li>/var/log/utmp</li>
+</ul>
+<pre><code>last -f /var/log/utmp
+who
+</code></pre>
+
+<ul>
+<li>
+<p>/var/log/lastlog（lastlog）  最后一次登录时间的日志</p>
+</li>
+<li>
+<p>/var/log/btmp（lastb）</p>
+</li>
+<li>
+<p>/vat/log/secure 日志分析技巧（结合shell）：</p>
+</li>
+</ul>
+<pre><code>
+1、定位有多少IP在爆破主机的root帐号：    
+grep &quot;Failed password for root&quot; /var/log/secure | awk '{print $11}' | sort | uniq -c | sort -nr | more
+
+定位有哪些IP在爆破：
+grep &quot;Failed password&quot; /var/log/secure|grep -E -o &quot;(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)&quot;|uniq -c
+
+爆破用户名字典是什么？
+ grep &quot;Failed password&quot; /var/log/secure|perl -e 'while($_=&lt;&gt;){ /for(.*?) from/; print &quot;$1\n&quot;;}'|uniq -c|sort -nr
+
+2、登录成功的IP有哪些：   
+grep &quot;Accepted &quot; /var/log/secure | awk '{print $11}' | sort | uniq -c | sort -nr | more
+
+登录成功的日期、用户名、IP：
+grep &quot;Accepted &quot; /var/log/secure | awk '{print $1,$2,$3,$9,$11}' 
+
+3、增加一个用户kali日志：
+Jul 10 00:12:15 localhost useradd[2382]: new group: name=kali, GID=1001
+Jul 10 00:12:15 localhost useradd[2382]: new user: name=kali, UID=1001, GID=1001, home=/home/kali
+, shell=/bin/bash
+Jul 10 00:12:58 localhost passwd: pam_unix(passwd:chauthtok): password changed for kali
+#grep &quot;useradd&quot; /var/log/secure 
+
+4、删除用户kali日志：
+Jul 10 00:14:17 localhost userdel[2393]: delete user 'kali'
+Jul 10 00:14:17 localhost userdel[2393]: removed group 'kali' owned by 'kali'
+Jul 10 00:14:17 localhost userdel[2393]: removed shadow group 'kali' owned by 'kali'
+# grep &quot;userdel&quot; /var/log/secure
+
+5、su切换用户：
+Jul 10 00:38:13 localhost su: pam_unix(su-l:session): session opened for user good by root(uid=0)
+
+sudo授权执行:
+sudo -l
+Jul 10 00:43:09 localhost sudo:    good : TTY=pts/4 ; PWD=/home/good ; USER=root ; COMMAND=/sbin/shutdown -r now
+</code></pre>
+
+<h4 id="apache">apache日志</h4>
+<p>apache默认生成两个日志文件，access_log、error_log</p>
+<ul>
+<li>access_log</li>
+</ul>
+<p>查询访问量前十的IP地址：</p>
+<pre><code>cat access_log |cut -d ' ' -f 1 |sort |uniq -c | sort -nr | awk '{print $0 }' | head -n 10 |less
+</code></pre>
+
+<h3 id="9">9、查杀工具</h3>
+<ul>
+<li>1) Rootkit查杀</li>
+</ul>
+<p>chkrootkit</p>
+<p>网址：http://www.chkrootkit.org</p>
+<pre><code>使用方法：
+wget ftp://ftp.pangeia.com.br/pub/seg/pac/chkrootkit.tar.gz
+tar zxvf chkrootkit.tar.gz
+cd chkrootkit-0.52
+make sense
+#编译完成没有报错的话执行检查
+./chkrootkit
+</code></pre>
+
+<p>rkhunter</p>
+<p>网址：http://rkhunter.sourceforge.net</p>
+<pre><code>使用方法：
+Wget https://nchc.dl.sourceforge.net/project/rkhunter/rkhunter/1.4.4/rkhunter-1.4.4.tar.gz
+tar -zxvf rkhunter-1.4.4.tar.gz
+cd rkhunter-1.4.4
+./installer.sh --install
+rkhunter -c
+</code></pre>
+
+<ul>
+<li>
+<p>2) 病毒查杀</p>
+</li>
+<li>
+<p>Clamav</p>
+</li>
+</ul>
+<p>ClamAV的官方下载地址为：<a href="http://www.clamav.net/download.html">http://www.clamav.net/download.html</a></p>
+<p>安装方式一：</p>
+<pre><code>1、安装zlib：
+wget http://nchc.dl.sourceforge.net/project/libpng/zlib/1.2.7/zlib-1.2.7.tar.gz 
+tar -zxvf  zlib-1.2.7.tar.gz
+cd zlib-1.2.7
+#安装一下gcc编译环境： yum install gcc
+CFLAGS=&quot;-O3 -fPIC&quot; ./configure --prefix= /usr/local/zlib/
+make &amp;&amp; make install
+
+2、添加用户组clamav和组成员clamav：
+groupadd clamav
+useradd -g clamav -s /bin/false -c &quot;Clam AntiVirus&quot; clamav
+
+3、安装Clamav
+tar –zxvf clamav-0.97.6.tar.gz
+cd clamav-0.97.6
+./configure --prefix=/opt/clamav --disable-clamav -with-zlib=/usr/local/zlib
+make
+make install
+
+4、配置Clamav
+mkdir /opt/clamav/logs
+mkdir /opt/clamav/updata
+touch /opt/clamav/logs/freshclam.log
+touch /opt/clamav/logs/clamd.log
+cd /opt/clamav/logs
+chown clamav:clamav clamd.log
+chown clamav:clamav freshclam.log
+
+5、ClamAV 使用：
+ /opt/clamav/bin/freshclam 升级病毒库
+./clamscan –h 查看相应的帮助信息
+./clamscan -r /home  扫描所有用户的主目录就使用
+./clamscan -r --bell -i /bin  扫描bin目录并且显示有问题的文件的扫描结果
+</code></pre>
+
+<p>安装方式二：</p>
+<pre><code># 安装
+yum install -y clamav
+# 更新病毒库
+freshclam
+# 扫描方法
+clamscan -r /etc --max-dir-recursion=5 -l /root/etcclamav.log
+clamscan -r /bin --max-dir-recursion=5 -l /root/binclamav.log
+clamscan -r /usr --max-dir-recursion=5 -l /root/usrclamav.log
+# 扫描并杀毒
+clamscan -r  --remove  /usr/bin/bsd-port
+clamscan -r  --remove  /usr/bin/
+clamscan -r --remove  /usr/local/zabbix/sbin
+# 查看日志发现
+cat /root/usrclamav.log |grep FOUND
+</code></pre>
+
+<ul>
+<li>3) WebShell查杀</li>
+</ul>
+<pre><code>河马webshell查杀：
+http://www.shellpub.com
+
+深信服Webshell网站后门检测工具：http://edr.sangfor.com.cn/backdoor_detection.html
+</code></pre>
+
+<h3 id="10">10、自动化辅助脚本</h3>
+<pre><code># # 查看当前登录用户
+who &gt; who.txt
+# # 显示目前登入系统的用户信息
+w &gt; w.txt
+# # 显示时间
+date &gt; date.txt
+# # 查看CPU信息
+cat /proc/cpuinfo &gt; cpuinfo.txt
+# # 查询系统版本
+lsb_release -a &gt; lsb_release.txt
+# # 当前系统相关信息(内核版本号、硬件架构、主机名称和操作系统类型等)
+uname -a &gt; uname.txt
+# # Linux查看当前操作系统版本信息
+cat /proc/version &gt;  version.txt
+# # 以批处理模式显示进程信息，更新1次后不再更新
+top -b -n 1 &gt; top.txt
+# # 查看系统负载
+uptime &gt; uptime.txt
+# # MB显示当前内存的使用
+free -m &gt; free_m.txt
+# # 文件系统的磁盘空间占用情况
+df -lhT &gt; df_lhT.txt
+# #  显示分区类型
+fdisk -l &gt; fdisk_l.txt
+# # 挂载设备情况
+mount &gt; mount.txt
+# # 显示系统中已存在的环境变量
+env &gt; env.txt
+# # 查看自定义环境变量
+cat ~/.bashrc &gt; bashrc.txt
+# # 读取内核信息
+cat /proc/meminfo &gt; meminfo.txt
+
+#account check  7
+
+# # 系统用户信息
+cat /etc/passwd &gt; etc_passwd.txt
+# # 密文信息
+cat /etc/shadow &gt; etc_shadow.txt
+# # 查看用户文件状态
+stat /etc/passwd &gt; etc_passwd_stat.txt
+stat /etc/shadow &gt; etc_shadow_stat.txt
+# # 查看特权用户
+awk -F: '$3==0 {print $1}' /etc/passwd &gt; etc_passwd_special_usr.txt
+grep “0” /etc/passwd &gt; etc_passwd_new_user.txt
+awk -F: 'length($2)==0 {print $1}' /etc/shadow &gt; etc_shadow_no_password_user.txt
+
+#process check  4
+# # 全格式显示所有进程
+ps -elf &gt; ps_elf.txt
+# # 显示所有进程，包括其他用户 
+ps aux &gt; ps_aux.txt
+ps -ef | grep inted  &gt;  ps_inted.txt
+ls /proc |sort -n|uniq &gt; proc.txt
+
+#file check 11
+# # 根据uid、执行权限来查找
+find / -uid 0 -perm -4000 &gt; uid0_perm4000.txt
+# # 根据文件大小
+find / -size +10000k &gt; size10000.txt
+find / -name &quot;...&quot; &gt; 3point_name_file.txt
+find / -name &quot;.. &quot; &gt; 2point_name_file.txt
+find / -name &quot;. &quot; &gt; 1point_name_file.txt
+find / -name &quot; &quot; &gt; blankspace_name_file.txt
+# # 查看隐藏文件
+find / -name &quot;.*&quot; &gt; hide_file.txt
+find / -name &quot;*&quot; &gt; all_file.txt
+find / -name &quot;.rhosts&quot; &gt; rhosts.txt
+find / -name &quot;.forward&quot; &gt; forward.txt
+# # 列出当前系统打开文件
+lsof &gt; lsof.txt
+
+#integrity check 5
+# # 查询指定文件来自于哪个安装包
+rpm -qf /bin/ls &gt; rpm_ls.txt
+rpm -Vf /bin/ls &gt;&gt; rpm_ls.txt
+rpm -qf /bin/netstat &gt; rpm_netstat.txt
+rpm -Vf /bin/netstat &gt;&gt; rpm_netstat.txt
+rpm -qf /bin/login &gt; rpm_login.txt
+rpm -Vf /bin/login &gt;&gt; rpm_login.txt
+rpm -qf /bin/find &gt; rpm_find.txt
+rpm -Vf /bin/find &gt;&gt; rpm_find.txt
+rpm -qf /usr/bin/top &gt; rpm_top.txt
+rpm -Vf /usr/bin/top &gt;&gt; rpm_top.txt
+
+#network check 6
+# # 查看路由表条目
+ip link | grep PROMISC &gt; ip_promisc.txt
+# # 显示所有联网文件
+lsof -i &gt; lsof_i.txt
+# # 显示TCP、UDP传输协议、Socket程序名称
+netstat -ntulpa &gt;  netstat_ntulpa.txt
+# # 显示正在使用Socket的程序
+netstat -anpo &gt; netstat_anpo.txt
+# # 显示arp缓冲区的所有条目
+arp -a &gt; arp_a.txt
+# # 显示全部接口信息
+ifconfig -a &gt; ifconfig_a.txt
+
+#schedule check 5
+# # 显示root的crontab文件内容
+crontab -l -u root &gt; root_crontab.txt
+crontab -l -u coremail &gt; coremail_crontab.txt
+# # 计划任务
+cat /etc/crontab &gt; etc_crontab.txt
+# # 列出计划任务的脚本
+ls /etc/cron.* -a &gt; etc_cron.txt
+# # 查看定时任务
+ls /var/spool/cron/ -a &gt; var_spool_cron.txt
+
+#rc check 4
+# # 启动项顺序
+cat /etc/rc.d/rc.local &gt; rc_local.txt
+# # 该目录下存在各个运行级别的脚本文件
+ls /etc/rc.d -a &gt; rc_d.txt
+ls /etc/rc*.d -a &gt; rcV_d.txt
+# # 搜索执行权限4000的普通类型文件
+find / -type f -perm 4000 &gt; type_f_perm_4000.txt
+
+#log check 11
+# # 日志进程
+ps -ef | grep syslog &gt; syslog.txt
+# # 列出日志目录
+ls -al /var/log &gt; var_log.txt
+# # 列出日志目录状态
+stat /var/log/wtmp &gt; stat_wtmp.txt
+stat /var/run/utmp &gt; stat_utmp.txt
+cat /var/run/utmp &gt; utmp.txt
+cat /etc/rsyslog.conf &gt; rsyslog_conf.txt
+cat /etc/init.d/rsyslog &gt; rsyslog.txt
+# # 列出登入系统失败的用户相关信息
+lastb &gt; lastb.txt
+# # :列出目前与过去登入系统的用户相关信息
+last &gt; last.txt
+# # Shell历史命令记录文件
+cat ~/.bash_history &gt; history.txt
+ls -l ~/.bash_history &gt; bash_history.txt
+
+#inetd sheck 1
+# # 扩展互联网服务守护进程配置
+cat /etc/xinetd.conf &gt; xinetd_config.txt
+
+#kernel check 2
+# # 加载的模块信息
+lsmod &gt; lsmod.txt
+find / -name core -exec ls -l {} \; &gt; core_file.txt
+
+#service check 2
+# # 查看开机启动服务
+chkconfig --list &gt; chkconfig_lists.txt
+# # 查看本地rpc进程
+rpcinfo -p &gt; rpcinfo.txt
+
+#files get 5
+# # 打包守护进程文件
+tar -zcvf xinetd.tar.gz /etc/xinetd.d/*
+# # 打包日志文件
+tar -zcvf log.tar.gz /var/log/*
+# # 打包自启动脚本
+tar -zcvf rcd.tar.gz /etc/rc.d/* 
+# # 打包计划任务
+tar -zcvf cron.tar.gz /etc/cron.*
+tar -zcvf at.tar.gz /var/spool/at/* 
+# # 清除当前会话命令
+history -r
+</code></pre>
+
+<h3 id="11">11、排查技巧</h3>
+<h4 id="proc">利用/proc恢复删除的文件</h4>
+<p>/proc目录是内核提供给我们的查询中心，通过查询该目录下的文件内容，可以获取到有关系统硬件及当前运行进程的信息。</p>
+<ul>
+<li>fd：fd目录包含了进程打开的每一个文件的文件描述符。这些描述符都指向实际文件：</li>
+</ul>
+<p>在/proc/{$PID}/fd目录下找到该文件的文件句柄：在/proc/15922/fd目录下找到该文件的文件句柄：</p>
+<pre><code>root@kali:~# ls -rtal /proc/15922/fd
+total 0
+dr-xr-xr-x 9 root root  0 Sep  9 09:38 ..
+dr-x------ 2 root root  0 Sep 10 04:13 .
+lrwx------ 1 root root 64 Sep 10 04:13 4 -&gt; '/root/VulApps/.git/objects/pack/tmp_pack_ETdZdJ (deleted)'
+lrwx------ 1 root root 64 Sep 10 04:13 3 -&gt; 'socket:[276743]'
+lrwx------ 1 root root 64 Sep 10 04:13 2 -&gt; /dev/pts/1
+l-wx------ 1 root root 64 Sep 10 04:13 1 -&gt; 'pipe:[275299]'
+lr-x------ 1 root root 64 Sep 10 04:13 0 -&gt; 'pipe:[275298]'
+
+</code></pre>
+
+<p>尝试恢复该文件，直接复制文件句柄、并修改文件权限即可：</p>
+<pre><code>root@kali:~# cp /proc/15922/fd/{$文件句柄序号} /opt/zz
+root@kali:~# cp /proc/15922/fd/4 /opt/zz
+root@kali:~# md5sum /proc/15922/fd/4
+81218b19401d4c7775c7b0dca09da692  /proc/15922/fd/4
+root@kali:~# md5sum /opt/zz
+81218b19401d4c7775c7b0dca09da692  /opt/zz
+
+</code></pre>
+
+<h4 id="rpm">RPM文件检查</h4>
+<p>系统完整性可以通过rpm自带的-Va来校验检查所有的rpm软件包，查看哪些命令是否被替换了：</p>
+<pre><code>./rpm -Va &gt; rpm.log
+</code></pre>
+
+<p>如果一切均校验正常将不会产生任何输出，如果有不一致的地方，就会显示出来，输出格式是8位长字符串，每个字符都用以表示文件与RPM数据库中一种属性的比较结果 ，如果是. (点) 则表示测试通过。</p>
+<pre><code>验证内容中的8个信息的具体内容如下：
+        S         文件大小是否改变
+        M         文件的类型或文件的权限（rwx）是否被改变
+        5         文件MD5校验是否改变（可以看成文件内容是否改变）
+        D         设备中，从代码是否改变
+        L         文件路径是否改变
+        U         文件的属主（所有者）是否改变
+        G         文件的属组是否改变
+        T         文件的修改时间是否改变
+</code></pre>
+
+<ul>
+<li>检查单个文件</li>
+</ul>
+<pre><code># 检查文件所属安装包
+[root@centos ~]# rpm  -qf /bin/ls 
+coreutils-8.4-47.el6.x86_64
+# 检查文件的匹配度
+[root@centos ~]# rpm  -Vf /bin/ls 
+S.5....T.    /bin/ls
+</code></pre>
+
+<p>如果命令被替换了，如果还原回来：</p>
+<pre><code>文件提取还原案例：
+rpm  -qf /bin/ls  查询ls命令属于哪个软件包
+mv  /bin/ls /tmp  先把ls转移到tmp目录下，造成ls命令丢失的假象
+rpm2cpio /mnt/cdrom/Packages/coreutils-8.4-19.el6.i686.rpm | cpio -idv ./bin/ls 提取rpm包中ls命令到当前目录的/bin/ls下
+cp /root/bin/ls  /bin/ 把ls命令复制到/bin/目录 修复文件丢失
+</code></pre>
+
+<h3 id="_6">参考：排查实战</h3>
+<p>https://www.t00ls.net/viewthread.php?tid=48068&amp;extra=&amp;page=1</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../03内存分析/" title="内存分析" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                内存分析
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../04入侵痕迹排查-Windows/" title="入侵痕迹排查-Windows" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                入侵痕迹排查-Windows
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.5e60981f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

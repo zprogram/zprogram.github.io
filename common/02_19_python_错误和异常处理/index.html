@@ -1,0 +1,1543 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>错误和异常处理 - knowledge_wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#757575">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="brown">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="knowledge_wiki" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                knowledge_wiki
+              </span>
+              <span class="md-header-nav__topic">
+                错误和异常处理
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="knowledge_wiki" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    knowledge_wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Web security
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Web security
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/01introduce/" title="Security Basic" class="md-nav__link">
+      Security Basic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/02information_gathering/" title="information gathering" class="md-nav__link">
+      information gathering
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/03Web_Security_protocol/" title="Web Security protocol" class="md-nav__link">
+      Web Security protocol
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/04SQL_Injection/" title="SQL Injection" class="md-nav__link">
+      SQL Injection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/05xxe/" title="xxe" class="md-nav__link">
+      xxe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/06Code_Injection/" title="Code Injection" class="md-nav__link">
+      Code Injection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/07Command_execute/" title="Command execute" class="md-nav__link">
+      Command execute
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/08Variable_Coverage/" title="Variable Coverage" class="md-nav__link">
+      Variable Coverage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/09XSS/" title="XSS" class="md-nav__link">
+      XSS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/10CSRF/" title="CSRF" class="md-nav__link">
+      CSRF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/11file_processing/" title="File Processing" class="md-nav__link">
+      File Processing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/12Session_Management/" title="Session Management" class="md-nav__link">
+      Session Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/13Unvalidated_Redirects_and_Forwards/" title="Unvalidated Redirects and Forwards" class="md-nav__link">
+      Unvalidated Redirects and Forwards
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/14SSRF/" title="SSRF" class="md-nav__link">
+      SSRF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/15unserialize/" title="unserialize" class="md-nav__link">
+      unserialize
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/16Databases_Security/" title="Databases Security" class="md-nav__link">
+      Databases Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/17Operating_system_Security/" title="Operating system Security" class="md-nav__link">
+      Operating system Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/18Middleware_Security/" title="Middleware Security" class="md-nav__link">
+      Middleware Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/19Pentest_Cheat_Sheets/" title="Pentest Cheat Sheets" class="md-nav__link">
+      Pentest Cheat Sheets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-20" type="checkbox" id="nav-2-20">
+    
+    <label class="md-nav__link" for="nav-2-20">
+      tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-20">
+        tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/tools_common/" title="common" class="md-nav__link">
+      common
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/tools_Nmap/" title="nmap" class="md-nav__link">
+      nmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/tools_Burpsuite/" title="Burpsuite" class="md-nav__link">
+      Burpsuite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/tools_SQLMap/" title="SQLMap" class="md-nav__link">
+      SQLMap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web_Security/tools_Metasploit/" title="Metasploit" class="md-nav__link">
+      Metasploit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Bug-Bounty
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Bug-Bounty
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Bug-Bounty/Bug-Bounty/" title="Bug-Bounty" class="md-nav__link">
+      Bug-Bounty
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Bug-Bounty/CTF/" title="CTF" class="md-nav__link">
+      CTF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Research on program vulnerabilities
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Research on program vulnerabilities
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/攻击类漏洞利用/" title="漏洞利用" class="md-nav__link">
+      漏洞利用
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/01PHP Security/" title="PHP Security" class="md-nav__link">
+      PHP Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/02Binary_Security/" title="Binary Security" class="md-nav__link">
+      Binary Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/03Malware_tech/" title="Malware analysis" class="md-nav__link">
+      Malware analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/04Malware_Analysis_tech/" title="Malware analysis tech" class="md-nav__link">
+      Malware analysis tech
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Computer Forensics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Computer Forensics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/00APT上机检查思路/" title="Introduce" class="md-nav__link">
+      Introduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/01Windows执行痕迹搜集/" title="Windows执行痕迹搜集" class="md-nav__link">
+      Windows执行痕迹搜集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/02流量分析/" title="流量分析" class="md-nav__link">
+      流量分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/03内存分析/" title="内存分析" class="md-nav__link">
+      内存分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/04入侵痕迹排查-Linux/" title="入侵痕迹排查-Linux" class="md-nav__link">
+      入侵痕迹排查-Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/04入侵痕迹排查-Windows/" title="入侵痕迹排查-Windows" class="md-nav__link">
+      入侵痕迹排查-Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/06入侵手法/" title="入侵手法" class="md-nav__link">
+      入侵手法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/05tools_common/" title="tools_commo" class="md-nav__link">
+      tools_commo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Information_Security_Engineer/" title="Information Security Engineer" class="md-nav__link">
+      Information Security Engineer
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      common
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        common
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../00_Programer_learn_Strategy/" title="程序员攻略" class="md-nav__link">
+      程序员攻略
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../01_Algrothm/" title="Algrothm" class="md-nav__link">
+      Algrothm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3" checked>
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_1_python_基本语法/" title="基本语法" class="md-nav__link">
+      基本语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_2_python_变量和数据类型/" title="变量和数据类型" class="md-nav__link">
+      变量和数据类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_3_python_流程控制/" title="流程控制" class="md-nav__link">
+      流程控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_4_python_函数及作用域/" title="函数及作用域" class="md-nav__link">
+      函数及作用域
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_5_python_数学/" title="数学函数" class="md-nav__link">
+      数学函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_6_python_字符串/" title="字符串" class="md-nav__link">
+      字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_7_python_列表/" title="列表" class="md-nav__link">
+      列表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_8_python_tuple/" title="tuple" class="md-nav__link">
+      tuple
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_9_python_字典/" title="字典" class="md-nav__link">
+      字典
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_10_python_集合/" title="集合" class="md-nav__link">
+      集合
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_11_python_文件操作/" title="文件操作" class="md-nav__link">
+      文件操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_12_python_os/" title="OS" class="md-nav__link">
+      OS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_13_python_shutil/" title="shutil" class="md-nav__link">
+      shutil
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_14_python_zip压缩/" title="zip压缩" class="md-nav__link">
+      zip压缩
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_15_python_calendar日历/" title="calendar日历" class="md-nav__link">
+      calendar日历
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_16_python_time时间/" title="time时间" class="md-nav__link">
+      time时间
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_17_python_类和对象/" title="类和对象" class="md-nav__link">
+      类和对象
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_18_python_模块和包/" title="模块和包" class="md-nav__link">
+      模块和包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="错误和异常处理" class="md-nav__link md-nav__link--active">
+      错误和异常处理
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_20_python_tkinter/" title="tkinter" class="md-nav__link">
+      tkinter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_21_python_性能/" title="性能" class="md-nav__link">
+      性能
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_22_python_多线程/" title="多线程" class="md-nav__link">
+      多线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3-23" type="checkbox" id="nav-7-3-23">
+    
+    <label class="md-nav__link" for="nav-7-3-23">
+      Flask
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-3-23">
+        Flask
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Python_flask/1_URL和视图笔记/" title="URL和视图笔记" class="md-nav__link">
+      URL和视图笔记
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Python_flask/2_模板笔记/" title="模板" class="md-nav__link">
+      模板
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Python_flask/3_数据库/" title="数据库" class="md-nav__link">
+      数据库
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Python_flask/4_cookie和session笔记/" title="cookie和session笔记" class="md-nav__link">
+      cookie和session笔记
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03_C_C++_Basic/" title="C_C++" class="md-nav__link">
+      C_C++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03_1_MFC/" title="C++_MFC" class="md-nav__link">
+      C++_MFC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04_Java_Book/" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Other-VBA语法/" title="VBA" class="md-nav__link">
+      VBA
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Other-Powersehll/" title="Powersehll" class="md-nav__link">
+      Powersehll
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../安全岗位面试/" title="面试" class="md-nav__link">
+      面试
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">错误和异常处理</h1>
+<p>在python中只有2种错误：一种是语法错误，另一种就是异常</p>
+<h1 id="_2">语法错误</h1>
+<p>python中语法错误也叫做解析错误，语法不符合规定导致的错误，初学者常见！</p>
+<h1 id="_3">异常</h1>
+<p>异常是指在语法正确的前提下，运行时发生的错误！</p>
+<p>在python中，语法正确是无法运行时所报的错误都是异常。</p>
+<p>异常是一个对象，在程序的思维中。</p>
+<p>所以异常时可以进行处理的！</p>
+<h1 id="_4">异常的分类（标准异常分类）</h1>
+<pre><code>AssertError         断言语句（assert）失败
+AttributeError          尝试访问未知的对象属性
+EOFError                用户输入文件末尾标志EOF（Ctrl+d）
+FloatingPointError      浮点计算错误
+GeneratorExit           generator.close()方法被调用的时候
+ImportError             导入模块失败的时候
+IndexError              索引超出序列的范围
+KeyError                字典中查找一个不存在的关键字
+KeyboardInterrupt       用户输入中断键（Ctrl+c）
+MemoryError             内存溢出（可通过删除对象释放内存）
+NameError               尝试访问一个不存在的变量
+NotImplementedError     尚未实现的方法
+OSError                 操作系统产生的异常（例如打开一个不存在的文件）
+OverflowError           数值运算超出最大限制
+ReferenceError          弱引用（weak reference）试图访问一个已经被垃圾回收机制回收了的对象
+RuntimeError            一般的运行时错误
+StopIteration           迭代器没有更多的值
+SyntaxError             Python的语法错误
+IndentationError        缩进错误
+TabError                Tab和空格混合使用
+SystemError             Python编译器系统错误
+SystemExit              Python编译器进程被关闭
+TypeError               不同类型间的无效操作
+UnboundLocalError       访问一个未初始化的本地变量（NameError的子类）
+UnicodeError            Unicode相关的错误（ValueError的子类）
+UnicodeEncodeError      Unicode编码时的错误（UnicodeError的子类）
+UnicodeDecodeError      Unicode解码时的错误（UnicodeError的子类）
+UnicodeTranslateError   Unicode转换时的错误（UnicodeError的子类）
+ValueError              传入无效的参数
+ZeroDivisionError       除数为零
+</code></pre>
+<h1 id="_5">常见的异常案例：</h1>
+<p>IndexError   </p>
+<pre><code>list1 = ['冯巩','牛群','马三立','侯宝林']
+
+print(list1[30])#使用了不存在的索引值
+</code></pre>
+<p>KeyError</p>
+<pre><code>dict1 = {'niu':'穹','zhu':'升','yang':'磊','ma':'星辉'}
+
+print(dict1['lv'])#使用了不存在的键
+</code></pre>
+<p>nameError</p>
+<pre><code>print(diao)#使用了为定义的变量
+</code></pre>
+<p>ZeroDivisionError</p>
+<pre><code>print(99/0)#被除数为0
+</code></pre>
+<p>KeyboardInterrupt
+    while True:
+        print('大爷来玩啊～')</p>
+<pre><code>#用于按ctrl+C终止shell执行的错误
+</code></pre>
+<p>AssertionError</p>
+<pre><code>assert len([1,2,3,4]) &gt; 1 #断言成功，不报错
+
+assert len([1,2,3,4]) &gt; 10 #断言失败时被报错
+</code></pre>
+<h1 id="_6">错误异常处理</h1>
+<p>语法格式：</p>
+<pre><code>try:
+    尝试实现某个操作，
+    如果没出现异常，任务就可以完成
+    如果出现异常，将异常从当前代码块扔出去尝试解决异常
+
+except 异常类型1:
+
+    解决方案1：用于尝试在此处处理异常解决问题
+
+except 异常类型2：
+
+    解决方案2：用于尝试在此处处理异常解决问题
+
+except (异常类型1,异常类型2...)
+
+    解决方案：针对多个异常使用相同的处理方式
+
+excpet:
+
+    解决方案：所有异常的解决方案
+
+else:
+
+    如果没有出现任何异常，将会执行此处代码
+
+finally:
+
+    管你有没有异常都要执行的代码
+</code></pre>
+<h2 id="try">try语法</h2>
+<p>1.无任何异常情况下的处理顺序</p>
+<pre><code>1.执行try区域内的代码
+2.如果没有任何异常发生
+3.执行else区域的代码
+4.执行finally区域的代码
+</code></pre>
+<p>2.发生异常的处理顺序</p>
+<pre><code>1.执行try区域内的代码
+2.如果出现异常，将异常从当前try区域抛出
+3.第一个【except 异常类型1】，会查询抛出的异常是否和我指定的类型一致
+    如果异常和的类型一致，则进入当前except区域进行处理
+    如果异常和类型不一致，则跳过当前except区域将异常送到下一个except匹配
+
+4.第二个【except 异常类型2】，会查询抛出的异常是否和我指定的类型一致
+    如果异常和的类型一致，则进入当前except区域进行处理
+    如果异常和类型不一致，则跳过当前except区域将异常送到下一个except匹配
+...
+
+5.如果except区域执行完毕或者没有任何except区域能够接受异常对象，继续运行finally区域
+</code></pre>
+<h1 id="_7">用户自定义异常</h1>
+<p>如果要用户自己操作异常对象需要使用到raise语句，抛出系统的内置异常类型或者自定义的异常类型</p>
+<p>raise语法</p>
+<pre><code>raise   错误异常对象
+</code></pre>
+<p>自定义异常类型</p>
+<pre><code>class 异常类名(RuntimeError):
+    pass
+
+try:
+
+    raise 自定义异常类() #生成并抛出异常类对象
+
+except 异常类 as 接收对象变量:
+
+    可以使用接收对象的变量
+</code></pre>
+<hr />
+<p>自定义异常类中成员可以根据需要添加或者不添加</p>
+<pre><code>常用的自定义类中的异常属性
+
+    自定义发生异常代码
+    自定义发生异常文字提示
+    自定义发生异常的行数
+    等
+</code></pre>
+<h1 id="with">with语法</h1>
+<pre><code>try:
+
+    with open('文件','模式') as 变量：#变量接收了open的返回值
+        使用变量
+
+except:
+    #错误异常处理区域
+    pass
+</code></pre>
+<p>使用该语法操作文件时不需要关闭文件，with会监控文件的使用情况，在适当的时机自动关闭</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../02_18_python_模块和包/" title="模块和包" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                模块和包
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../02_20_python_tkinter/" title="tkinter" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                tkinter
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.5e60981f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

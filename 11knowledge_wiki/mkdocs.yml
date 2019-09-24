@@ -1,0 +1,91 @@
+site_name: knowledge_wiki
+
+nav:
+    - Home: 'index.md'
+    - Web security:
+        - Security Basic :  Web_Security/01introduce.md
+        - information gathering : Web_Security/02information_gathering.md
+        - Web Security protocol : Web_Security/03Web_Security_protocol.md 
+        - SQL Injection : Web_Security/04SQL_Injection.md
+        - xxe : Web_Security/05xxe.md
+        - Code Injection : Web_Security/06Code_Injection.md
+        - Command execute : Web_Security/07Command_execute.md
+        - Variable Coverage : Web_Security/08Variable_Coverage.md        
+        - XSS : Web_Security/09XSS.md
+        - CSRF : Web_Security/10CSRF.md
+        - File Processing : Web_Security/11file_processing.md
+        - Session Management : Web_Security/12Session_Management.md
+        - Unvalidated Redirects and Forwards : Web_Security/13Unvalidated_Redirects_and_Forwards.md
+        - SSRF : Web_Security/14SSRF.md
+        - unserialize : Web_Security/15unserialize.md
+        - Databases Security : Web_Security/16Databases_Security.md
+        - Operating system Security : Web_Security/17Operating_system_Security.md
+        - Middleware Security : Web_Security/18Middleware_Security.md
+        - Pentest Cheat Sheets : Web_Security/19Pentest_Cheat_Sheets.md
+        - tools:
+            - common : Web_Security/tools_common.md
+            - nmap : Web_Security/tools_Nmap.md
+            - Burpsuite : Web_Security/tools_Burpsuite.md
+            - SQLMap : Web_Security/tools_SQLMap.md
+            - Metasploit : Web_Security/tools_Metasploit.md
+    - Bug-Bounty :
+        - Bug-Bounty : Bug-Bounty/Bug-Bounty.md
+        - CTF : Bug-Bounty/CTF.md
+    - Research on program vulnerabilities:
+        - 漏洞利用 : vulnerabilities/攻击类漏洞利用.md
+        - PHP Security :  vulnerabilities/01PHP Security.md
+        - Binary Security :  vulnerabilities/02Binary_Security.md
+        - Malware analysis: vulnerabilities/03Malware_tech.md
+        - Malware analysis tech: vulnerabilities/04Malware_Analysis_tech.md
+    - Computer Forensics: 
+        - Introduce : Computer_Forensics/00APT上机检查思路.md
+        - Windows执行痕迹搜集 : Computer_Forensics/01Windows执行痕迹搜集.md
+        - 流量分析: Computer_Forensics/02流量分析.md
+        - 内存分析 : Computer_Forensics/03内存分析.md
+        - 入侵痕迹排查-Linux : Computer_Forensics/04入侵痕迹排查-Linux.md
+        - 入侵痕迹排查-Windows : Computer_Forensics/04入侵痕迹排查-Windows.md
+        - 入侵手法 : Computer_Forensics/06入侵手法.md
+        - tools_commo : Computer_Forensics/05tools_common.md 
+    - Information Security Engineer: Information_Security_Engineer.md
+    - common: 
+        - 程序员攻略 : common/00_Programer_learn_Strategy.md
+        - Algrothm : common/01_Algrothm.md
+        - Python : 
+            - 基本语法 : common/02_1_python_基本语法.md
+            - 变量和数据类型 : common/02_2_python_变量和数据类型.md
+            - 流程控制 : common/02_3_python_流程控制.md
+            - 函数及作用域 : common/02_4_python_函数及作用域.md
+            - 数学函数 : common/02_5_python_数学.md
+            - 字符串 : common/02_6_python_字符串.md
+            - 列表 : common/02_7_python_列表.md
+            - tuple : common/02_8_python_tuple.md
+            - 字典 : common/02_9_python_字典.md
+            - 集合 : common/02_10_python_集合.md
+            - 文件操作 : common/02_11_python_文件操作.md
+            - OS : common/02_12_python_os.md
+            - shutil : common/02_13_python_shutil.md
+            - zip压缩 : common/02_14_python_zip压缩.md
+            - calendar日历 : common/02_15_python_calendar日历.md
+            - time时间: common/02_16_python_time时间.md
+            - 类和对象: common/02_17_python_类和对象.md
+            - 模块和包: common/02_18_python_模块和包.md
+            - 错误和异常处理: common/02_19_python_错误和异常处理.md
+            - tkinter: common/02_20_python_tkinter.md
+            - 性能: common/02_21_python_性能.md
+            - 多线程 : common/02_22_python_多线程.md
+            - Flask :
+                - URL和视图笔记 : common/Python_flask/1_URL和视图笔记.md
+                - 模板 : common/Python_flask/2_模板笔记.md
+                - 数据库 : common/Python_flask/3_数据库.md
+                - cookie和session笔记 : common/Python_flask/4_cookie和session笔记.md
+        - C_C++ : common/03_C_C++_Basic.md
+        - C++_MFC : common/03_1_MFC.md
+        - Java : common/04_Java_Book.md
+        - VBA : common/Other-VBA语法.md
+        - Powersehll : common/Other-Powersehll.md
+        - 面试 : 安全岗位面试.md
+theme:
+  name: 'material'
+  palette:
+    primary: 'Grey'
+    accent: 'Brown'

