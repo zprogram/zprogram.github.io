@@ -30,7 +30,7 @@ nav:
             - Metasploit : Web_Security/tools_Metasploit.md
     - Bug-Bounty :
         - Bug-Bounty : Bug-Bounty/Bug-Bounty.md
-        - CTF : Bug-Bounty/CTF.md
+        - 漏洞扫描 : Bug-Bounty/漏洞扫描.md
     - Research on program vulnerabilities:
         - 漏洞利用 : vulnerabilities/攻击类漏洞利用.md
         - PHP Security :  vulnerabilities/01PHP Security.md
