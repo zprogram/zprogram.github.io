@@ -850,15 +850,34 @@ https://www.cnblogs.com/17bdw/p/11067058.html
 
 ##### 题解
 
+1、两者之间取一个最大的值做range
+2、把进位赋值给前一个步数,因为carry为如果有值就要前进一位。
+3、从右边往左边读，所以是[-(i+1)]
+4、 val处以2的结果，如果小于2就没有carry位或者说carry位等于0.如果超过2，那就说明有carry位，carry位为1。取模是为了取最后一位值。如果到达位置为0取模为0，如果是1就取模为1，如果是2，2%2为0。
+5、返回结果
+6、判断最后一位有没有加上来的carry位。
+7、反向result，是为了反向输出正确结果
+
 ```
-result , carry,val = "",0,0
-for i in range(max(len(a),len(b))):
-    val = carry
-    if i < len(a):
-        val += int(a[-(i+1)])
-     
-
-
+class Solution(object):
+    def addBinary(self, a, b):
+        """
+        :type a: str
+        :type b: str
+        :rtype: str
+        """
+        result , carry,val = "",0,0
+        for i in range(max(len(a),len(b))):
+            val = carry
+            if i < len(a):
+                val += int(a[-(i+1)]) 
+            if i < len(b):
+                val += int(b[-(i+1)])
+            carry,val = val // 2,val%2
+            result += str(val)
+        if carry:
+            result += str(1)
+        return result[::-1]
 ```
 
 ##### 博文地址
