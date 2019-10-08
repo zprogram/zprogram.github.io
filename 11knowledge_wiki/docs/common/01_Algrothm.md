@@ -911,9 +911,32 @@ https://www.cnblogs.com/17bdw/p/11111549.html
 
 ##### 题解
 
+一个数 x 的开方 sqrt 一定在 0 ~ x 之间，并且满足 sqrt == x / sqrt。可以利用二分查找在 0 ~ x 之间查找 sqrt。
+
+```
+class Solution(object):
+    def mySqrt(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
+        if x < 2 :
+            return x
+        left,right = 1, x // 2 
+        while left <= right :
+            mid = left + (right - left) // 2
+            if mid > x/mid:
+                right = mid - 1
+            else:
+                left = mid + 1
+        return left - 1
+```
+
 ##### 博文地址
 
-https://i.cnblogs.com/EditPosts.aspx?postid=11144240&update=1
+https://www.cnblogs.com/17bdw/p/11144240.html
+
+
 
 
 
