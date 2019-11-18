@@ -1029,5 +1029,7 @@ WEBKIT中的HTML词法解析 `https://blog.csdn.net/dlmu2001/article/details/599
 
 ## 技巧搜集
 
-[输入长度受限情况下的 XSS 攻击](https://xz.aliyun.com/t/3513)
+- [输入长度受限情况下的 XSS 攻击](https://xz.aliyun.com/t/3513)
+
+- [JSON Hijacking漏洞](https://www.cnblogs.com/17bdw/p/11376104.html)
 

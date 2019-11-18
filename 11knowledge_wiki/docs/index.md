@@ -26,20 +26,4 @@
 
 - 看雪翻译小组成员 lipss
 - 跟踪国内外安全事件、漏洞、资讯 zzzhhh
-- 技术文章发布链接 [GitHub](https://github.com/zprogram)、[Pediy](https://bbs.pediy.com/user-214974.htm)、 [52pojie](https://www.52pojie.cn/home.php?mod=space&uid=91574)、 [Blog](http://www.cnblogs.com/17bdw/)
-```
-【吾爱破解52pojie.cn】《一份通过IPC$和lpk.dll感染方式的病毒分析报告》【精华帖】
-【吾爱破解52pojie.cn】《com.h-1病毒分析报告（秒抢红包锁屏样本）+手动查杀操作》【优秀帖】
-【看雪】渗透测试的WINDOWS NTFS技巧集合【优秀帖】
-【看雪】取证分析之逆向服务器提权开启3389远程连接工具 【优秀帖】
-【看雪】用命令行与Python使用YARA规则-识别恶意木马必备【精华帖】
-【看雪】Virrut变种感染型病毒分析报告（Virut.ce）【精华帖】
-【吐司t00ls.net】Mimikatz一键获取远程终端凭据与获取明文密码【精华帖】
-【吐司t00ls.net】python批量检测Struts2-045、JBOSS-JMX-EJB-InvokerServlet
-【吐司t00ls.net】《控制全内网漏洞之MySQL udf提权》
-【安全客】如何基于Python写一个TCP反向连接后门
-【Python】批量查询-提取站长之家IP批量查询的结果加强版本v2.0
-【先知】定位内网中毒主机IP经历小记
-【先知】Mysql UDF BackDoor
-【先知】一次红队之旅
-```
+- 技术文章发布链接 [cnblogs](http://www.cnblogs.com/17bdw/)、[先知社区](https://xz.aliyun.com/u/402) 、[t00ls](https://www.t00ls.net/members-profile-1471.html)、[Pediy](https://bbs.pediy.com/user-214974.htm)、[GitHub](https://github.com/zprogram)、 [52pojie](https://www.52pojie.cn/home.php?mod=space&uid=91574)

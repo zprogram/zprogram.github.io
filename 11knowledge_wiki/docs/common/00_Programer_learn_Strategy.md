@@ -99,7 +99,7 @@ http://www.codeabbey.com/index/task_list
 
 WEB开发：
 ```
-MDN 的 Web 开发入门
+- MDN 的 Web 开发入门
 https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web
 ```
 
@@ -108,23 +108,26 @@ https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web
 #### 入门Python
 
 ```
-Python 编程快速上手 
+- Python 编程快速上手 
 https://book.douban.com/subject/26836700/
-Python 编程：从入门到实践
+- Python 编程：从入门到实践
 https://book.douban.com/subject/26829016/
 ```
 
 #### 入门JavaScript
 
 ```
-MDN JavaScript 教程
+- JavaScript 全栈教程（廖雪峰） 
+https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000
+
+- ES6语法最新
+http://es6.ruanyifeng.com/
+
+- MDN JavaScript 教程。最权威的 JavaScript 官方教程了，从初级到中级再到高级
 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript
 
-W3School JavaScript 教程 
+- W3School JavaScript 教程 
 http://www.w3school.com.cn/js/index.asp
-
-JavaScript 全栈教程（廖雪峰） 
-https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000
 ```
 
 #### 操作系统入门 Linux
@@ -146,32 +149,34 @@ https://www.gitbook.com/book/jeasonstudio/vscode-cn-doc/details
 #### Web 编程入门
 
 ```
-# 前端知识
+# 前端基础
 
  要系统地学习一下前端的知识，也就是 CSS、HTML 和 JavaScript 这三个东西。这里还是给出 MDN 的相关的技术文档页面 
-   CSS 文档 https://developer.mozilla.org/zh-CN/docs/Web/CSS  
-   HTML 文档 https://developer.mozilla.org/zh-CN/docs/Web/HTML 
-   学习的并不是所有的东西，而是了解 CSS 和 HTML 是怎么相互作用来展示数据的，然后，不用记忆文档中的内容，这两个文档是用来查找知识的。
-   简单地学习使用 JavaScript 操纵 HTML 元件，理解 DOM 和动态网页
-  JavaScript HTML DOM 的教程 https://www.w3schools.com/js/js_htmldom.asp W3Schools 
+ 
+- CSS 文档 https://developer.mozilla.org/zh-CN/docs/Web/CSS  - HTML 文档 https://developer.mozilla.org/zh-CN/docs/Web/HTML 
   
- # 后端知识
+  学习的并不是所有的东西，而是了解 CSS 和 HTML 是怎么相互作用来展示数据的，然后，不用记忆文档中的内容，这两个文档是用来查找知识的。
+  简单地学习使用 JavaScript 操纵 HTML 元件，理解 DOM 和动态网页
+
+- JavaScript HTML DOM 的教程 https://www.w3schools.com/js/js_htmldom.asp
+  
+ # 后端基础
  
  想省点事，不想再学一门新的语言了，那么你可以直接用 Python 或者 Node.js。
  如果你想试试另外一种脚本型的也是比较主流的编程语言，那么可以搞搞 PHP，它也是很快就可以上手的语言。
- W3School 的 PHP 教程 ： http://www.w3school.com.cn/php/index.asp
- PHP 的官网文档 ： http://php.net/manual/zh/
+- W3School 的 PHP 教程 ： http://www.w3school.com.cn/php/index.asp
+- PHP 的官网文档 ： http://php.net/manual/zh/
 ```
 
 - 学习要点
 
 ```
-学习 HTML 基本语法。
-学习 CSS 如何选中 HTML 元素并应用一些基本样式。
-学会用 Firefox + Firebug 或 Chrome 查看你觉得很炫的网页结构，并动态修改。
-在一台 Linux 机器上配置 LEMP - Ubuntu/Nginx/PHP/MySQL 这个环境。
-学习 PHP，让后台 PHP 和前台 HTML 进行数据交互，对服务器相应浏览器请求形成初步认识。实现一个表单提交和反显的功能。
-把 PHP 连接本地或者远程数据库 MySQL（MySQL 和 SQL 现学现用够了）。
+- 学习 HTML 基本语法。
+- 学习 CSS 如何选中 HTML 元素并应用一些基本样式。
+- 学会用 Firefox + Firebug 或 Chrome 查看你觉得很炫的网页结构，并动态修改。
+- 在一台 Linux 机器上配置 LEMP - Ubuntu/Nginx/PHP/MySQL 这个环境。
+- 学习 PHP，让后台 PHP 和前台 HTML 进行数据交互，对服务器相应浏览器请求形成初步认识。实现一个表单提交和反显的功能。
+- 把 PHP 连接本地或者远程数据库 MySQL（MySQL 和 SQL 现学现用够了）。
 ```
 
 ## 正式入门

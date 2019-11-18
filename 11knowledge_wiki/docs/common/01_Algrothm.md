@@ -39,7 +39,7 @@ class Solution(object):
                 buff_dict[target - nums[i]] = i
 ```
 
-##### 博文地址：
+##### 【ARTS】01_18_左耳听风-20190311~20190317
 
 ```
 https://www.cnblogs.com/17bdw/p/10540256.html
@@ -101,7 +101,7 @@ class Solution:
             return 0
 ```
 
-##### 博文地址：
+##### 【ARTS】01_20_左耳听风-20190325~20190331
 
 ```
 https://www.cnblogs.com/17bdw/p/10591372.html
@@ -149,7 +149,7 @@ class Solution:
             return False
 ```
 
-##### 博文地址：
+##### 【ARTS】01_21_左耳听风-201900401~201900407
 
 ```
 https://www.cnblogs.com/17bdw/p/10663891.html
@@ -226,7 +226,11 @@ class Solution(object):
         return result
 ```
 
-##### 博文地址：
+##### 【ARTS】01_19_左耳听风-20190318~20190324
+
+```
+https://www.cnblogs.com/17bdw/p/10589946.html
+```
 
 
 
@@ -275,13 +279,11 @@ class Solution:
         return result
 ```
 
-##### 博文地址：
+##### 【ARTS】01_22_左耳听风-201900408~2019004014
 
 ```
 https://www.cnblogs.com/17bdw/p/10703837.html
 ```
-
-
 
 #### [20、有效的括号](https://leetcode-cn.com/problems/valid-parentheses)
 
@@ -334,7 +336,7 @@ class Solution:
         return len(stack)==0
 ```
 
-##### 博文地址：
+##### 【ARTS】01_23_左耳听风-201900415~2019004021
 
 ```
 https://www.cnblogs.com/17bdw/p/10747898.html
@@ -936,9 +938,181 @@ class Solution(object):
 
 https://www.cnblogs.com/17bdw/p/11144240.html
 
+#### [83. 删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
+
+给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。
+
+示例 1:
+
+```
+输入: 1->1->2
+输出: 1->2
+```
+
+示例 2:
+
+```
+输入: 1->1->2->3->3
+输出: 1->2->3
+```
+
+##### 题解
+
+1、把链表值存储
+
+2、通过循环比对上一个值是不是一样while runner and current.val == runner.val:
+
+3、如果是一样的值就一直循环，当不一样的时候再跳出循环。 
+
+```
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def deleteDuplicates(self, head: ListNode) -> ListNode:
+        current = head
+        while current:
+            runner = current.next
+            while runner and current.val == runner.val:
+                runner = runner.next
+            current.next = runner
+            current = runner
+        return head
+
+```
+
+##### 博文地址
+
+[【ARTS】01_35_左耳听风-201900708~201900714](https://www.cnblogs.com/17bdw/p/11191645.html)
+
+#### [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)
+
+题解
+
+```
+class Solution(object):
+    def climbStairs(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        prev , current = 0,1
+        for i in range(n):
+            prev,current = current,current+prev
+        return current
+```
 
 
 
+
+
+#### [88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)
+
+##### 题解
+
+给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。
+
+说明:
+
+- 初始化 nums1 和 nums2 的元素数量分别为 m 和 n。
+- 你可以假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元素。
+
+示例:
+```
+输入:
+nums1 = [1,2,3,0,0,0], m = 3
+nums2 = [2,5,6],       n = 3
+
+输出: [1,2,2,3,5,6]
+```
+
+
+##### 博文地址
+
+[【ARTS】01_36_左耳听风-201900715~201900721](https://www.cnblogs.com/17bdw/p/11216452.html)
+
+
+
+### 【leetcode】100. 相同的树
+https://leetcode-cn.com/problems/same-tree/
+
+### 1）problem
+
+给定两个二叉树，编写一个函数来检验它们是否相同。
+
+如果两个树在结构上相同，并且节点具有相同的值，则认为它们是相同的。
+
+示例 1:
+
+```
+输入:       1         1
+          / \       / \
+         2   3     2   3
+
+        [1,2,3],   [1,2,3]
+
+输出: true
+```
+
+示例 2:
+
+···
+输入:      1          1
+          /           \
+         2             2
+
+        [1,2],     [1,null,2]
+
+输出: false
+···
+
+示例 3:
+
+```
+输入:       1         1
+          / \       / \
+         2   1     1   2
+
+        [1,2,1],   [1,1,2]
+
+输出: false
+```
+
+### 2）answer
+
+- 如果这两个节点的值相等，就继续把p节点的左孩子,q节点的左孩子放入栈中；再把p节点的右孩子，q节点的右孩子放入栈中。
+- 重复这个步骤，直到栈为空。
+- 如果整个循环遍历完了，说明两个树的元素都是相等的，返回true。
+- 如果不相等就返回False
+
+### 3）solution
+
+```
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
+        if p is None and q is None:
+            return True
+
+        if p is not None and q is not None:
+            return p.val ==q.val and self.isSameTree(p.left,q.left) and self.isSameTree(p.right,q.right)
+        
+        return False
+```
+
+博文地址
+
+
+[【ARTS】01_38_左耳听风-201900729~201900804](https://www.cnblogs.com/17bdw/p/11333672.html)
 
 
 ### Hash Table

@@ -45,6 +45,7 @@ nav:
         - 入侵痕迹排查-Linux : Computer_Forensics/04入侵痕迹排查-Linux.md
         - 入侵痕迹排查-Windows : Computer_Forensics/04入侵痕迹排查-Windows.md
         - 入侵手法 : Computer_Forensics/06入侵手法.md
+        - CTF&安全防护 : Computer_Forensics/07CTF促进安全防护.md
         - tools_commo : Computer_Forensics/05tools_common.md 
     - Information Security Engineer: Information_Security_Engineer.md
     - common: 

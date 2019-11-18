@@ -53,6 +53,15 @@
 - HTTP协议响应头信息
 - HTTP协议的URL
 
+#### **HTTP编码**
+
+- URL Encoded
+- Hexadecimal
+- Base64
+- Rot13
+
+https://www.hackingarticles.in/understanding-encoding-beginners-guide/
+
 #### **注入漏洞**
 
 - SQL注入
