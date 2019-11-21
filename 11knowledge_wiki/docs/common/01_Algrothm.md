@@ -39,11 +39,7 @@ class Solution(object):
                 buff_dict[target - nums[i]] = i
 ```
 
-##### 【ARTS】01_18_左耳听风-20190311~20190317
-
-```
-https://www.cnblogs.com/17bdw/p/10540256.html
-```
+##### [【ARTS】01_18_左耳听风-20190311~20190317](https://www.cnblogs.com/17bdw/p/10540256.html)
 
 #### [7、整数反转](https://leetcode-cn.com/problems/reverse-integer) 
 
@@ -101,11 +97,7 @@ class Solution:
             return 0
 ```
 
-##### 【ARTS】01_20_左耳听风-20190325~20190331
-
-```
-https://www.cnblogs.com/17bdw/p/10591372.html
-```
+##### [【ARTS】01_20_左耳听风-20190325~20190331](https://www.cnblogs.com/17bdw/p/10591372.html)
 
 #### [9、回文数](https://leetcode-cn.com/problems/palindrome-number)
 
@@ -149,11 +141,9 @@ class Solution:
             return False
 ```
 
-##### 【ARTS】01_21_左耳听风-201900401~201900407
+##### [【ARTS】01_21_左耳听风-201900401~201900407](https://www.cnblogs.com/17bdw/p/10663891.html)
 
-```
-https://www.cnblogs.com/17bdw/p/10663891.html
-```
+
 
 #### [13、罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer)
 
@@ -226,15 +216,7 @@ class Solution(object):
         return result
 ```
 
-##### 【ARTS】01_19_左耳听风-20190318~20190324
-
-```
-https://www.cnblogs.com/17bdw/p/10589946.html
-```
-
-
-
-
+##### [【ARTS】01_19_左耳听风-20190318~20190324](https://www.cnblogs.com/17bdw/p/10589946.html)
 
 #### [14、最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix)
 
@@ -279,11 +261,9 @@ class Solution:
         return result
 ```
 
-##### 【ARTS】01_22_左耳听风-201900408~2019004014
+##### [【ARTS】01_22_左耳听风-201900408~2019004014](https://www.cnblogs.com/17bdw/p/10703837.html)
 
-```
-https://www.cnblogs.com/17bdw/p/10703837.html
-```
+
 
 #### [20、有效的括号](https://leetcode-cn.com/problems/valid-parentheses)
 
@@ -336,11 +316,9 @@ class Solution:
         return len(stack)==0
 ```
 
-##### 【ARTS】01_23_左耳听风-201900415~2019004021
+##### [【ARTS】01_23_左耳听风-201900415~2019004021](https://www.cnblogs.com/17bdw/p/10747898.html)
 
-```
-https://www.cnblogs.com/17bdw/p/10747898.html
-```
+
 
 #### [21、合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists)
 
@@ -377,11 +355,9 @@ class Solution:
         return dumy.next
 ```
 
-##### 博文地址：
+##### [【ARTS】01_24_左耳听风-201900422~2019004028](https://www.cnblogs.com/17bdw/p/10772079.html)
 
-```
-https://www.cnblogs.com/17bdw/p/10772079.html
-```
+
 
 #### [26、删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array)
 
@@ -441,15 +417,7 @@ class Solution:
         return count+1
 ```
 
-##### 博文地址：
-
-```
-https://www.cnblogs.com/17bdw/p/10814731.html
-```
-
-
-
-
+##### [【ARTS】01_25_左耳听风-201900429~20190505](https://www.cnblogs.com/17bdw/p/10814731.html)
 
 #### [27、移除元素](https://leetcode-cn.com/problems/remove-element)
 
@@ -511,11 +479,9 @@ class Solution:
         return last+1
 ```
 
-##### 博文地址：
+##### [【ARTS】01_26_左耳听风-201900506~201900512](https://www.cnblogs.com/17bdw/p/10814744.html)
 
-```
-https://www.cnblogs.com/17bdw/p/10814744.html
-```
+
 
 #### [28、实现 strStr()](https://leetcode-cn.com/problems/implement-strstr) 
 
@@ -557,13 +523,7 @@ class Solution(object):
         return -1
 ```
 
-##### 博文地址：
-
-```
-https://www.cnblogs.com/17bdw/p/10832101.html
-```
-
-
+##### [【ARTS】01_27_左耳听风-201900513~201900519](https://www.cnblogs.com/17bdw/p/10832101.html)
 
 
 
@@ -608,11 +568,7 @@ for i in range(len(nums)):
         return i
 ```
 
-##### 博文地址
-
-https://www.cnblogs.com/17bdw/p/10901656.html
-
-
+##### [【ARTS】01_28_左耳听风-201900520~201900526](https://www.cnblogs.com/17bdw/p/10901656.html)
 
 #### [38、报数](https://leetcode-cn.com/problems/count-and-say/)
 
@@ -676,9 +632,9 @@ class Solution(object):
         return next_seq
 ```
 
-##### 博文地址
+##### [【ARTS】01_29_左耳听风-201900527~201900602](https://www.cnblogs.com/17bdw/p/10965804.html)
 
-https://www.cnblogs.com/17bdw/p/10965804.html
+
 
 #### [53、最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
 
@@ -721,8 +677,8 @@ class Solution(object):
 ```
 
 
-##### 博文地址
-https://www.cnblogs.com/17bdw/p/11009250.html
+##### [【ARTS】01_30_左耳听风-201900603~201900609](https://www.cnblogs.com/17bdw/p/11009250.html)
+
 
 
 
@@ -770,9 +726,9 @@ class Solution(object):
 
 
 
-##### 博文地址：
+##### [【ARTS】01_31_左耳听风-201900610~201900616](https://www.cnblogs.com/17bdw/p/11037760.html)
 
-https://www.cnblogs.com/17bdw/p/11037760.html
+
 
 #### [66. 加一](https://leetcode-cn.com/problems/plus-one/)
 
@@ -823,8 +779,8 @@ if __name__ == '__main__':
     print(c.plusOne([1,0,9]))
 ```
 
-##### 博文地址
-https://www.cnblogs.com/17bdw/p/11067058.html
+##### [【ARTS】01_32_左耳听风-201900617~201900623](https://www.cnblogs.com/17bdw/p/11067058.html)
+
 
 
 
@@ -882,9 +838,9 @@ class Solution(object):
         return result[::-1]
 ```
 
-##### 博文地址
+##### [【ARTS】01_33_左耳听风-201900624~201900630](https://www.cnblogs.com/17bdw/p/11111549.html)
 
-https://www.cnblogs.com/17bdw/p/11111549.html
+
 
 #### [69. x 的平方根](https://leetcode-cn.com/problems/sqrtx/)
 
@@ -934,9 +890,67 @@ class Solution(object):
         return left - 1
 ```
 
-##### 博文地址
+##### [【ARTS】01_34_左耳听风-201900701~201900707](https://www.cnblogs.com/17bdw/p/11144240.html)
 
-https://www.cnblogs.com/17bdw/p/11144240.html
+
+#### [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)
+
+假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
+
+每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
+
+注意：给定 n 是一个正整数。
+
+**示例 1：**
+
+```
+输入： 2
+输出： 2
+解释： 有两种方法可以爬到楼顶。
+1.  1 阶 + 1 阶
+2.  2 阶
+```
+
+**示例 2：**
+
+```
+输入： 3
+输出： 3
+解释： 有三种方法可以爬到楼顶。
+1.  1 阶 + 1 阶 + 1 阶
+2.  1 阶 + 2 阶
+3.  2 阶 + 1 阶
+···
+```
+
+##### 题解
+
+当按步数，发现其实是有规律的。符合斐波那契数列规律，所以可以用斐波那契的方法解题。每层都是两层数字之和。
+
+```
+# n = 1 : 1
+# n = 2 : 2
+# n = 3 : 3
+# n = 4 : 5
+# n = 5 : 8
+
+```
+
+```
+class Solution(object):
+    def climbStairs(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        prev , current = 0,1
+        for i in range(n):
+            prev,current = current,current+prev
+        return current
+```
+
+#####  [【ARTS】01_35_左耳听风-201900708~201900714](https://www.cnblogs.com/17bdw/p/11191645.html)
+
 
 #### [83. 删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
 
@@ -984,30 +998,7 @@ class Solution:
 
 ```
 
-##### 博文地址
-
-[【ARTS】01_35_左耳听风-201900708~201900714](https://www.cnblogs.com/17bdw/p/11191645.html)
-
-#### [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)
-
-题解
-
-```
-class Solution(object):
-    def climbStairs(self, n):
-        """
-        :type n: int
-        :rtype: int
-        """
-        prev , current = 0,1
-        for i in range(n):
-            prev,current = current,current+prev
-        return current
-```
-
-
-
-
+#####  [【ARTS】01_36_左耳听风-201900715~201900721](https://www.cnblogs.com/17bdw/p/11216452.html)
 
 #### [88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)
 
@@ -1029,17 +1020,12 @@ nums2 = [2,5,6],       n = 3
 输出: [1,2,2,3,5,6]
 ```
 
-
-##### 博文地址
-
-[【ARTS】01_36_左耳听风-201900715~201900721](https://www.cnblogs.com/17bdw/p/11216452.html)
+#####  [【ARTS】01_37_左耳听风-201900722~201900728](https://www.cnblogs.com/17bdw/p/11261636.html)
 
 
 
-### 【leetcode】100. 相同的树
-https://leetcode-cn.com/problems/same-tree/
+#### [100. 相同的树](https://leetcode-cn.com/problems/same-tree/)
 
-### 1）problem
 
 给定两个二叉树，编写一个函数来检验它们是否相同。
 
@@ -1081,14 +1067,12 @@ https://leetcode-cn.com/problems/same-tree/
 输出: false
 ```
 
-### 2）answer
+##### 题解
 
 - 如果这两个节点的值相等，就继续把p节点的左孩子,q节点的左孩子放入栈中；再把p节点的右孩子，q节点的右孩子放入栈中。
 - 重复这个步骤，直到栈为空。
 - 如果整个循环遍历完了，说明两个树的元素都是相等的，返回true。
 - 如果不相等就返回False
-
-### 3）solution
 
 ```
 # Definition for a binary tree node.
@@ -1109,46 +1093,139 @@ class Solution:
         return False
 ```
 
-博文地址
+##### [【ARTS】01_38_左耳听风-201900729~201900804](https://www.cnblogs.com/17bdw/p/11333672.html)
 
 
-[【ARTS】01_38_左耳听风-201900729~201900804](https://www.cnblogs.com/17bdw/p/11333672.html)
+
+#### [101. 对称二叉树](https://leetcode-cn.com/problems/symmetric-tree/)
+
+给定一个二叉树，检查它是否是镜像对称的。
+
+例如，二叉树 [1,2,2,3,4,4,3] 是对称的。
+```
+    1
+   / \
+  2   2
+ / \ / \
+3  4 4  3
+```
+但是下面这个 [1,2,2,null,3,null,3] 则不是镜像对称的:
+
+```
+    1
+   / \
+  2   2
+   \   \
+   3    3
+```
+说明:
+
+如果你可以运用递归和迭代两种方法解决这个问题，会很加分。
+
+
+##### 题解
+
+用到了递归的思想，根节点为空返回True；
+
+根节点的左右节点同时为空返回True；
+
+当左节点右节点均不为空而且左右节点的值相等时，就要判断左节点的左子节点和右节点的右子节点是否相等，左节点的右子节点和右节点的左子节点是否相等。
+
+若以上条件均不满足，就要返回False。
+
+```
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def isSymmetric(self, root: TreeNode) -> bool:
+        if root is None:
+            return True
+        return self.isSymetricRecu(root.left,root.right)
+    def isSymetricRecu(self,left,right):
+        if left is None and right is None:
+            return True
+        if left is None or right is None or left.val != right.val:
+            return False
+        return self.isSymetricRecu(left.left,right.right) and self.isSymetricRecu(left.right,right.left)
+```
+
+##### [【ARTS】01_39_左耳听风-201900805~20190811](https://www.cnblogs.com/17bdw/p/11333676.html)
+
+#### [104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
+
+给定一个二叉树，找出其最大深度。
+
+二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。
+
+说明: 叶子节点是指没有子节点的节点。
+
+示例：
+
+给定二叉树`[3,9,20,null,null,15,7]`，
+
+```
+    3
+   / \
+  9  20
+    /  \
+   15   7
+```
+返回它的最大深度 3 。
+
+##### 题解
+
+这里用递归的思想，maxlevel = max( maxleft, maxright) + 1.
+
+```
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def maxDepth(self, root: TreeNode) -> int:
+        if root is None:
+            return 0
+        else:
+            return max(self.maxDepth(root.left),self.maxDepth(root.right))+1
+```
+
+##### [【ARTS】01_40_左耳听风-201900812~201900818](https://www.cnblogs.com/17bdw/p/11371237.html)
+
 
 
 ### Hash Table
 
-#### Jewels and Stones
+#### [771. Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/)
 
-https://leetcode.com/problems/jewels-and-stones/
+##### 题解
 
-```
-题解：https://www.cnblogs.com/17bdw/p/9977996.html#_label0_0
-```
+##### [【ARTS】01_01_左耳听风-20181112~1116](https://www.cnblogs.com/17bdw/p/9977996.html)
+
+#### [136. 只出现一次的数字](https://leetcode.com/problems/single-number/)
+
+##### 题解
+
+##### [【ARTS】01_04_左耳听风-20181203~1209](https://www.cnblogs.com/17bdw/p/10092655.html)
 
 
-#### Single Number
-
-https://leetcode.com/problems/single-number/
-
-```
-题解：https://www.cnblogs.com/17bdw/p/10092655.html#_label1_0
-```
 
 ### string
 
-#### Unique Email Addresses
+#### [929. Unique Email Addresses](https://leetcode.com/problems/unique-email-addresses/)
 
-https://leetcode.com/problems/unique-email-addresses/
+##### 题解
+##### [【ARTS】01_02_左耳听风-20181119~1125](https://www.cnblogs.com/17bdw/p/10018357.html)
 
-```
-题解：https://www.cnblogs.com/17bdw/p/10018357.html#_label0_0
-```
+#### [709. To Lower Case](https://leetcode.com/problems/to-lower-case/)
 
-#### To Lower Case
+##### [【ARTS】01_03_左耳听风-20181126~1202](https://www.cnblogs.com/17bdw/p/10055054.html)
 
-https://leetcode.com/problems/to-lower-case/
-
-```
-题解：https://www.cnblogs.com/17bdw/p/10055054.html#_label1_0
-```
 
