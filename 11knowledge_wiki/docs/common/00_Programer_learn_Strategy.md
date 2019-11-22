@@ -153,7 +153,9 @@ https://www.gitbook.com/book/jeasonstudio/vscode-cn-doc/details
 
  要系统地学习一下前端的知识，也就是 CSS、HTML 和 JavaScript 这三个东西。这里还是给出 MDN 的相关的技术文档页面 
  
-- CSS 文档 https://developer.mozilla.org/zh-CN/docs/Web/CSS  - HTML 文档 https://developer.mozilla.org/zh-CN/docs/Web/HTML 
+- CSS 文档 https://developer.mozilla.org/zh-CN/docs/Web/CSS  
+
+- HTML 文档 https://developer.mozilla.org/zh-CN/docs/Web/HTML 
   
   学习的并不是所有的东西，而是了解 CSS 和 HTML 是怎么相互作用来展示数据的，然后，不用记忆文档中的内容，这两个文档是用来查找知识的。
   简单地学习使用 JavaScript 操纵 HTML 元件，理解 DOM 和动态网页
